@@ -1,4 +1,4 @@
-# vertriebswerk_BI
+# Marketing BI Template
 Coalesce code repository for vertriebswerk BI setup
 
 Use the following template to setup the staging and mart nodes on your repo
