@@ -1,0 +1,229 @@
+fileVersion: 1
+id: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+name: TRAFFIC_ACQUISITION
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_GOOGLE_ANALYTICS
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74815b00-28f2-415d-816b-b9c494609276
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: DATE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18f63604-450d-4aa4-8e6a-5fd7fa0d6c23
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: PROPERTY
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7d3f02c1-bd63-4fd7-8aa2-3aba8e0caf85
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 730e43e2-e42c-449c-b6db-504e04513ef1
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: SESSION_DEFAULT_CHANNEL_GROUP
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: caee65a3-a02d-4089-8a58-8001eb0315a9
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: SESSION_SOURCE_MEDIUM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 637304cb-e5e8-4b97-b96f-dc6bd95d4f59
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ENGAGED_SESSIONS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1fb6933-7d9c-491c-9cfe-11aeea27d19f
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: TOTAL_USERS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa419545-1a5b-42a5-bcf5-ec6cb3426677
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: USER_ENGAGEMENT_DURATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a232fdfa-9ebb-4a39-aa21-d896a45936f7
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: SESSIONS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: acd9c8b8-a30e-4a40-aa85-800f381f5bc6
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21ff4d04-f984-45c2-a708-2361abe45a58
+          stepCounter: 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: TOTAL_REVENUE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_GOOGLE_ANALYTICS', 'TRAFFIC_ACQUISITION') }}
+  name: TRAFFIC_ACQUISITION
+  schema: ""
+  sqlType: Source
+  table: TRAFFIC_ACQUISITION
+  type: sourceInput
+  version: 1
+type: Node

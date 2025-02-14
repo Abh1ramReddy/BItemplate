@@ -1,0 +1,533 @@
+fileVersion: 1
+id: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+name: POST_COMMENT_HISTORY
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_FACEBOOK_PAGES
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d65f6124-4529-46a6-8b00-455fc463dfd7
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8fa0709a-d920-4c8b-83bc-2d1abe66e733
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: POST_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2049b935-7185-4e14-afcd-6342fd6db9df
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(512)
+        defaultValue: ""
+        description: ""
+        name: ATTACHMENT_MEDIA_IMAGE_SRC
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a1be702-ed8a-4f8f-8455-ca29926e2ec1
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ATTACHMENT_MEDIA_IMAGE_HEIGHT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 46622456-b311-4a6a-8a75-fbcd8e7a4d5a
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ATTACHMENT_MEDIA_IMAGE_WIDTH
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9926c3d6-a42d-49a4-ab97-68f299264ee6
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(512)
+        defaultValue: ""
+        description: ""
+        name: ATTACHMENT_MEDIA_SOURCE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7767032b-e909-4a19-ad12-0fd02e442d35
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ATTACHMENT_MEDIA_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d563cae5-51ec-4b44-97b0-9a425d78e000
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ATTACHMENT_TARGET_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 846cb1d6-bb43-4c94-9702-97b62b372bd8
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(512)
+        defaultValue: ""
+        description: ""
+        name: ATTACHMENT_TARGET_URL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1987ae87-f576-4b68-ac99-196a64ddea5e
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ATTACHMENT_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83538bd6-4029-4c8a-bb3c-5d9abaabd11f
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(512)
+        defaultValue: ""
+        description: ""
+        name: ATTACHMENT_URL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 227c94e1-0621-4121-a779-a5ec2bb8ff01
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: CAN_COMMENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 06ef0266-e791-46a6-9c06-333ac2559287
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: CAN_REMOVE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fbca4c97-4a36-4153-b5a0-9558422754df
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: CAN_HIDE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eb826d4d-ba73-49cf-aa55-0a2b7d0953ff
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: CAN_LIKE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a59402a-d7fb-466b-9e2f-ed83823cf952
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: CAN_REPLY_PRIVATELY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 00a395f0-47e8-492e-9570-63466a906ed4
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: COMMENT_COUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1518522-dc89-4541-96e9-bfee5d7a4399
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: CREATED_TIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9753ef2c-8014-4707-b2c5-dbebf98fb949
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1acd72e-277d-43b6-9e44-ee9fa5d2f276
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: LIKE_COUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa2111ea-9732-4562-af07-f8bd5b5140cd
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(1024)
+        defaultValue: ""
+        description: ""
+        name: MESSAGE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bdd2835c-de73-4238-aaff-39d3b839439c
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: MESSAGE_TAGS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e9f55fc-0ad2-4485-b36f-437d9d8baff7
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: OBJECT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 61fcb699-7eb3-4e67-a84d-f9baf4d6f664
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: USER_LIKES
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4435b7d-40b2-4606-ba6b-b0b3437def2d
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: FROM_OBJECT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92f4c1fb-9b07-4161-854d-1b5eb09dff0b
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: PARENT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7236083e-cd4f-4c9c-8750-9430a47cc2cd
+          stepCounter: 61405d8a-c8c0-446c-b11b-1da1d4e8f6af
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_FACEBOOK_PAGES', 'POST_COMMENT_HISTORY') }}
+  name: POST_COMMENT_HISTORY
+  schema: ""
+  sqlType: Source
+  table: POST_COMMENT_HISTORY
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,95 @@
+fileVersion: 1
+id: 66c05d14-0ef0-425b-9673-38b1bd401739
+name: STG_ACCOUNT_HISTORY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_FACEBOOK_ADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4a073dba-8acb-4266-b287-1aa61acd7976
+          stepCounter: 66c05d14-0ef0-425b-9673-38b1bd401739
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1506c1a2-ed69-4280-a4b6-e75842c96676
+                stepCounter: b356c72f-7846-4a39-a29f-7fb83afab2ee
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 817ceb9d-310a-473f-80de-41097a3e4fe5
+          stepCounter: 66c05d14-0ef0-425b-9673-38b1bd401739
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5c280bd1-7313-47e1-a5d4-f5d515bd59ff
+                stepCounter: b356c72f-7846-4a39-a29f-7fb83afab2ee
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 64035715-d00e-46cc-8fc6-b044755ee63d
+          stepCounter: 66c05d14-0ef0-425b-9673-38b1bd401739
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: STATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('STG_FACEBOOK_ADS', 'STG_ACCOUNT_HISTORY')}} AS (
+            		SELECT DISTINCT 
+                    "ID" as "ID",
+                    "NAME" AS "NAME",
+                    "ACCOUNT_STATUS" AS "STATUS" 
+
+             FROM {{ ref('RAW_FACEBOOK_ADS', 'ACCOUNT_HISTORY') }}
+            	)
+        dependencies:
+          - locationName: RAW_FACEBOOK_ADS
+            nodeName: ACCOUNT_HISTORY
+        join:
+          joinCondition: FROM {{ ref('RAW_FACEBOOK_ADS', 'ACCOUNT_HISTORY') }} "ACCOUNT_HISTORY"
+        name: STG_ACCOUNT_HISTORY
+        noLinkRefs: []
+  name: STG_ACCOUNT_HISTORY
+  overrideSQL: true
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

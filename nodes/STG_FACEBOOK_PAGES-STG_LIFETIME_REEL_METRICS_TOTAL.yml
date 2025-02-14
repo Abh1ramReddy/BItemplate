@@ -1,0 +1,330 @@
+fileVersion: 1
+id: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+name: STG_LIFETIME_REEL_METRICS_TOTAL
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_FACEBOOK_PAGES
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1eccf99b-ee9a-4440-9911-abca0a66e969
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d56c3b8d-2cb8-4c1d-ad68-750308d4cd9b
+                stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2c2f1e7-ca8f-4bc6-adc9-b60ccda35c0a
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: REEL_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 429684b2-4277-497c-9175-689b2e5f1ac9
+                stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c9a4cb89-8848-4826-9b55-e0ad584eefc1
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: BLUE_REELS_PLAY_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 911ec504-bdd7-4a02-b035-618b52126828
+                stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21984291-1f1f-4b08-bed2-eebf8ed7e54b
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_AVG_TIME_WATCHED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b058cedd-3e82-448a-a4ca-fee85eef5ed0
+                stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b2833f3-4518-4230-af6a-9ef3a42958c6
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEW_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 13a22373-ed93-4b60-b627-243940750825
+                stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c572c0e0-066b-4dd9-9a70-b60065d64867
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_LIKES
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d52e9ab-80fb-486f-bfb6-c261b790ef02
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_LOVE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d004cd15-6eb5-4c13-a9f4-5062e3daaf8f
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_WOW
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25f9eeef-e933-478a-b993-6f204f1b66a1
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_HAHA
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dab52517-108c-447c-8503-2749ddf3854b
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_SORRY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37c1891e-dc3b-4aa1-9b34-5afa4992c19f
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_ANGER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b06ecdaa-85e2-4624-a883-c05d555bd422
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: COMMENT_COUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d53cf692-9362-4d6e-b089-5b25e278f02d
+          stepCounter: 6bc02925-b6d3-4ed8-b362-a9387e12c367
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SHARE_COUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('STG_FACEBOOK_PAGES', 'STG_LIFETIME_REEL_METRICS_TOTAL')}} AS (
+            WITH VIEWS AS (
+                SELECT 
+                    TO_DATE(CONVERT_TIMEZONE('Europe/Berlin', 'America/Los_Angeles', "DATE"::TIMESTAMP_NTZ)) AS "DATE",
+                    "REEL_ID",
+                    "BLUE_REELS_PLAY_COUNT",
+                    "POST_VIDEO_AVG_TIME_WATCHED",
+                    "POST_VIDEO_VIEW_TIME",
+                    "_FIVETRAN_SYNCED"
+                FROM {{ ref('RAW_FACEBOOK_PAGES', 'LIFETIME_REEL_METRICS_TOTAL')}}
+                QUALIFY ROW_NUMBER() OVER (PARTITION BY "REEL_ID" ORDER BY "DATE" DESC) = 1
+            ),
+
+            REACTIONS AS (
+                SELECT
+                    TO_DATE(CONVERT_TIMEZONE('Europe/Berlin', 'America/Los_Angeles', "DATE"::TIMESTAMP_NTZ)) AS "DATE",
+                    "REEL_ID",
+                    CASE WHEN "TYPE" = 'REACTION_LIKE' THEN COALESCE("POST_VIDEO_LIKES_BY_REACTION_TYPE", 0) 
+                         ELSE 0  
+                    END AS "POST_LIKES",
+                    CASE WHEN "TYPE" = 'REACTION_LOVE' THEN COALESCE("POST_VIDEO_LIKES_BY_REACTION_TYPE", 0) 
+                         ELSE 0 
+                    END AS "POST_LOVE",
+                    CASE WHEN "TYPE" = 'REACTION_WOW' THEN COALESCE("POST_VIDEO_LIKES_BY_REACTION_TYPE", 0)
+                         ELSE 0 
+                    END AS "POST_WOW",
+                    CASE WHEN "TYPE" = 'REACTION_HAHA' THEN COALESCE("POST_VIDEO_LIKES_BY_REACTION_TYPE", 0)
+                         ELSE 0 
+                    END AS "POST_HAHA",
+                    CASE WHEN "TYPE" = 'REACTION_SORRY' THEN COALESCE("POST_VIDEO_LIKES_BY_REACTION_TYPE", 0)
+                         ELSE 0 
+                    END AS "POST_SORRY",
+                    CASE WHEN "TYPE" = 'REACTION_ANGER' THEN COALESCE("POST_VIDEO_LIKES_BY_REACTION_TYPE", 0)
+                         ELSE 0 
+                    END AS "POST_ANGER",
+                    CASE WHEN "TYPE" = 'COMMENT' THEN COALESCE("POST_VIDEO_SOCIAL_ACTIONS", 0)
+                         ELSE 0 
+                    END AS "COMMENT_COUNT",
+                    CASE WHEN "TYPE" = 'SHARE' THEN COALESCE("POST_VIDEO_SOCIAL_ACTIONS", 0)
+                         ELSE 0 
+                    END AS "SHARE_COUNT",
+                    "_FIVETRAN_SYNCED"
+                FROM      {{ ref('RAW_FACEBOOK_PAGES', 'LIFETIME_REEL_METRICS_BY_TYPE')}}
+
+            ),
+
+            JOINED AS (
+                SELECT 
+                    V."DATE",
+                    V."REEL_ID",
+                    V."BLUE_REELS_PLAY_COUNT",
+                    V."POST_VIDEO_AVG_TIME_WATCHED",
+                    V."POST_VIDEO_VIEW_TIME",  
+                    R."POST_LIKES",
+                    R."POST_LOVE",
+                    R."POST_WOW",
+                    R."POST_HAHA",
+                    R."POST_SORRY",
+                    R."POST_ANGER",
+                    R."COMMENT_COUNT",
+                    R."SHARE_COUNT"
+                FROM VIEWS V 
+                    LEFT JOIN REACTIONS R ON V."DATE" = R."DATE" AND V."REEL_ID" = R."REEL_ID"
+            )
+
+            SELECT * FROM JOINED
+
+            	)
+        dependencies:
+          - locationName: RAW_FACEBOOK_PAGES
+            nodeName: LIFETIME_REEL_METRICS_TOTAL
+        join:
+          joinCondition: FROM {{ ref('RAW_FACEBOOK_PAGES', 'LIFETIME_REEL_METRICS_TOTAL') }} "LIFETIME_REEL_METRICS_TOTAL"
+        name: STG_LIFETIME_REEL_METRICS_TOTAL
+        noLinkRefs: []
+  name: STG_LIFETIME_REEL_METRICS_TOTAL
+  overrideSQL: true
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

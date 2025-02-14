@@ -1,0 +1,96 @@
+fileVersion: 1
+id: c13a7483-b1f5-4dfc-9a1f-20cced369413
+name: BING_ACCOUNTS
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_ACCOUNT_MAPPING
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 494c4af9-384a-4fbb-a5b9-83191760192a
+          stepCounter: c13a7483-b1f5-4dfc-9a1f-20cced369413
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: _ROW
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4fae3b08-eb5b-4b73-bc77-d70871926bfd
+          stepCounter: c13a7483-b1f5-4dfc-9a1f-20cced369413
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 295e2002-fb7f-49f9-869f-a25caf38a48f
+          stepCounter: c13a7483-b1f5-4dfc-9a1f-20cced369413
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a3eab6e1-4994-4e9f-bd08-9139b85dd86e
+          stepCounter: c13a7483-b1f5-4dfc-9a1f-20cced369413
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_ACCOUNT_MAPPING', 'BING_ACCOUNTS') }}
+  name: BING_ACCOUNTS
+  schema: ""
+  sqlType: Source
+  table: BING_ACCOUNTS
+  type: sourceInput
+  version: 1
+type: Node

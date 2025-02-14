@@ -1,0 +1,191 @@
+fileVersion: 1
+id: fabe2223-8385-4bc6-8f74-e10b42063067
+name: ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_FACEBOOK_ADS
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7bc6d7b5-8013-47aa-b1be-d2696036208b
+          stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ACCOUNT_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 063c861e-3128-421f-bf0f-40ff0dff5b97
+          stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: DATE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 56c6b0ed-d8b4-4cd8-a713-5ed6dbe7c766
+          stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 158a10fb-2b78-40cb-87f0-4556014f07fe
+          stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: INDEX
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bc19f923-08e1-4a53-9944-6b7bc2ff3db0
+          stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ACTION_VIDEO_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 309386f2-b643-4c5d-bc1c-cc2d1c276fb8
+          stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: VALUE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d9a5a0cd-5635-4324-8a0f-548b8e30ea47
+          stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c16fc9f4-32bd-4d9e-a433-90aee871cb57
+          stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ACTION_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8b9ec9e-4617-4594-b75a-68234140ac17
+          stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: INLINE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_FACEBOOK_ADS', 'ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS') }}
+  name: ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS
+  schema: ""
+  sqlType: Source
+  table: ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS
+  type: sourceInput
+  version: 1
+type: Node

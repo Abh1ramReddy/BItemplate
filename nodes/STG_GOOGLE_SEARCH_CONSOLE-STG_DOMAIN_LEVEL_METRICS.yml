@@ -1,0 +1,151 @@
+fileVersion: 1
+id: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+name: STG_DOMAIN_LEVEL_METRICS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_GOOGLE_SEARCH_CONSOLE
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 17f37ae7-ed59-4925-b843-9a4f0cca2b45
+          stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2eec50e6-170c-45cc-b5c1-a9fcfa0eacfa
+                stepCounter: 81e38098-3de6-4e4e-ba59-c766c376437a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83133a69-d8a4-46a9-8f95-1ee99201557f
+          stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SEARCH_TYPE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2b6c38c6-5e62-49ac-8341-bf6a1c9a1c5d
+                stepCounter: 81e38098-3de6-4e4e-ba59-c766c376437a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 75fb5321-2f99-43a5-8850-1d06e614675d
+          stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SITE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f3b2d29-4628-4ff9-9f38-8b51abd2f51d
+                stepCounter: 81e38098-3de6-4e4e-ba59-c766c376437a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71041a5c-15c8-43da-a896-7cd2c8aee619
+          stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 492b3019-8dc0-484c-9110-c2165e3ecf75
+                stepCounter: 81e38098-3de6-4e4e-ba59-c766c376437a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: faf5929a-5dbb-4539-ad2d-a53c2dc53174
+          stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 06397247-b57c-4a7f-8537-cab81ec91432
+                stepCounter: 81e38098-3de6-4e4e-ba59-c766c376437a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2dd03ccb-4543-4a99-8e66-158114f9862b
+          stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CTR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 08ef38ae-ab68-4935-8a74-ec4999589681
+                stepCounter: 81e38098-3de6-4e4e-ba59-c766c376437a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dd59bd05-5f0d-46ee-a0be-5ccf43a6914e
+          stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POSITION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 893fcfd7-27d1-4bc4-9455-4cfb028afcac
+                stepCounter: 81e38098-3de6-4e4e-ba59-c766c376437a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5ad81af8-c795-44f2-966b-55214b3b9563
+          stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 718cda35-3fd1-4ee5-8f68-ccf2515d2188
+                stepCounter: 81e38098-3de6-4e4e-ba59-c766c376437a
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_GOOGLE_SEARCH_CONSOLE
+            nodeName: DOMAIN_LEVEL_METRICS
+        join:
+          joinCondition: FROM {{ ref('RAW_GOOGLE_SEARCH_CONSOLE', 'DOMAIN_LEVEL_METRICS') }} "DOMAIN_LEVEL_METRICS"
+        name: STG_DOMAIN_LEVEL_METRICS
+        noLinkRefs: []
+  name: STG_DOMAIN_LEVEL_METRICS
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

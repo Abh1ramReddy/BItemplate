@@ -1,0 +1,769 @@
+fileVersion: 1
+id: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+name: STG_LIFETIME_POST_METRICS_TOTAL
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_FACEBOOK_PAGES
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7bc8de47-93a8-4ba5-aa09-b9d68b980834
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 42a8b632-2983-44e1-adbb-95b2af138b81
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6f1709d-2c72-4b40-bb1f-055ae83c111c
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: POST_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c24c4762-2019-4ca9-9728-603d53afc8f0
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4d06bb92-62e8-493d-bf93-8a4cbbcb573b
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3f81fa10-336c-4363-877a-5a741486194b
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: acba03db-3cc2-4ebe-a636-38ae4d5e7812
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_IMPRESSIONS_PAID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fb49e44b-2a7d-493a-82b1-b6b6a6675818
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f6e473c-5da5-47aa-8ee2-f1b77a890397
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_IMPRESSIONS_FAN
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d82783b7-7850-40af-8a60-ffa301d45508
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d81775b-fcf8-4822-961b-160206626487
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_IMPRESSIONS_ORGANIC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5ff55653-cc3f-4c71-b127-d1aadd807532
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b3d70178-4745-4659-9c36-3b6df26df000
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_IMPRESSIONS_VIRAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fb922837-decc-42fe-bc32-cbf98071d51a
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ff1d06b9-551f-4c6d-be9c-a499220739c6
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_IMPRESSIONS_NONVIRAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f5c15e6-4c19-413d-80e3-450ff8be0dad
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2046410b-6a59-4cc6-9ecd-849f73ff92fd
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 129558a1-6381-49e6-a48b-26a13d3e3686
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73933b33-8bfc-4bde-a39e-122335777110
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_LIKES
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86af7e7c-a190-4475-8fba-3813c75fd05b
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_LOVE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 797e3c8a-92af-4837-a4f9-fbe6484f36dc
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_WOW
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1edff72b-3148-485f-8d97-60f08f3f4fde
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_HAHA
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67c4c66a-4028-4bfd-ae02-2560693db17a
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_SORRY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79037e4a-6e4a-427e-b617-e0c8e18b6543
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_ANGER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0b10357-367c-4884-9acb-941e579a7bc7
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_AVG_TIME_WATCHED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e30ce55b-5408-4c47-96cf-a2931766d839
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4dcb7913-069f-4eab-bda1-c9ef99ce63bb
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_COMPLETE_VIEWS_ORGANIC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d8174b96-7f8e-4df3-82c3-7dd3a7a07579
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e0e19c7-acf2-4993-b05c-ccc4d187d3e0
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_COMPLETE_VIEWS_PAID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e22c016-2e7a-4ee4-9e7c-d2e48e467ed4
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f7cdea41-80a5-4f0c-8361-cb95c2c31dd6
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_LENGTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d879a055-8dc1-489d-8750-1bfa517691e1
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd96d7af-412b-4dee-83d6-7fccf0bdba74
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_ORGANIC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 73ea8fa2-7a02-464c-8c49-884ea9e2d6d4
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b4b0d81-26ef-4639-ac56-38ee92f408ee
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_PAID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bb4b70ef-dbad-40ee-8df8-9467c8d38266
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a98df0c-3f51-4adb-92a4-eb92085c94d1
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5655afc4-7663-4908-bac7-1ef7bb854579
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d2402544-6700-4d35-88b7-552721054d93
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_AUTOPLAYED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d95d0df8-7d29-4495-b016-9473dc83a5e8
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa564279-4424-4e57-be57-6a292009245f
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_CLICKED_TO_PLAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 63e9cfc6-a891-4f5d-a01a-353a776f210c
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 30bf9a0f-99b3-48a1-915e-56007433830e
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_10_S
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 65681277-a9f6-46f6-b2e4-8c866de78deb
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 00b0c0b2-4917-476b-95bf-8ac824f35ab6
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_10_S_AUTOPLAYED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 85938fb4-f2de-41b8-b2bc-9df47e323829
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e9dd2261-58f0-4d8a-99e1-cdf2baff73d5
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_10_S_CLICKED_TO_PLAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a03c384f-e780-4d38-9269-c3c7ff42dd3d
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 699a3821-a94b-4497-b487-21ee9d5804cd
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_10_S_ORGANIC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ed4e13f-18ba-43fc-86cd-f4aa32c55045
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba6f163c-ef91-4f90-93e2-5ee2fc30f7c7
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_10_S_PAID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9bf17b6f-6c4d-4b8b-a19a-dd3dcf94610a
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 468cecf2-e7a7-4d3d-b71f-65478966ae66
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_10_S_SOUND_ON
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2b72f16-da39-4dd6-9cf7-c33b2adb2e5e
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d80bed39-5d61-4812-af8b-712616af8c7a
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_15_S
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cdb9de37-9d84-4e44-ac33-cda0791b295c
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f85b8aca-1f1d-40ff-8979-3c50560f40d1
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_60_S_EXCLUDES_SHORTER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c207394a-6c3b-42ab-a79b-82bdfdbb756c
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 33cafe47-4003-4343-9670-d1851347d641
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEWS_SOUND_ON
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1638db79-c2df-4b3d-b736-d06d89efd741
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 294b66c8-f20f-4cfb-b11c-10773a3bf496
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEW_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 40009dbf-3d19-408c-a62e-b9e56a3cf699
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c7cb029-17d5-4413-9848-9c3a589780be
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_VIEW_TIME_ORGANIC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f1d08fa8-9827-46e6-976c-85418fde2671
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea585ac1-21f3-4e66-816b-401da10b9229
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_COMPLETE_VIEWS_30_S_AUTOPLAYED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 53926ef9-bcf1-49aa-a0ec-f1255e484c7a
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 183c3897-a1fc-4eac-9599-8e204f3a0671
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_COMPLETE_VIEWS_30_S_CLICKED_TO_PLAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5f23fbb2-fa90-4855-bab0-590d945aa688
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 143a483e-272c-448b-8d75-a45b95d3da64
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_COMPLETE_VIEWS_30_S_ORGANIC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1ba3d43c-aeae-42be-ad26-033f793208c9
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d2e77c9-e9e5-48cd-a006-787cc103e3bf
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_COMPLETE_VIEWS_30_S_PAID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2c7407ef-f198-4ed8-bceb-12eec952703f
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d5e2c4f7-68c9-4f6c-967c-dd18a4312041
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_AD_BREAK_AD_IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2438e0ae-35ff-4ab8-afe2-511539195d36
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47d47967-c8fa-4f74-9acf-f8a2171e13c8
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_AD_BREAK_EARNINGS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d87453fb-b4d9-439a-abaf-50c051b13dad
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c4ccef78-f905-40ad-9e26-3dd7d0b7e18d
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POST_VIDEO_AD_BREAK_AD_CPM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 38cd1b7e-05dc-4d85-b3f3-bca051d64527
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 100655e0-5559-4a56-99ab-9be560ea54aa
+          stepCounter: 35cd0da5-381a-4b72-95fc-ca0ddd51a1b7
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aa20f44f-5ca1-48b2-afc5-abb3e4b9ff4a
+                stepCounter: 83a833c2-7f5d-4463-94bd-88018442911c
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |
+            {{ stage('Override Create SQL') }}
+            CREATE OR REPLACE VIEW {{ ref('STG_FACEBOOK_PAGES', 'STG_LIFETIME_POST_METRICS_TOTAL') }} AS (
+                WITH SOURCE AS (
+                    SELECT
+                        "DATE",
+                        "POST_ID",
+                        "POST_IMPRESSIONS",
+                        "POST_IMPRESSIONS_PAID",
+                        "POST_IMPRESSIONS_FAN",
+                        "POST_IMPRESSIONS_ORGANIC",
+                        "POST_IMPRESSIONS_VIRAL",
+                        "POST_IMPRESSIONS_NONVIRAL",
+                        "POST_CLICKS",
+                        CASE WHEN "POST_REACTIONS_LIKE_TOTAL" = 0 THEN NULL ELSE "POST_REACTIONS_LIKE_TOTAL" END AS "POST_LIKES",
+                        CASE WHEN "POST_REACTIONS_LOVE_TOTAL" = 0 THEN NULL ELSE "POST_REACTIONS_LOVE_TOTAL" END AS "POST_LOVE",
+                        CASE WHEN "POST_REACTIONS_WOW_TOTAL" = 0 THEN NULL ELSE "POST_REACTIONS_WOW_TOTAL" END AS "POST_WOW",
+                        CASE WHEN "POST_REACTIONS_HAHA_TOTAL" = 0 THEN NULL ELSE "POST_REACTIONS_HAHA_TOTAL" END AS "POST_HAHA",
+                        CASE WHEN "POST_REACTIONS_SORRY_TOTAL" = 0 THEN NULL ELSE "POST_REACTIONS_SORRY_TOTAL" END AS "POST_SORRY",
+                        CASE WHEN "POST_REACTIONS_ANGER_TOTAL" = 0 THEN NULL ELSE "POST_REACTIONS_ANGER_TOTAL" END AS "POST_ANGER",
+                        "POST_VIDEO_AVG_TIME_WATCHED",
+                        "POST_VIDEO_COMPLETE_VIEWS_ORGANIC",
+                        "POST_VIDEO_COMPLETE_VIEWS_PAID",
+                        "POST_VIDEO_LENGTH",
+                        "POST_VIDEO_VIEWS_ORGANIC",
+                        "POST_VIDEO_VIEWS_PAID",
+                        "POST_VIDEO_VIEWS",
+                        "POST_VIDEO_VIEWS_AUTOPLAYED",
+                        "POST_VIDEO_VIEWS_CLICKED_TO_PLAY",
+                        "POST_VIDEO_VIEWS_10_S",
+                        "POST_VIDEO_VIEWS_10_S_AUTOPLAYED",
+                        "POST_VIDEO_VIEWS_10_S_CLICKED_TO_PLAY",
+                        "POST_VIDEO_VIEWS_10_S_ORGANIC",
+                        "POST_VIDEO_VIEWS_10_S_PAID",
+                        "POST_VIDEO_VIEWS_10_S_SOUND_ON",
+                        "POST_VIDEO_VIEWS_15_S",
+                        "POST_VIDEO_VIEWS_60_S_EXCLUDES_SHORTER",
+                        "POST_VIDEO_VIEWS_SOUND_ON",
+                        "POST_VIDEO_VIEW_TIME",
+                        "POST_VIDEO_VIEW_TIME_ORGANIC",
+                        "POST_VIDEO_COMPLETE_VIEWS_30_S_AUTOPLAYED",
+                        "POST_VIDEO_COMPLETE_VIEWS_30_S_CLICKED_TO_PLAY",
+                        "POST_VIDEO_COMPLETE_VIEWS_30_S_ORGANIC",
+                        "POST_VIDEO_COMPLETE_VIEWS_30_S_PAID",
+                        "POST_VIDEO_AD_BREAK_AD_IMPRESSIONS",
+                        "POST_VIDEO_AD_BREAK_EARNINGS",
+                        "POST_VIDEO_AD_BREAK_AD_CPM",
+                        "_FIVETRAN_SYNCED"
+                    FROM {{ ref('RAW_FACEBOOK_PAGES', 'LIFETIME_POST_METRICS_TOTAL') }}
+                )
+
+                SELECT
+                    "DATE",
+                    "POST_ID",
+                    "POST_IMPRESSIONS",
+                    "POST_IMPRESSIONS_PAID",
+                    "POST_IMPRESSIONS_FAN",
+                    "POST_IMPRESSIONS_ORGANIC",
+                    "POST_IMPRESSIONS_VIRAL",
+                    "POST_IMPRESSIONS_NONVIRAL",
+                    "POST_CLICKS",
+                    FIRST_VALUE("POST_LIKES" IGNORE NULLS) OVER (PARTITION BY "POST_ID" ORDER BY "DATE" DESC) AS "POST_LIKES",
+                    FIRST_VALUE("POST_LOVE" IGNORE NULLS) OVER (PARTITION BY "POST_ID" ORDER BY "DATE" DESC) AS "POST_LOVE",
+                    FIRST_VALUE("POST_WOW" IGNORE NULLS) OVER (PARTITION BY "POST_ID" ORDER BY "DATE" DESC) AS "POST_WOW",
+                    FIRST_VALUE("POST_HAHA" IGNORE NULLS) OVER (PARTITION BY "POST_ID" ORDER BY "DATE" DESC) AS "POST_HAHA",
+                    FIRST_VALUE("POST_SORRY" IGNORE NULLS) OVER (PARTITION BY "POST_ID" ORDER BY "DATE" DESC) AS "POST_SORRY",
+                    FIRST_VALUE("POST_ANGER" IGNORE NULLS) OVER (PARTITION BY "POST_ID" ORDER BY "DATE" DESC) AS "POST_ANGER",
+                    "POST_VIDEO_AVG_TIME_WATCHED",
+                    "POST_VIDEO_COMPLETE_VIEWS_ORGANIC",
+                    "POST_VIDEO_COMPLETE_VIEWS_PAID",
+                    "POST_VIDEO_LENGTH",
+                    "POST_VIDEO_VIEWS_ORGANIC",
+                    "POST_VIDEO_VIEWS_PAID",
+                    "POST_VIDEO_VIEWS",
+                    "POST_VIDEO_VIEWS_AUTOPLAYED",
+                    "POST_VIDEO_VIEWS_CLICKED_TO_PLAY",
+                    "POST_VIDEO_VIEWS_10_S",
+                    "POST_VIDEO_VIEWS_10_S_AUTOPLAYED",
+                    "POST_VIDEO_VIEWS_10_S_CLICKED_TO_PLAY",
+                    "POST_VIDEO_VIEWS_10_S_ORGANIC",
+                    "POST_VIDEO_VIEWS_10_S_PAID",
+                    "POST_VIDEO_VIEWS_10_S_SOUND_ON",
+                    "POST_VIDEO_VIEWS_15_S",
+                    "POST_VIDEO_VIEWS_60_S_EXCLUDES_SHORTER",
+                    "POST_VIDEO_VIEWS_SOUND_ON",
+                    "POST_VIDEO_VIEW_TIME",
+                    "POST_VIDEO_VIEW_TIME_ORGANIC",
+                    "POST_VIDEO_COMPLETE_VIEWS_30_S_AUTOPLAYED",
+                    "POST_VIDEO_COMPLETE_VIEWS_30_S_CLICKED_TO_PLAY",
+                    "POST_VIDEO_COMPLETE_VIEWS_30_S_ORGANIC",
+                    "POST_VIDEO_COMPLETE_VIEWS_30_S_PAID",
+                    "POST_VIDEO_AD_BREAK_AD_IMPRESSIONS",
+                    "POST_VIDEO_AD_BREAK_EARNINGS",
+                    "POST_VIDEO_AD_BREAK_AD_CPM",
+                    "_FIVETRAN_SYNCED"
+                FROM
+                    SOURCE
+                QUALIFY ROW_NUMBER() OVER (PARTITION BY "POST_ID" ORDER BY "DATE" DESC) = 1
+            )
+        dependencies:
+          - locationName: RAW_FACEBOOK_PAGES
+            nodeName: LIFETIME_POST_METRICS_TOTAL
+        join:
+          joinCondition: FROM {{ ref('RAW_FACEBOOK_PAGES', 'LIFETIME_POST_METRICS_TOTAL') }} "LIFETIME_POST_METRICS_TOTAL"
+        name: STG_LIFETIME_POST_METRICS_TOTAL
+        noLinkRefs: []
+  name: STG_LIFETIME_POST_METRICS_TOTAL
+  overrideSQL: true
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

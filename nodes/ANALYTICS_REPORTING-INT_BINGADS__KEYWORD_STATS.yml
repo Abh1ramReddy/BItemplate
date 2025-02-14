@@ -1,0 +1,227 @@
+fileVersion: 1
+id: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+name: INT_BINGADS__KEYWORD_STATS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba8ef3d8-cfdd-425f-8107-01683794a9ad
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1298d462-cf58-4f1e-8430-0d832f639789
+                stepCounter: f30c17c0-89ab-4669-afea-657212ecb1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b9e34ea-f534-4ae9-87f8-5b41dbebd626
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4b9fbdb7-d9af-4799-a741-cfd2d4599d68
+                stepCounter: f30c17c0-89ab-4669-afea-657212ecb1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65c9589d-0205-471f-96b7-c5eb21c4e474
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5c7b52b9-6051-44f3-8624-e9521709eb91
+                stepCounter: f30c17c0-89ab-4669-afea-657212ecb1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 276f15be-919d-42c4-8df6-2b040ab9501b
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: INTERACTIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e09d2dd9-00e7-4ab8-b437-d0c976c5ca37
+                stepCounter: f30c17c0-89ab-4669-afea-657212ecb1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a53bb802-8a6a-4178-ae94-d434fac06644
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: INTERACTION_RATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c0dd4b9-aade-421f-8829-718ef2a82515
+                stepCounter: f30c17c0-89ab-4669-afea-657212ecb1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2bcda56-1d20-4f90-b26f-30a82d388bdf
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: AVERAGE_CPC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 61ae3545-7ef5-4b9d-bce6-5574e591c2ec
+                stepCounter: f30c17c0-89ab-4669-afea-657212ecb1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 98a29b10-617a-4546-b79c-96b0c5a204ec
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: COST_MICROS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1f0e00cb-ed24-4266-ac23-a6af1e360bdb
+                stepCounter: f30c17c0-89ab-4669-afea-657212ecb1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 08b3477a-fbdc-4b6a-abb3-d9c37453e04d
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CONVERSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 25494449-21a1-4241-a7fd-c5d62c49b6ef
+                stepCounter: f30c17c0-89ab-4669-afea-657212ecb1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b255786-fd3b-4f55-a3c9-2f01930610b0
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CONVERSIONS_VALUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c2254798-ae6a-4125-a96a-aa0d0153968b
+                stepCounter: f30c17c0-89ab-4669-afea-657212ecb1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c190076-300e-4e2b-a7ee-756436bf12bf
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: KEYWORD_TEXT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 88ff2d76-5542-406a-b43b-31f506a388b4
+                stepCounter: d8151380-da14-4d8f-8325-01f6033a4701
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4e0fd33-9a21-4e94-9fe7-92d133abc7b2
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CAMPAIGN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ce5f843e-51e6-4330-8552-e97a777c4d13
+                stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 14f82f41-2cc1-45bd-91e2-35395d6d752e
+          stepCounter: 757e5496-bee1-4042-b9dd-6fbb200cdccd
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: AD_GROUP_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee245826-7a7f-40a7-ae9e-44e67163a170
+                stepCounter: 3daee347-f356-46da-af76-760856cd7f02
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_BINGADS__AD_GROUP_HISTORY: 3daee347-f356-46da-af76-760856cd7f02
+          STG_BINGADS__CAMPAIGN_HISTORY: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+          STG_BINGADS__KEYWORD_HISTORY: d8151380-da14-4d8f-8325-01f6033a4701
+          STG_BINGADS__KEYWORD_PERFORMANCE_DAILY_REPORT: f30c17c0-89ab-4669-afea-657212ecb1dd
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_BINGADS
+            nodeName: STG_BINGADS__AD_GROUP_HISTORY
+          - locationName: STG_BINGADS
+            nodeName: STG_BINGADS__CAMPAIGN_HISTORY
+          - locationName: STG_BINGADS
+            nodeName: STG_BINGADS__KEYWORD_HISTORY
+          - locationName: STG_BINGADS
+            nodeName: STG_BINGADS__KEYWORD_PERFORMANCE_DAILY_REPORT
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_BINGADS', 'STG_BINGADS__KEYWORD_PERFORMANCE_DAILY_REPORT') }} "STG_BINGADS__KEYWORD_PERFORMANCE_DAILY_REPORT"
+            LEFT JOIN {{ ref('STG_BINGADS', 'STG_BINGADS__KEYWORD_HISTORY') }} "STG_BINGADS__KEYWORD_HISTORY"
+            ON "STG_BINGADS__KEYWORD_PERFORMANCE_DAILY_REPORT"."KEYWORD_ID" = "STG_BINGADS__KEYWORD_HISTORY"."ID"
+            AND "STG_BINGADS__KEYWORD_PERFORMANCE_DAILY_REPORT"."AD_GROUP_ID" = "STG_BINGADS__KEYWORD_HISTORY"."AD_GROUP_ID"
+            LEFT JOIN {{ ref('STG_BINGADS', 'STG_BINGADS__CAMPAIGN_HISTORY') }} "STG_BINGADS__CAMPAIGN_HISTORY"
+            ON "STG_BINGADS__KEYWORD_PERFORMANCE_DAILY_REPORT"."CAMPAIGN_ID" = "STG_BINGADS__CAMPAIGN_HISTORY"."ID"
+            AND "STG_BINGADS__KEYWORD_PERFORMANCE_DAILY_REPORT"."ACCOUNT_ID" = "STG_BINGADS__CAMPAIGN_HISTORY"."ACCOUNT_ID"
+            LEFT JOIN {{ ref('STG_BINGADS', 'STG_BINGADS__AD_GROUP_HISTORY') }} "STG_BINGADS__AD_GROUP_HISTORY"
+            ON "STG_BINGADS__KEYWORD_PERFORMANCE_DAILY_REPORT"."CAMPAIGN_ID" = "STG_BINGADS__AD_GROUP_HISTORY"."CAMPAIGN_ID"
+            AND "STG_BINGADS__KEYWORD_PERFORMANCE_DAILY_REPORT"."AD_GROUP_ID" = "STG_BINGADS__AD_GROUP_HISTORY"."ID"
+        name: INT_BINGADS__KEYWORD_STATS
+        noLinkRefs: []
+  name: INT_BINGADS__KEYWORD_STATS
+  overrideSQL: false
+  schema: ""
+  sqlType: "2"
+  type: sql
+  version: 1
+type: Node

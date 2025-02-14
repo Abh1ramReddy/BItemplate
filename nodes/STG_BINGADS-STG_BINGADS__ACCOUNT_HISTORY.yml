@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 5460b49b-6716-478a-aef5-c7c78cc47c23
+name: STG_BINGADS__ACCOUNT_HISTORY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_BINGADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43ce1444-faa2-4941-a8b5-d38af6b91031
+          stepCounter: 5460b49b-6716-478a-aef5-c7c78cc47c23
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7558dd7a-93f0-4ff2-a12f-057e4badfe6b
+                stepCounter: 927659df-8c87-465f-94e3-e99d08699eab
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96296ad9-0f1c-4a65-a6ec-d4a1563116f0
+          stepCounter: 5460b49b-6716-478a-aef5-c7c78cc47c23
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3f01e887-abf0-4cc1-8d16-a87a9d1e8eae
+                stepCounter: 927659df-8c87-465f-94e3-e99d08699eab
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_BINGADS
+            nodeName: ACCOUNT_HISTORY
+        join:
+          joinCondition: FROM {{ ref('RAW_BINGADS', 'ACCOUNT_HISTORY') }} "ACCOUNT_HISTORY"
+        name: STG_BINGADS__ACCOUNT_HISTORY
+        noLinkRefs: []
+  name: STG_BINGADS__ACCOUNT_HISTORY
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

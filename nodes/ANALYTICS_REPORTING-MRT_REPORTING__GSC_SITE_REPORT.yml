@@ -1,0 +1,335 @@
+fileVersion: 1
+id: 39671699-3b6e-4f85-a061-feadd8613c70
+name: MRT_REPORTING__GSC_SITE_REPORT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 425e5f06-14d7-4add-9d37-ae660cf86cbc
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: DATE
+        description: ""
+        name: MONTH
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8ecaf4d9-2517-4d6c-9e2b-2fde84540128
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 69f5c7ee-34ad-4ade-ae57-e9b58bc11172
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SEARCH_TYPE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b869eed2-dfb1-425e-ae9a-e0c07a5c15d8
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96031c4b-4c1c-46b3-96a6-4b2479b92061
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SITE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1b957d7-16b3-4e79-9b11-67735620c7b1
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe99ab66-db1e-47cc-8f19-46f387261781
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: COUNTRY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d0b0522d-97d3-4647-8792-67f7c0decea3
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef19521a-26c8-4cbe-a413-534f1ac1107d
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DEVICE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6d7d6be2-dd2b-4d31-9d03-da7f820ee57e
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c2c4e65-cfee-4abf-8f6d-fde40e43e35c
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PAGE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 23a12a4d-56ab-4d34-b74b-23a86666bab6
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 933f2f0c-04e6-47b6-97c1-f3dde8b7f71f
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: QUERY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c19e72e7-357c-4d2c-9aef-3ca19d869f3b
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e98d4aa2-2200-4b80-8e05-184483a277be
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bedabe10-3f67-47e1-af26-5705f94a3a71
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9aa2169a-205e-46a0-83d7-46ddf3b85b03
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4e314f94-cac6-4fc4-a203-6d92274feed9
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: db71be3e-7bf6-416b-813a-e50a1c18f1a8
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CTR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 25c59463-c8b6-4659-bc5f-dbf4a18163fa
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8eb6ce0f-eeef-4bdf-a571-0c82f6ea6d52
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POSITION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 241d3e99-c46c-4f2f-a652-3612103a2500
+                stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d4837e6-5df5-4c64-bdec-8bb16fc7376e
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PREVIOUS_MONTH_CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: LAG("TOTAL_CLICKS") OVER (PARTITION BY "PAGE", "QUERY", "SEARCH_TYPE", "SITE", "COUNTRY", "DEVICE" ORDER BY "month_start")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 007cb5c8-b138-45d6-818d-fd38472e4aee
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PREVIOUS_MONTH_IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: LAG("TOTAL_IMPRESSIONS") OVER (PARTITION BY "PAGE", "QUERY", "SEARCH_TYPE", "SITE", "COUNTRY", "DEVICE" ORDER BY "month_start")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c103df7-8a61-4b7e-a085-260f62131b6d
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PREVIOUS_MONTH_CTR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: LAG("AVERAGE_CTR") OVER (PARTITION BY "PAGE", "QUERY", "SEARCH_TYPE", "SITE", "COUNTRY", "DEVICE" ORDER BY "month_start")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3963f3b1-02e8-4267-8943-575d4f7349f6
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PREVIOUS_MONTH_POSITION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: LAG("AVERAGE_POSITION") OVER (PARTITION BY "PAGE", "QUERY", "SEARCH_TYPE", "SITE", "COUNTRY", "DEVICE" ORDER BY "month_start")
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 537360ea-cec0-42e4-b3fd-3fbdc2a56ec5
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a42ca8c7-74a2-4316-90b7-ba8987f44501
+                stepCounter: 818cbf14-b72c-4463-88eb-4255cc5c30f5
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 149a6276-78e4-4813-a0a6-2bbc892252e4
+          stepCounter: 39671699-3b6e-4f85-a061-feadd8613c70
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HOTEL_GRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 13237824-8d1c-4dc9-a23d-80f82e3ed6f5
+                stepCounter: 818cbf14-b72c-4463-88eb-4255cc5c30f5
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_KEYWORD_STATS: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('ANALYTICS_REPORTING', 'MRT_GSC_SITE_REPORT')}} AS (
+            		SELECT 
+             "month_start" AS "month_start",
+             "SEARCH_TYPE" AS "SEARCH_TYPE",
+             "SITE" AS "SITE",
+             "COUNTRY" AS "COUNTRY",
+             "DEVICE" AS "DEVICE",
+             "PAGE" AS "PAGE",
+             "QUERY" AS "QUERY",
+             "TOTAL_CLICKS" AS "TOTAL_CLICKS",
+             "TOTAL_IMPRESSIONS" AS "TOTAL_IMPRESSIONS",
+             "AVERAGE_CTR" AS "AVERAGE_CTR",
+             "AVERAGE_POSITION" AS "AVERAGE_POSITION"
+             FROM {{ ref('STG_GOOGLE_SEARCH_CONSOLE', 'STG_KEYWORD_STATS') }}
+            	)
+        dependencies:
+          - locationName: STG_ACCOUNT_MAPPING
+            nodeName: STG_GSC_ACCOUNT_MAPPING
+          - locationName: STG_GOOGLE_SEARCH_CONSOLE
+            nodeName: STG_KEYWORD_STATS
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_GOOGLE_SEARCH_CONSOLE', 'STG_KEYWORD_STATS') }} "STG_KEYWORD_STATS"
+            LEFT JOIN (SELECT "SITE" AS "SITE2","DISPLAY_NAME", "HOTELGRUPPE" FROM {{ ref('STG_ACCOUNT_MAPPING', 'STG_GSC_ACCOUNT_MAPPING') }}) "STG_GSC_ACCOUNT_MAPPING"
+            ON "STG_KEYWORD_STATS"."SITE"="STG_GSC_ACCOUNT_MAPPING"."SITE2"
+        name: MRT_REPORTING__GSC_SITE_REPORT
+        noLinkRefs: []
+  name: MRT_REPORTING__GSC_SITE_REPORT
+  overrideSQL: false
+  schema: ""
+  sqlType: "5"
+  type: sql
+  version: 1
+type: Node

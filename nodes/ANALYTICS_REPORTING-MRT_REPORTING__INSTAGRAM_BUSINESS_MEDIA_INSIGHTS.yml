@@ -1,0 +1,664 @@
+fileVersion: 1
+id: 666d279b-8075-4c82-9891-d619130e098e
+name: MRT_REPORTING__INSTAGRAM_BUSINESS_MEDIA_INSIGHTS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests:
+          hasNull: true
+          isDistinct: true
+        columnReference:
+          columnCounter: d45b7f18-f3f7-4767-b9cb-c409059dbe51
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a9c0e101-bf9f-4dcd-a353-8803fae23b96
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 034c530c-8c41-4b7b-8aaa-bf77c95d0000
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: LIKE_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e09883bc-d8e1-4288-a7e9-29868cdf3fdc
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(LIKE_COUNT,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: ec10aed1-9521-40d1-9c4f-7b8aec0dfc2b
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: COMMENT_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd602698-5484-40d0-aea5-c3d351ede879
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(COMMENT_COUNT,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 3b6b712d-dbeb-4b67-b634-f02397f93a6e
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: VIDEO_PHOTO_IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dd8afa6e-83f5-4a9a-936b-1411834bc164
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(VIDEO_PHOTO_IMPRESSIONS,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 96d4e842-1300-41b7-9ada-76084058cbab
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: VIDEO_PHOTO_REACH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9c4d2451-428c-4de5-8a03-c505228d72c9
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(VIDEO_PHOTO_REACH,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: ead8a71d-0282-4303-9a1a-c5959a2ee302
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: VIDEO_PHOTO_SAVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 86f66ce8-37ba-4ea4-9197-39cbbbe57962
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(VIDEO_PHOTO_SAVED,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 8aac01b3-c500-4c70-a138-a0d6571cfca4
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: VIDEO_VIEWS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8391ecbc-441a-47e3-90b9-ce333ac16421
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(VIDEO_VIEWS,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 6f618390-557a-4dda-b17f-3c522d3b04f4
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CAROUSEL_ALBUM_ENGAGEMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e9094f70-30ed-488c-b631-02eceee56b50
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(CAROUSEL_ALBUM_ENGAGEMENT,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 64c2d288-6d9a-48cf-872e-689fd806459e
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CAROUSEL_ALBUM_IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 859e3fe2-7fcf-4435-a7eb-98dfaa1fa45f
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(CAROUSEL_ALBUM_IMPRESSIONS,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 2d385581-0f70-41a7-84a6-9a29136e6dce
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CAROUSEL_ALBUM_REACH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c583c10a-a820-4dcd-883b-500154bfaa40
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(CAROUSEL_ALBUM_REACH,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: d212e89c-7134-4937-90da-5c281cae9bb9
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CAROUSEL_ALBUM_SAVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d4303750-0fa3-4894-9558-f38527cf4525
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(CAROUSEL_ALBUM_SAVED,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: f7cece87-81c7-499f-904b-82e40244e320
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CAROUSEL_ALBUM_VIDEO_VIEWS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2d97dd4-bab8-4a03-9b98-9116ca4790e2
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(CAROUSEL_ALBUM_VIDEO_VIEWS,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 423b59ab-3b19-4a14-8715-5d42080436f8
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORY_IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 63c8e1cc-9dd6-4ba0-9462-3024267f131e
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(STORY_IMPRESSIONS,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 48be803e-24c9-49e6-b899-bc4e0cc7f327
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORY_REACH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c2ff0f3d-8ba2-4ffd-a900-4d048b963417
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(STORY_REACH,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 9ec70c42-3149-48ee-bff5-e2012c32a082
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORY_EXITS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1b9cbb2b-84b4-4e64-81a6-1ecec325cef4
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(STORY_EXITS,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 628af6b2-674e-4762-868a-0e67e2919b83
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: REEL_REACH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: faacb9bf-7411-4828-a331-6d98aece14e1
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(REEL_REACH,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 60185ebf-6486-43f5-8225-75aa89c50d30
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: REEL_SAVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 49955aec-d508-4b49-8b61-92dc6e329b4e
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(REEL_SAVED,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 51d57baf-1904-4002-a21f-d8097561a882
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: VIDEO_PHOTO_ENGAGEMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ca616e67-1726-4411-a9e7-c5f73a302aae
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(VIDEO_PHOTO_ENGAGEMENT,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 1d6c16ef-87f0-4123-92e8-a1a880a9f906
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORY_REPLIES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 05327f69-7607-4557-beae-b57c0b6a5a6d
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(STORY_REPLIES,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 43bbdae2-2a8d-4669-bac6-aab29ab9717d
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORY_TAPS_BACK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cfffc282-e529-4c91-ba75-74c90b75ac9e
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(STORY_TAPS_BACK,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 8d332d68-881e-447b-9d0e-e6b3081f0c37
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORY_TAPS_FORWARD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a7bd9662-bfab-4496-bfbc-d97bf5d55930
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(STORY_TAPS_FORWARD,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: d6575b69-fc84-4da5-97b3-8727dd594872
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORY_SWIPE_FORWARD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2bdaf536-949d-4f9b-8862-06fc0dc81e8e
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(STORY_SWIPE_FORWARD,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 7017f652-917a-4d0b-97e3-afd76ef8b2b5
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: REEL_COMMENTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 31755db0-3f5e-48fb-968d-f398b2a9fdf8
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(REEL_COMMENTS,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: c4f093ad-1d56-42bd-a595-f2d9882fd0ce
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: REEL_LIKES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a74c288d-4b0b-413e-9150-cfd6c15e2e26
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(REEL_LIKES,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 6ed63ee3-1b6c-48f1-99c9-a702c3f9f29a
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: REEL_PLAYS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1d2d02f0-0e79-41f7-bfbc-6648e4479922
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(REEL_PLAYS,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: d149c57d-27b6-4676-92b1-237caf254a1e
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: REEL_SHARES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3cabf676-8a2a-4bce-ab6a-3aae338af4fb
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(REEL_SHARES,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 1bd844e2-d757-43d2-8925-ddfa45628199
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: REEL_TOTAL_INTERACTIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1fbfe4b1-ccac-41b2-b81e-89f8e01ca7e3
+                stepCounter: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+            transform: COALESCE(REEL_TOTAL_INTERACTIONS,0)
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: a41ed4a0-146f-428a-9c54-66c0aa0c92fc
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: HOTEL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 48654089-a778-4920-a2da-c13718a1e58a
+                stepCounter: e6487322-37dc-4418-9c8e-7fba2d73985e
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: ab157d1c-785b-4a71-8e5f-f96870e4ce30
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: USER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e6639c5-3d8d-4b67-94e1-090338c60264
+                stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 1e4dc1ec-1c52-4409-88c4-cae6ac7045c5
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: VARCHAR(4096)
+        description: ""
+        name: CAPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3066998c-d011-4d7d-88a2-d5b50f8da8d9
+                stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 14d43649-acd8-4133-b142-9cdad08dcb11
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 48fe7970-ca56-47f0-87bc-7266de8773b2
+                stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+            transform: TO_DATE(created_time)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: c0d80387-5061-407f-af9b-73e13d254a4d
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: VARCHAR(4096)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: media_product_type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f776357d-9682-4ce3-a284-6a81d2ed96f8
+                stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+            transform: |-
+              case when media_product_type is null then MEDIA_TYPE
+                          else media_product_type
+                          end
+        systemColumnType: None
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 88b0488b-d3b2-4667-8a5e-6c8afa9462cc
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: VARCHAR(4096)
+        description: ""
+        name: post_detail
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f776357d-9682-4ce3-a284-6a81d2ed96f8
+                stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+            transform: |-
+              case
+                  when media_product_type != 'STORY' then permalink
+                  else media_url
+                  end
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bfaaec5e-5611-4986-b74d-8a47fe1df224
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c745849-25ae-47c4-a27a-b137e2b903b8
+                stepCounter: 057024d5-e625-4ba4-a8bb-6c55feb8ff99
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e8e5232-90f3-4f3c-9a3e-3c412388637d
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 60f62d9b-a782-452a-b505-8da6b4655553
+                stepCounter: 057024d5-e625-4ba4-a8bb-6c55feb8ff99
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5cb91bda-92ec-4183-a420-336c5f1e6afd
+          stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: IMAGE_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 716fd58e-cc18-435e-ab99-7035eeb7885a
+                stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs:
+      - isDistinct
+      - hasNull
+    sourceMapping:
+      - aliases:
+          INT_INSTAGRAM_BUSINESS__MEDIA_HISTORY: 1e0a030a-7698-483c-9aa5-e83931d5d875
+          INT_INSTAGRAM_BUSINESS__MEDIA_INSIGHTS: 204b7ee7-3e5b-45d4-81d2-e3fe14d5fd83
+          INT_INSTAGRAM_BUSINESS__UNIQUE_USER: e6487322-37dc-4418-9c8e-7fba2d73985e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ANALYTICS_REPORTING
+            nodeName: INT_INSTAGRAM_BUSINESS__MEDIA_HISTORY
+          - locationName: ANALYTICS_REPORTING
+            nodeName: INT_INSTAGRAM_BUSINESS__MEDIA_INSIGHTS
+          - locationName: ANALYTICS_REPORTING
+            nodeName: INT_INSTAGRAM_BUSINESS__UNIQUE_USER
+          - locationName: STG_ACCOUNT_MAPPING
+            nodeName: STG_INSTAGRAM_ACCOUNT_MAPPING
+        join:
+          joinCondition: |-
+            FROM {{ ref('ANALYTICS_REPORTING', 'INT_INSTAGRAM_BUSINESS__MEDIA_INSIGHTS') }} "INT_INSTAGRAM_BUSINESS__MEDIA_INSIGHTS"
+            LEFT JOIN {{ ref('ANALYTICS_REPORTING', 'INT_INSTAGRAM_BUSINESS__MEDIA_HISTORY') }} "INT_INSTAGRAM_BUSINESS__MEDIA_HISTORY"
+            ON "INT_INSTAGRAM_BUSINESS__MEDIA_INSIGHTS"."ID" = "INT_INSTAGRAM_BUSINESS__MEDIA_HISTORY"."ID"
+            LEFT JOIN {{ ref('ANALYTICS_REPORTING', 'INT_INSTAGRAM_BUSINESS__UNIQUE_USER') }} "INT_INSTAGRAM_BUSINESS__UNIQUE_USER"
+            ON "INT_INSTAGRAM_BUSINESS__MEDIA_HISTORY"."USER_ID" = "INT_INSTAGRAM_BUSINESS__UNIQUE_USER"."ID"
+            LEFT JOIN (SELECT "NAME","DISPLAY_NAME", "HOTELGRUPPE" FROM {{ ref('STG_ACCOUNT_MAPPING', 'STG_INSTAGRAM_ACCOUNT_MAPPING') }}) "STG_INSTAGRAM_ACCOUNT_MAPPING"
+            ON "INT_INSTAGRAM_BUSINESS__UNIQUE_USER"."NAME"="STG_INSTAGRAM_ACCOUNT_MAPPING"."NAME"
+        name: MRT_REPORTING__INSTAGRAM_BUSINESS_MEDIA_INSIGHTS
+        noLinkRefs: []
+  name: MRT_REPORTING__INSTAGRAM_BUSINESS_MEDIA_INSIGHTS
+  overrideSQL: false
+  schema: ""
+  sqlType: "5"
+  type: sql
+  version: 1
+type: Node

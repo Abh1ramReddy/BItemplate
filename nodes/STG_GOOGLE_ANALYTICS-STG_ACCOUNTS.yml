@@ -1,0 +1,123 @@
+fileVersion: 1
+id: cc017984-1359-41b6-ac1a-8191e34f202c
+name: STG_ACCOUNTS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_GOOGLE_ANALYTICS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e0ffa23-306b-4116-a638-3cc1344deb3a
+          stepCounter: cc017984-1359-41b6-ac1a-8191e34f202c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2aa6ee2e-2e55-4aa8-8889-7e5e1c2e8245
+                stepCounter: 91c58fe8-b619-4ef3-af68-48ae15f1d35a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b429afc9-265d-446c-9dab-dbb1bb162046
+          stepCounter: cc017984-1359-41b6-ac1a-8191e34f202c
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: CREATE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c1b1775b-eec4-45ee-8357-08ba41a9f4e3
+                stepCounter: 91c58fe8-b619-4ef3-af68-48ae15f1d35a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fcea5d37-4e68-46f6-a4ef-64017127db6d
+          stepCounter: cc017984-1359-41b6-ac1a-8191e34f202c
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: UPDATE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a20ed600-eebf-4353-b431-8e12d232d92f
+                stepCounter: 91c58fe8-b619-4ef3-af68-48ae15f1d35a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 450670e0-e871-4f46-a980-7f1eb7d640e5
+          stepCounter: cc017984-1359-41b6-ac1a-8191e34f202c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: efa448f4-869e-447e-95bf-0dc245c74d1c
+                stepCounter: 91c58fe8-b619-4ef3-af68-48ae15f1d35a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dc517476-95c9-4cbd-89ca-c74586d296fa
+          stepCounter: cc017984-1359-41b6-ac1a-8191e34f202c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: REGION_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 70f97fcf-df65-4479-b3c1-a452417c12e2
+                stepCounter: 91c58fe8-b619-4ef3-af68-48ae15f1d35a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ee1ff818-72b3-4dad-833a-7efa829eb044
+          stepCounter: cc017984-1359-41b6-ac1a-8191e34f202c
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 165616ef-0786-4336-844e-cfc95df7dd6f
+                stepCounter: 91c58fe8-b619-4ef3-af68-48ae15f1d35a
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_GOOGLE_ANALYTICS
+            nodeName: ACCOUNTS
+        join:
+          joinCondition: FROM {{ ref('RAW_GOOGLE_ANALYTICS', 'ACCOUNTS') }} "ACCOUNTS"
+        name: STG_ACCOUNTS
+        noLinkRefs: []
+  name: STG_ACCOUNTS
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

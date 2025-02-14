@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "4"
+includeSelector: "+{ location: ANALYTICS_REPORTING name: MRT_* } "
+name: Full run
+type: Job

@@ -1,0 +1,81 @@
+fileVersion: 1
+id: 6c15580a-18ab-4e7b-a562-3802434047e2
+name: STG_LOOKUP
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_GOOGLE_ANALYTICS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27b32eb6-0fd4-409b-a50a-3c52e96fd0ce
+          stepCounter: 6c15580a-18ab-4e7b-a562-3802434047e2
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PROPERTYID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b4ca6772-3c97-431c-8f2e-1a4676674e86
+                stepCounter: abd035be-8bf8-4548-bd77-2ec721af73c4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 82b48299-96c0-4e86-99fc-d02385abd0cc
+          stepCounter: 6c15580a-18ab-4e7b-a562-3802434047e2
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f50c979d-86e8-4353-bc97-f03c079f252a
+                stepCounter: abd035be-8bf8-4548-bd77-2ec721af73c4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7409cc0e-512d-4a29-bfe2-c5ef2a74f898
+          stepCounter: 6c15580a-18ab-4e7b-a562-3802434047e2
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee35e0fb-a7c0-4d7e-8ee6-6c5ff8bacf9b
+                stepCounter: abd035be-8bf8-4548-bd77-2ec721af73c4
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_GOOGLE_ANALYTICS
+            nodeName: STG_PROPERTIES
+        join:
+          joinCondition: FROM {{ ref('STG_GOOGLE_ANALYTICS', 'STG_PROPERTIES') }} "STG_PROPERTIES"
+        name: STG_LOOKUP
+        noLinkRefs: []
+  name: STG_LOOKUP
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

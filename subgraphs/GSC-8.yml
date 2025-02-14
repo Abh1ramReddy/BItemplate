@@ -1,0 +1,12 @@
+fileVersion: 1
+id: "8"
+name: GSC
+steps:
+  - 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+  - 39671699-3b6e-4f85-a061-feadd8613c70
+  - 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+  - 81e38098-3de6-4e4e-ba59-c766c376437a
+  - 8dff9e1c-dc02-4138-9416-5d6320584f50
+  - bd79efe5-2496-49d6-9c41-055c2c603e2f
+  - f36a0e8b-246d-4498-a14e-f4cf90fdf893
+type: Subgraph

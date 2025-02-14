@@ -1,0 +1,210 @@
+fileVersion: 1
+id: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+name: MRT_REPORTING__GOOGLE_ADS_ROAS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d5d4d850-81fb-4e84-83ba-6d5d5cd775c9
+          stepCounter: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CAMPAIGN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 015ef055-e9d1-4f8a-b8c3-e1f2e4160467
+                stepCounter: f31c00a9-2ba0-4ce9-a1a8-5398eca67a39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a3610130-1e39-46c2-a61a-170930ebe07f
+          stepCounter: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f20e632a-b71f-4ed3-bd50-aa2f4ffb2a69
+                stepCounter: f31c00a9-2ba0-4ce9-a1a8-5398eca67a39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: beb99c9c-21d3-41e2-ab8f-f9b31ecfbaac
+          stepCounter: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c11c6f8d-5dc1-486c-9eda-f783dab9f1b5
+                stepCounter: f31c00a9-2ba0-4ce9-a1a8-5398eca67a39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88e65be1-23a6-46dc-8b30-6dc8ee10be8c
+          stepCounter: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a30297e-ff2e-4114-aa9b-6c3a62babf12
+                stepCounter: f31c00a9-2ba0-4ce9-a1a8-5398eca67a39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6bacf2d9-63c3-4cb4-a4a9-af68a5ffefee
+          stepCounter: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bc2d6401-0b15-4d96-a483-fe83921958c5
+                stepCounter: f31c00a9-2ba0-4ce9-a1a8-5398eca67a39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1bde38a9-e768-49d0-8be4-16e94b030800
+          stepCounter: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DEVICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aa34431d-3fac-4a56-9a88-81668b3fc394
+                stepCounter: f31c00a9-2ba0-4ce9-a1a8-5398eca67a39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0edffe7c-7abd-44e1-990a-bdedd47b5a37
+          stepCounter: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: COST
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bab2c354-dbc1-4a72-8a29-e4e9c59a4403
+                stepCounter: f31c00a9-2ba0-4ce9-a1a8-5398eca67a39
+            transform: SUM(COST)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e640485a-e74a-4f94-a36d-d264d61aed01
+          stepCounter: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: PURCHASE_VALUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ff41bce-2639-44dd-84ff-72b8f78f15c8
+                stepCounter: 9646d84d-223d-4f80-a8f1-84f927b761da
+            transform: case when sum("STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION"."CONVERSIONS_VALUE") is null then 0 else sum("STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION"."CONVERSIONS_VALUE") end
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47fd4b75-b49d-4cfd-8c6d-16790ead3d73
+          stepCounter: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1f53e781-0246-4642-affd-bf4792080d97
+                stepCounter: 1a016e89-e870-4758-823b-8c57f0e20389
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6472cabe-03e3-4ba1-95d6-43ac5ff08e58
+          stepCounter: ba088c8f-8e3e-423c-abd6-5a613a12cbec
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HOTEL_GRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a5a4d0d4-b8c3-4bc5-816f-b05a71edb78e
+                stepCounter: 1a016e89-e870-4758-823b-8c57f0e20389
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_STATS: f31c00a9-2ba0-4ce9-a1a8-5398eca67a39
+          STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION: 9646d84d-223d-4f80-a8f1-84f927b761da
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ANALYTICS_REPORTING
+            nodeName: MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_STATS
+          - locationName: STG_ACCOUNT_MAPPING
+            nodeName: STG_GADS_ACCOUNT_MAPPING
+          - locationName: STG_GOOGLE_ADS
+            nodeName: STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION
+        join:
+          joinCondition: |-
+            FROM {{ ref('ANALYTICS_REPORTING', 'MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_STATS') }} "MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_STATS"
+            LEFT JOIN {{ ref('STG_GOOGLE_ADS', 'STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION') }} "STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION"
+            ON "MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_STATS"."CUSTOMER_ID" = "STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION"."CUSTOMER_ID"
+            AND "MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_STATS"."DATE" = "STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION"."DATE"
+            AND "MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_STATS"."DEVICE" = "STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION"."DEVICE"
+            AND "MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_STATS"."ID" = "STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION"."ID"
+
+            LEFT JOIN (SELECT "NAME" ,"DISPLAY_NAME", "HOTELGRUPPE" FROM {{ ref('STG_ACCOUNT_MAPPING', 'STG_GADS_ACCOUNT_MAPPING') }}) "STG_GADS_ACCOUNT_MAPPING"
+            ON "MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_STATS"."ACCOUNT_NAME"="STG_GADS_ACCOUNT_MAPPING"."NAME"
+
+            WHERE "STG_GOOGLE_ADS__CAMPAIGN_CONVERSION_ACTION"."CONVERSION_ACTION_CATEGORY" = 'PURCHASE'
+            GROUP BY 
+               ALL
+        name: MRT_REPORTING__GOOGLE_ADS_ROAS
+        noLinkRefs: []
+  name: MRT_REPORTING__GOOGLE_ADS_ROAS
+  overrideSQL: false
+  schema: ""
+  sqlType: "5"
+  type: sql
+  version: 1
+type: Node

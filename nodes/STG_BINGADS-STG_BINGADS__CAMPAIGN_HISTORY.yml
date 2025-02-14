@@ -1,0 +1,478 @@
+fileVersion: 1
+id: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+name: STG_BINGADS__CAMPAIGN_HISTORY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_BINGADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests:
+          isDistinct: true
+        columnReference:
+          columnCounter: dbaf9782-750d-4a5b-97a5-3a371a0b82fa
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 115313ed-a0b3-4207-895f-b14160ab0d71
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 6045eee6-afc5-40de-9189-92e442413161
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: MODIFIED_TIME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 96aa8431-bd05-448c-a298-fe153e8e1e4f
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: a0bfbaad-6726-4ad8-b83e-0aef938efafe
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: BUDGET
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 70594219-551c-469c-b201-fb3a113e2921
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 23d42f7b-9718-4886-972e-14013fac764d
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PRIORITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dea058fb-29c4-45a9-8fec-cd46b5a67bff
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 9bc7bbc7-ce33-4140-a904-596073a33983
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: LANGUAGE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f66aec35-10a6-47d9-aa69-ff660ab04800
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 49804837-0e1c-47cb-8b26-033f4d60e0f1
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d24ed010-e6fb-4930-87bc-d46c307455bb
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: de02028b-2a92-4677-9a5f-063bc56c58ed
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: WEBSITE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c4de7568-9fce-4a55-9168-36b9dcd79627
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 70d6089f-bb56-46ab-8b40-df0a6faed0c2
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ACCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 706f9a32-b400-4f0e-8320-11ce408c52a5
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 1e345bc7-7e5d-40aa-80db-877cb36c464e
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: BUDGET_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 13ca99af-3569-4d9d-bd08-b8878138b2c8
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 153980b9-35c9-4b3d-9eef-b928ea5b385d
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BUDGET_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 24144314-208b-4706-a49b-406bcaf50ce7
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: ce5f843e-51e6-4330-8552-e97a777c4d13
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c940ef3d-4d0c-498c-98c0-54100cfe437a
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 849b421a-803b-4686-928f-bf8331fb89e0
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f38ba55f-3638-46f2-bf5a-5525b642322a
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: c93b022f-142e-456d-a2bd-80355e742785
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: BID_ADJUSTMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b37e7a48-de1e-41ef-a64b-971fcc5b7a94
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 8d06d186-c55c-48af-856e-ad1f1b75d847
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: BID_STRATEGY_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 76c20bdb-1987-4c1b-9c3e-11ab80e34182
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 5dfbe5fe-a7fe-4fb6-ae0f-71549d2d5c09
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: BID_STRATEGY_MAX_CPC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dcdecbdf-dcce-457c-8e05-cf7b153a9cdf
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 4b46757b-2fc3-4088-8bf8-a68538312f2a
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BID_STRATEGY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 60ec435e-1f87-4dd4-87e6-2e8a757e9c11
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: bf00c3a9-db7d-4c49-8127-dcb2ad112d08
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BID_STRATEGY_TARGET_AD_POSITION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ab80152c-1d07-48a7-a5b8-e443a8927636
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: b6de1c7a-ce8d-4d6c-a188-3c45dc0542d5
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: BID_STRATEGY_TARGET_CPA
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 224d1209-e66d-41c4-9a05-fc7d0d2d7226
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: fdd20437-7a64-4bd3-b580-1d90b8c7a17c
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BID_STRATEGY_TARGET_IMPRESSION_SHARE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 25abf071-e0d2-40ab-a389-645f67f54b46
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 93ca8394-0fff-400e-85d8-30a8c9614e3a
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: BID_STRATEGY_TARGET_ROAS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 33f04cec-cb7f-4176-8822-24f823912ae7
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 2eeba963-d522-4310-b6bc-5df632dde5d3
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BID_STRATEGY_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2b871c0-6a16-4455-bb37-46ecb39f8be7
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 0e60fae9-b7cb-4035-89c3-157436fd99dc
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: COUNTRY_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 328c0e34-94af-4454-9383-a8e2a4bfa90a
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: e4fae20d-cb98-40bb-b726-bf995f56a92e
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DOMAIN_LANGUAGE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 816f5576-7f56-439a-8b80-3584bf438705
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 829ff54f-fd1e-4e44-8b15-7069c7f71ef0
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: LOCAL_INVENTORY_ADS_ENABLED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6035c345-fca0-4d85-a4b4-1f5269a044d2
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 7c124730-a5bc-492b-9e88-0ee253428833
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fee0f021-55b2-41de-b262-e593c878bcc0
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 1d9b6221-040d-4414-902b-d0422f2ddfa8
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SUB_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 999a610d-f020-4603-b054-c0718b12f13b
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 0f75582e-4c85-4155-9dbc-a51095caef70
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: TIME_ZONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6695f717-c82a-422e-80b9-fd4d129821cf
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 3b0098b8-ab5c-455b-9c7d-dcf83b4b6aad
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: TRACKING_TEMPLATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e4084f2c-db8c-4048-83c7-9fe26b62b5a4
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+      - appliedColumnTests:
+          isDistinct: false
+        columnReference:
+          columnCounter: 0d3965f9-b85c-47aa-af38-618c86e8f6c1
+          stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a35be6ad-c8a8-46aa-885d-ebb574eb3b05
+                stepCounter: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs:
+      - isDistinct
+    sourceMapping:
+      - aliases:
+          CAMPAIGN_HISTORY: e354d8f0-3b86-4bbe-8d8d-ed7317c36c9d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_BINGADS
+            nodeName: CAMPAIGN_HISTORY
+        join:
+          joinCondition: |-
+            FROM {{ ref('RAW_BINGADS', 'CAMPAIGN_HISTORY') }} "CAMPAIGN_HISTORY"
+            qualify row_number() over (partition by "CAMPAIGN_HISTORY"."ID" order by "CAMPAIGN_HISTORY"."MODIFIED_TIME" desc) = 1
+        name: STG_BINGADS__CAMPAIGN_HISTORY
+        noLinkRefs: []
+  name: STG_BINGADS__CAMPAIGN_HISTORY
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

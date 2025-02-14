@@ -1,0 +1,88 @@
+fileVersion: 1
+id: 057024d5-e625-4ba4-a8bb-6c55feb8ff99
+name: STG_INSTAGRAM_ACCOUNT_MAPPING
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_ACCOUNT_MAPPING
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c745849-25ae-47c4-a27a-b137e2b903b8
+          stepCounter: 057024d5-e625-4ba4-a8bb-6c55feb8ff99
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 611e155e-32c0-4069-a6f3-e3762357437e
+                stepCounter: 02f9f84e-9976-46e6-86cb-e8fe9802502f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bbceb948-a390-4d11-9138-9ec4396fab2c
+          stepCounter: 057024d5-e625-4ba4-a8bb-6c55feb8ff99
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3b742dcc-9b45-4d71-bd91-2501f1dcba16
+                stepCounter: 02f9f84e-9976-46e6-86cb-e8fe9802502f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60f62d9b-a782-452a-b505-8da6b4655553
+          stepCounter: 057024d5-e625-4ba4-a8bb-6c55feb8ff99
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 35076d17-bd19-4356-aa71-08c21d3eba4d
+                stepCounter: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          GROUPING: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+          INSTAGRAM_ACCOUNTS: 02f9f84e-9976-46e6-86cb-e8fe9802502f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_ACCOUNT_MAPPING
+            nodeName: GROUPING
+          - locationName: RAW_ACCOUNT_MAPPING
+            nodeName: INSTAGRAM_ACCOUNTS
+        join:
+          joinCondition: |-
+            FROM {{ ref('RAW_ACCOUNT_MAPPING', 'INSTAGRAM_ACCOUNTS') }} "INSTAGRAM_ACCOUNTS"
+            INNER JOIN {{ ref('RAW_ACCOUNT_MAPPING', 'GROUPING') }} "GROUPING"
+            ON "INSTAGRAM_ACCOUNTS"."DISPLAY_NAME"= "GROUPING"."HOTEL_NAME"
+        name: STG_INSTAGRAM_ACCOUNT_MAPPING
+        noLinkRefs: []
+  name: STG_INSTAGRAM_ACCOUNT_MAPPING
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,179 @@
+fileVersion: 1
+id: cf8dd056-06d8-4095-809f-0ea4a2534872
+name: STG_INSTAGRAM_BUSINESS__USER_HISTORY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_INSTAGRAM_BUSINESS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cc730af7-4125-4e76-b133-d551c1f64bb1
+          stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0ce47fbb-f290-4734-97d3-452716843e62
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f5e540da-7817-4f67-a0e0-01338b3e39df
+          stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b61dd385-9f91-46e8-ac57-36f30795fbd7
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d05b076-d67c-48b3-a186-dcde82087060
+          stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IG_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 76f26e6e-d7d5-4c2a-ab09-1a9aa98a82fa
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37dbd491-d351-4aae-a6a8-41928a8cfd2b
+          stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FOLLOWS_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4acac774-a035-42e9-b673-8fc2502fba0b
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37596264-9463-4150-969e-6622f5851f3f
+          stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FOLLOWERS_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 22305209-f0a7-4734-9433-9f1d6b9d6216
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6203bb4c-c7ca-4fa8-a6a8-1f78fd20e44d
+          stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: MEDIA_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0bb51e81-28dd-48e2-a698-0f287d4592d8
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 53115b0f-8578-4e9c-a681-98347c49e8c2
+          stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8324903d-c799-4285-b9d2-542b90c2a562
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72421d40-2e3a-48a9-983d-01971c535372
+          stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: USERNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 63caf567-d6f2-4637-89f0-496249d18cc1
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 51138164-df26-4c86-84eb-d2be5e3fab4e
+          stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: WEBSITE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bf06c058-ef64-48aa-93c6-be6aa1f74d4f
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f91c0dac-2703-4ab1-bebd-14aac27e893d
+          stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 59592fbb-3d01-4e3d-8483-f610d32c5469
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_INSTAGRAM_BUSINESS
+            nodeName: USER_HISTORY
+        join:
+          joinCondition: FROM {{ ref('RAW_INSTAGRAM_BUSINESS', 'USER_HISTORY') }} "USER_HISTORY"
+        name: STG_INSTAGRAM_BUSINESS__USER_HISTORY
+        noLinkRefs: []
+  name: STG_INSTAGRAM_BUSINESS__USER_HISTORY
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

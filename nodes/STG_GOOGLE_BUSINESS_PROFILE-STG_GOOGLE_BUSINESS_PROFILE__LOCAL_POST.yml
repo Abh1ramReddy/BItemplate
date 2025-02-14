@@ -1,0 +1,403 @@
+fileVersion: 1
+id: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+name: STG_GOOGLE_BUSINESS_PROFILE__LOCAL_POST
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_GOOGLE_BUSINESS_PROFILE
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a14aef92-a6e0-42ff-9d69-9ed3e008d897
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7c8b639a-1e2e-41bf-9f39-26248c248c59
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74464ca6-010c-48c8-9eca-09eae5a7e919
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: LOCATION_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eaa79520-c739-4534-9179-f24cac1c97e7
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b54a69a-e617-4359-9df3-c3f8940a4ad0
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d42a1e0f-3eb9-4893-9578-0b55aee1323d
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e657de73-439e-4dec-b232-470a3678bd4c
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 803bd583-348b-4173-b9c2-d7b3a45639f4
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c256757a-4c02-4413-b7f7-541a7714f5c0
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e0cba390-39bd-49b7-9f08-f30baed8753c
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0cd3abf-93b0-48eb-9171-6da6aa5d825f
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CALL_TO_ACTION_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ef21948-90d2-49e7-b172-3476087c3ae2
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6270da67-1661-43f5-ba02-c74a9c82771d
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_SCHEDULE_START_DATE_DAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 46de917e-c548-4992-ad8e-5d83c01f4e3a
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1cfa4c0e-2fd6-4d94-acdd-536ac4e0f893
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_SCHEDULE_START_TIME_HOURS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5368cdf6-d467-4678-bbc4-ec6214d7bcb3
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 78a7338c-a8fe-4e45-b8ac-a121cba052e9
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: TOPIC_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cc42726c-2d5a-40a5-874c-14c3583781fd
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b48fcdbd-a997-49b5-ac0a-98e7262a674f
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: LANGUAGE_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 92ae0be2-29e6-43df-afcc-4ce41f7e89bb
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5b85848-519f-4927-a1b4-4debd726077d
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: UPDATE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 045fe8df-4dc8-4547-b68b-062a7010282a
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0cec875c-7054-4dd2-8676-d55b0c9821b2
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CALL_TO_ACTION_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 21839c88-b4c1-4398-851c-916d53337d0a
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a40dd318-b830-4583-98c0-2a34a3b78a12
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_SCHEDULE_END_DATE_YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2697f22a-66e0-4e72-80ec-c4f2fb27ddfc
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d7dc0b3-4c83-42da-9be4-b18994f22951
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ac49e385-d46a-4769-b3a8-0757f92d3d10
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09b78b38-8a2f-4bcb-bbad-8bc9e4c3d367
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_SCHEDULE_END_TIME_SECONDS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 63d7c949-6b68-4573-ab8d-dafcf7768052
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 056164a7-2763-4009-91ad-154c4f61561e
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(1024)
+        description: ""
+        name: SUMMARY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2cba579-ef99-4a2d-a3b6-17ce56370bfb
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 036c6da8-bb72-4680-941f-bf0af57c485b
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_SCHEDULE_END_DATE_DAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 59593dbe-7804-4286-a481-786a50d94c26
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 40859911-ff2b-4e22-abd0-1d580b195aa0
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: CREATE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1091afec-117f-47e7-aa99-0da088038c50
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 710b469e-5f5d-42a3-8c83-abec6f9f44d0
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_SCHEDULE_START_DATE_MONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b4a9138f-cbe4-4758-b315-a036feefa007
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 666ad630-2cac-4b81-9f8e-1c6af867e208
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: EVENT_TITLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0a2eca0d-fa6d-44b4-ae8b-921d19e735a9
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2b236f7-5c73-4c16-9201-7355cf7a2676
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_SCHEDULE_END_TIME_MINUTES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 110aa97f-7975-4fe5-8841-7df01d312ae9
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e0ac4b7e-521f-4b66-b842-bfd654380250
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_SCHEDULE_END_TIME_HOURS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 05c8ae97-c585-44f5-8821-2af27ea14bf3
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fbd9bf2b-ad05-4c3e-a0d9-ae3d30c076c6
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_SCHEDULE_START_DATE_YEAR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 01592491-649c-49fc-90da-e2b9d90b42b9
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 36819bc2-1d01-4a47-9400-e00045bbd812
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: OFFER_REDEEM_ONLINE_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 76b53842-5f6b-4173-8d75-0b44e0afd216
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 07723998-02cb-41ff-a471-f6b1ba9c78df
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SEARCH_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ca6c334-6f44-4e6f-b443-97ab54dd6dfb
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 940bfbb5-997f-4aeb-8053-6fc05b38d48e
+          stepCounter: 50c36b19-56a1-4ec9-a818-ac8a1ae5a1b3
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_SCHEDULE_END_DATE_MONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 07794954-a2eb-4a23-8a06-bc6d10f07483
+                stepCounter: 71fd2f06-03d5-433b-9fc2-28a2312b9210
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_GOOGLE_BUSINESS_PROFILE
+            nodeName: LOCAL_POST
+        join:
+          joinCondition: FROM {{ ref('RAW_GOOGLE_BUSINESS_PROFILE', 'LOCAL_POST') }} "LOCAL_POST"
+        name: STG_GOOGLE_BUSINESS_PROFILE__LOCAL_POST
+        noLinkRefs: []
+  name: STG_GOOGLE_BUSINESS_PROFILE__LOCAL_POST
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,88 @@
+fileVersion: 1
+id: 1a016e89-e870-4758-823b-8c57f0e20389
+name: STG_GADS_ACCOUNT_MAPPING
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_ACCOUNT_MAPPING
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1be4539b-42e2-4f1d-b2f3-8d20baa879e6
+          stepCounter: 1a016e89-e870-4758-823b-8c57f0e20389
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1b711a7b-9367-4e2c-91d7-35c51d7e1de4
+                stepCounter: f1288560-2bf4-4eaf-9a1f-733072ec295d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f53e781-0246-4642-affd-bf4792080d97
+          stepCounter: 1a016e89-e870-4758-823b-8c57f0e20389
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d717f9d1-c0fa-452e-8bda-e7f797bf4708
+                stepCounter: f1288560-2bf4-4eaf-9a1f-733072ec295d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a5a4d0d4-b8c3-4bc5-816f-b05a71edb78e
+          stepCounter: 1a016e89-e870-4758-823b-8c57f0e20389
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 35076d17-bd19-4356-aa71-08c21d3eba4d
+                stepCounter: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          GADS_ACCOUNTS: f1288560-2bf4-4eaf-9a1f-733072ec295d
+          GROUPING: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_ACCOUNT_MAPPING
+            nodeName: GADS_ACCOUNTS
+          - locationName: RAW_ACCOUNT_MAPPING
+            nodeName: GROUPING
+        join:
+          joinCondition: |-
+            FROM {{ ref('RAW_ACCOUNT_MAPPING', 'GADS_ACCOUNTS') }} "GADS_ACCOUNTS"
+            INNER JOIN {{ ref('RAW_ACCOUNT_MAPPING', 'GROUPING') }} "GROUPING"
+            ON "GADS_ACCOUNTS"."DISPLAY_NAME" = "GROUPING"."HOTEL_NAME"
+        name: STG_GADS_ACCOUNT_MAPPING
+        noLinkRefs: []
+  name: STG_GADS_ACCOUNT_MAPPING
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,172 @@
+fileVersion: 1
+id: 64e2e4f1-3312-45b4-a4cd-d766b3b96c68
+name: ESTIMATED_RECOLLECTION
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_FACEBOOK_ADS
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa7da6cd-d66f-4eb4-a49c-b0026f66cc9e
+          stepCounter: 64e2e4f1-3312-45b4-a4cd-d766b3b96c68
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ADSET_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2849219a-ad3f-4783-9d35-83a19669b494
+          stepCounter: 64e2e4f1-3312-45b4-a4cd-d766b3b96c68
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: DATE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b07950fc-0777-45b8-a84b-7ff59923e3d6
+          stepCounter: 64e2e4f1-3312-45b4-a4cd-d766b3b96c68
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef917cfa-f13c-4f6d-93f7-54d12723f66b
+          stepCounter: 64e2e4f1-3312-45b4-a4cd-d766b3b96c68
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ACCOUNT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43b32375-258a-4a05-9bb8-54a58b125bdf
+          stepCounter: 64e2e4f1-3312-45b4-a4cd-d766b3b96c68
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: CAMPAIGN_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bac1c06d-8c93-492b-981a-a1d0a2a6050f
+          stepCounter: 64e2e4f1-3312-45b4-a4cd-d766b3b96c68
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: ESTIMATED_AD_RECALLERS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6de445a-e385-4226-a62b-63b7e491a566
+          stepCounter: 64e2e4f1-3312-45b4-a4cd-d766b3b96c68
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SPEND
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5fb5af1b-bea4-4af6-b109-17f96b679577
+          stepCounter: 64e2e4f1-3312-45b4-a4cd-d766b3b96c68
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_FACEBOOK_ADS', 'ESTIMATED_RECOLLECTION') }}
+  name: ESTIMATED_RECOLLECTION
+  schema: ""
+  sqlType: Source
+  table: ESTIMATED_RECOLLECTION
+  type: sourceInput
+  version: 1
+type: Node

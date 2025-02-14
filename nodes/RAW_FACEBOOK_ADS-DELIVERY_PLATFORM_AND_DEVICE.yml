@@ -1,0 +1,324 @@
+fileVersion: 1
+id: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+name: DELIVERY_PLATFORM_AND_DEVICE
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_FACEBOOK_ADS
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 52249436-817c-4475-849b-d23e1f62bedf
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ACCOUNT_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86b302fd-c667-47ba-b466-72c221a6f8eb
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: DATE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca9ec831-c08a-4d3e-b796-298a881d5cde
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea0dc248-0605-420b-8b38-1f45fad873d7
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: DEVICE_PLATFORM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ff0ac53f-f3a0-4bfb-a554-edc301e7ce6f
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: PUBLISHER_PLATFORM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c9d6cdc-9e88-4130-b3cf-b3bb2814c426
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b23c046f-7ecc-4ff9-a68c-42a271d02405
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: INLINE_LINK_CLICKS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83838b8a-7516-4d73-b30e-91d85cd1a631
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: REACH
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e08ca42c-19cf-471f-bd7c-d53722b51ee7
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: COST_PER_INLINE_LINK_CLICK
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd61b43d-1f54-46a4-8bbf-de440558bf45
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: CPC
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd55106b-1084-4023-9068-d6c0c452a77e
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: CPM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d2dedd4b-08ff-4b2e-90ac-894882636372
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: CTR
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1390048-955a-4446-9304-5cdc8e9c3d1b
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: FREQUENCY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7e303933-22b4-41ff-81ea-e7ba653c2997
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SPEND
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1fcdebc6-75f4-4283-97e9-73d1c1a91b08
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: INLINE_LINK_CLICK_CTR
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 94b54cc6-d354-4131-83e6-fb75c646490d
+          stepCounter: 9b365ba9-f308-43bd-bf47-1bdd4eecd02b
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_FACEBOOK_ADS', 'DELIVERY_PLATFORM_AND_DEVICE') }}
+  name: DELIVERY_PLATFORM_AND_DEVICE
+  schema: ""
+  sqlType: Source
+  table: DELIVERY_PLATFORM_AND_DEVICE
+  type: sourceInput
+  version: 1
+type: Node

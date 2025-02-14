@@ -1,0 +1,120 @@
+fileVersion: 1
+id: bffef34d-0f35-44ce-b848-33b56095e04c
+name: STG_BASIC_AD_SET_ACTIONS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_FACEBOOK_ADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 59906e33-3a0b-4e3f-a488-7019d89f7f81
+          stepCounter: bffef34d-0f35-44ce-b848-33b56095e04c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ADSET_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2a4e627-5ec1-48d7-90eb-202d5c305b02
+                stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 546a332f-0b1d-47d3-8174-01eeff04dc21
+          stepCounter: bffef34d-0f35-44ce-b848-33b56095e04c
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4620d7e9-5872-494f-81bd-ef9e568c7f91
+                stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b683aa81-90b8-4b06-8984-55093545e530
+          stepCounter: bffef34d-0f35-44ce-b848-33b56095e04c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6d241dac-b1a7-41f7-ba07-1fe514484e95
+                stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6dceb0b3-3153-42f6-a8d3-0f9eaed8a377
+          stepCounter: bffef34d-0f35-44ce-b848-33b56095e04c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACTION_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e4363396-f571-4c23-bde1-4ff1bc0b6f73
+                stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6743346-5652-49c8-a75d-36c8533c42aa
+          stepCounter: bffef34d-0f35-44ce-b848-33b56095e04c
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: VALUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8ac1df27-0c72-44b4-82b5-58ba6ee03683
+                stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('STG_FACEBOOK_ADS', 'STG_BASIC_AD_SET_ACTIONS')}} AS (
+            		SELECT 
+             "ADSET_ID" AS "ADSET_ID",
+             "DATE" AS "DATE",
+             "_FIVETRAN_ID" AS "_FIVETRAN_ID",
+
+             "ACTION_TYPE" AS "ACTION_TYPE",
+             "VALUE" AS "VALUE"
+             FROM {{ ref('RAW_FACEBOOK_ADS', 'BASIC_AD_SET_ACTIONS') }}
+            	)
+        dependencies:
+          - locationName: RAW_FACEBOOK_ADS
+            nodeName: BASIC_AD_SET_ACTIONS
+        join:
+          joinCondition: FROM {{ ref('RAW_FACEBOOK_ADS', 'BASIC_AD_SET_ACTIONS') }} "BASIC_AD_SET_ACTIONS"
+        name: STG_BASIC_AD_SET_ACTIONS
+        noLinkRefs: []
+  name: STG_BASIC_AD_SET_ACTIONS
+  overrideSQL: true
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

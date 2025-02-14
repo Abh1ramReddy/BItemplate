@@ -1,0 +1,126 @@
+fileVersion: 1
+id: e6487322-37dc-4418-9c8e-7fba2d73985e
+name: INT_INSTAGRAM_BUSINESS__UNIQUE_USER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 57e32a69-a95a-4eea-8bec-99067e4f5ad6
+          stepCounter: e6487322-37dc-4418-9c8e-7fba2d73985e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f5e540da-7817-4f67-a0e0-01338b3e39df
+                stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0166260-4dd4-4677-a5e2-6379aad5f68c
+          stepCounter: e6487322-37dc-4418-9c8e-7fba2d73985e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IG_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1d05b076-d67c-48b3-a186-dcde82087060
+                stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96bb5fb0-5cce-4b88-938e-53d00bc7abea
+          stepCounter: e6487322-37dc-4418-9c8e-7fba2d73985e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FOLLOWS_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37dbd491-d351-4aae-a6a8-41928a8cfd2b
+                stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+            transform: MAX("STG_INSTAGRAM_BUSINESS__USER_HISTORY"."FOLLOWS_COUNT")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c3edb76d-6fd0-4ebb-b5ab-85d9b30d7362
+          stepCounter: e6487322-37dc-4418-9c8e-7fba2d73985e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FOLLOWERS_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37596264-9463-4150-969e-6622f5851f3f
+                stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+            transform: MAX("STG_INSTAGRAM_BUSINESS__USER_HISTORY"."FOLLOWERS_COUNT")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48654089-a778-4920-a2da-c13718a1e58a
+          stepCounter: e6487322-37dc-4418-9c8e-7fba2d73985e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 53115b0f-8578-4e9c-a681-98347c49e8c2
+                stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 84c2c3b0-9b51-4200-9e90-fb0a23651a83
+          stepCounter: e6487322-37dc-4418-9c8e-7fba2d73985e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: USERNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 72421d40-2e3a-48a9-983d-01971c535372
+                stepCounter: cf8dd056-06d8-4095-809f-0ea4a2534872
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_INSTAGRAM_BUSINESS__USER_HISTORY: cf8dd056-06d8-4095-809f-0ea4a2534872
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_INSTAGRAM_BUSINESS
+            nodeName: STG_INSTAGRAM_BUSINESS__USER_HISTORY
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_INSTAGRAM_BUSINESS', 'STG_INSTAGRAM_BUSINESS__USER_HISTORY') }} "STG_INSTAGRAM_BUSINESS__USER_HISTORY"
+            GROUP BY "ID", "IG_ID", "NAME", "USERNAME"
+        name: INT_INSTAGRAM_BUSINESS__UNIQUE_USER
+        noLinkRefs: []
+  name: INT_INSTAGRAM_BUSINESS__UNIQUE_USER
+  overrideSQL: false
+  schema: ""
+  sqlType: "2"
+  type: sql
+  version: 1
+type: Node

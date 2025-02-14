@@ -1,0 +1,188 @@
+fileVersion: 1
+id: d674ba8b-8796-4629-8c18-8592a70a717a
+name: MRT_REPORTING__FBADS_VIDEO_PLAYS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 64d5b147-2597-4da1-bcb4-1ec11421d966
+          stepCounter: d674ba8b-8796-4629-8c18-8592a70a717a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 45d9bd1c-cad4-4f80-9a6b-7a492b9c91e0
+                stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4467bddc-d067-45ba-a65b-000777cb30cc
+          stepCounter: d674ba8b-8796-4629-8c18-8592a70a717a
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ff510667-82fb-4088-b86b-c7ad99385526
+                stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6cd61518-57f2-4e2a-8c7e-75c301a493d2
+          stepCounter: d674ba8b-8796-4629-8c18-8592a70a717a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: VIEW_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d23c8717-551b-4aef-9bb7-60ed164a9ea9
+                stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d9a95d96-eff0-479b-a920-903ac97fa598
+          stepCounter: d674ba8b-8796-4629-8c18-8592a70a717a
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: VALUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bfa02e85-a7b8-4b7e-90b0-2639d527983c
+                stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9847de69-c2b3-4e63-8161-19da71161041
+          stepCounter: d674ba8b-8796-4629-8c18-8592a70a717a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACTION_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0e9def34-ff22-45dd-84ae-fb9df20838f0
+                stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b6334ae-22c1-48e6-9c00-8c997fa380cd
+          stepCounter: d674ba8b-8796-4629-8c18-8592a70a717a
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4a073dba-8acb-4266-b287-1aa61acd7976
+                stepCounter: 66c05d14-0ef0-425b-9673-38b1bd401739
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8a8f96a-a444-4aa1-b0a2-66d72feab493
+          stepCounter: d674ba8b-8796-4629-8c18-8592a70a717a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 817ceb9d-310a-473f-80de-41097a3e4fe5
+                stepCounter: 66c05d14-0ef0-425b-9673-38b1bd401739
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2395be2e-7fc2-4d3e-8c8c-cd20f548fb44
+          stepCounter: d674ba8b-8796-4629-8c18-8592a70a717a
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a16325f7-c678-4509-a7ad-20f1dad5e9d9
+                stepCounter: abeb00e0-8c73-4841-86f2-6ca1928da0ac
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed4f3897-9ae8-4c5c-8ac2-e8d50541e29e
+          stepCounter: d674ba8b-8796-4629-8c18-8592a70a717a
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2fbac4e5-14dd-4220-83a5-5934970037a6
+                stepCounter: abeb00e0-8c73-4841-86f2-6ca1928da0ac
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ACCOUNT_HISTORY: 66c05d14-0ef0-425b-9673-38b1bd401739
+          STG_ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS: 5e1fe131-ae44-40ee-82f3-0143798125b0
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_ACCOUNT_MAPPING
+            nodeName: STG_FBADS_ACCOUNT_MAPPING
+          - locationName: STG_FACEBOOK_ADS
+            nodeName: STG_ACCOUNT_HISTORY
+          - locationName: STG_FACEBOOK_ADS
+            nodeName: STG_ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_FACEBOOK_ADS', 'STG_ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS') }} "STG_ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS"
+            LEFT JOIN {{ ref('STG_FACEBOOK_ADS', 'STG_ACCOUNT_HISTORY') }} "STG_ACCOUNT_HISTORY"
+            ON "STG_ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS"."ACCOUNT_ID" = "STG_ACCOUNT_HISTORY"."ID"
+            LEFT JOIN (SELECT "NAME","DISPLAY_NAME", "HOTELGRUPPE" FROM {{ ref('STG_ACCOUNT_MAPPING', 'STG_FBADS_ACCOUNT_MAPPING') }}) "STG_FBADS_ACCOUNT_MAPPING"
+            ON "STG_ACCOUNT_HISTORY"."NAME"="STG_FBADS_ACCOUNT_MAPPING"."NAME"
+        name: MRT_REPORTING__FBADS_VIDEO_PLAYS
+        noLinkRefs: []
+  name: MRT_REPORTING__FBADS_VIDEO_PLAYS
+  overrideSQL: false
+  schema: ""
+  sqlType: "5"
+  type: sql
+  version: 1
+type: Node

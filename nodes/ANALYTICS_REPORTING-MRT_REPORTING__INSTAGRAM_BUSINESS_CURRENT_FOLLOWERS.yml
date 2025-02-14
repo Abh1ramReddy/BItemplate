@@ -1,0 +1,209 @@
+fileVersion: 1
+id: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+name: MRT_REPORTING__INSTAGRAM_BUSINESS_CURRENT_FOLLOWERS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bdce4a67-0c40-4c77-a355-1456316b9547
+          stepCounter: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09628656-b110-4e23-9a3b-0353dd803224
+                stepCounter: b1625eba-cca8-4e06-95c3-8c9a5f9a0c2b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f8932b0-5ed9-43e1-899d-dffb1de69745
+          stepCounter: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IG_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b7c07800-8f8a-4510-87cb-287a1eed0523
+                stepCounter: b1625eba-cca8-4e06-95c3-8c9a5f9a0c2b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3689e4f0-4156-440a-982b-7aaa2145a95f
+          stepCounter: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FOLLOWS_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ef5f757-db59-4ce2-a271-e84f5d1b6e20
+                stepCounter: b1625eba-cca8-4e06-95c3-8c9a5f9a0c2b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e94b7db-6be9-4f92-81dc-efec88e446d3
+          stepCounter: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FOLLOWERS_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f4924e82-1ec9-41e4-a0f0-2d0d1681fe0f
+                stepCounter: b1625eba-cca8-4e06-95c3-8c9a5f9a0c2b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 29dde6b3-f5ff-44aa-ba69-0d734c1386bb
+          stepCounter: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: MEDIA_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 53b1b586-6dd8-4df2-9288-7a48b5cc649a
+                stepCounter: b1625eba-cca8-4e06-95c3-8c9a5f9a0c2b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f683611-472f-445f-9e87-155de93556b4
+          stepCounter: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: USERNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c91d04cd-0d03-4729-83a4-9664885e2774
+                stepCounter: b1625eba-cca8-4e06-95c3-8c9a5f9a0c2b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7420321-0aff-4b79-948f-e6cb15b02510
+          stepCounter: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: WEBSITE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3e483fb9-64c6-4d27-a896-6b95982edea3
+                stepCounter: b1625eba-cca8-4e06-95c3-8c9a5f9a0c2b
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88894c39-896f-401d-b556-41d7c88a387c
+          stepCounter: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HOTEL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7287c38c-c1d3-4f8f-bc80-320a15525c58
+                stepCounter: f9cc494b-2606-43e5-a505-13082b8f904c
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47bb5273-b542-44d9-9349-12bb23f526fc
+          stepCounter: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c745849-25ae-47c4-a27a-b137e2b903b8
+                stepCounter: 057024d5-e625-4ba4-a8bb-6c55feb8ff99
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67355286-47af-42d6-9923-78303ea40fd9
+          stepCounter: 54682c56-2a5c-48d9-ade2-6a8f9e667fc8
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 60f62d9b-a782-452a-b505-8da6b4655553
+                stepCounter: 057024d5-e625-4ba4-a8bb-6c55feb8ff99
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          INT_INSTAGRAM_BUSINESS__LATEST_USER: b1625eba-cca8-4e06-95c3-8c9a5f9a0c2b
+          STG_INSTAGRAM_BUSINESS__INSTAGRAM_USERS: f9cc494b-2606-43e5-a505-13082b8f904c
+        customSQL:
+          customSQL: |+
+
+        dependencies:
+          - locationName: ANALYTICS_REPORTING
+            nodeName: INT_INSTAGRAM_BUSINESS__LATEST_USER
+          - locationName: STG_ACCOUNT_MAPPING
+            nodeName: STG_INSTAGRAM_ACCOUNT_MAPPING
+          - locationName: STG_INSTAGRAM_BUSINESS
+            nodeName: STG_INSTAGRAM_BUSINESS__INSTAGRAM_USERS
+        join:
+          joinCondition: |-
+            FROM {{ ref('ANALYTICS_REPORTING', 'INT_INSTAGRAM_BUSINESS__LATEST_USER') }} "INT_INSTAGRAM_BUSINESS__LATEST_USER"
+            LEFT JOIN {{ ref('STG_INSTAGRAM_BUSINESS', 'STG_INSTAGRAM_BUSINESS__INSTAGRAM_USERS') }} "STG_INSTAGRAM_BUSINESS__INSTAGRAM_USERS"
+            ON "INT_INSTAGRAM_BUSINESS__LATEST_USER".ID = "STG_INSTAGRAM_BUSINESS__INSTAGRAM_USERS".ID
+            LEFT JOIN (SELECT "NAME","DISPLAY_NAME", "HOTELGRUPPE" FROM {{ ref('STG_ACCOUNT_MAPPING', 'STG_INSTAGRAM_ACCOUNT_MAPPING') }}) "STG_INSTAGRAM_ACCOUNT_MAPPING"
+            ON "STG_INSTAGRAM_BUSINESS__INSTAGRAM_USERS"."NAME"="STG_INSTAGRAM_ACCOUNT_MAPPING"."NAME"
+        name: MRT_REPORTING__INSTAGRAM_BUSINESS_CURRENT_FOLLOWERS
+        noLinkRefs: []
+  name: MRT_REPORTING__INSTAGRAM_BUSINESS_CURRENT_FOLLOWERS
+  overrideSQL: false
+  schema: ""
+  sqlType: "5"
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,172 @@
+fileVersion: 1
+id: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+name: IMPRESSION_SHARE
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_GOOGLE_ADS
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1bce8784-27b0-4081-8bc7-8bf110975645
+          stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: CUSTOMER_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c93067a-d6f1-46ad-9891-987dbc2166c0
+          stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: DATE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4755952-5153-4169-85fa-faa42a59bd56
+          stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebd79c66-0f6c-4988-a2a9-925296d663c1
+          stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd32f126-ce21-43e7-8b7c-6091489dc1db
+          stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SEARCH_IMPRESSION_SHARE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91ac1fac-f37f-41e7-af14-a71e514519b9
+          stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SEARCH_BUDGET_LOST_IMPRESSION_SHARE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a00f44e-9abc-4491-9683-4e8c943518de
+          stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: SEARCH_TOP_IMPRESSION_SHARE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e7c47a9-ee6e-40fb-90d1-7c65609409c2
+          stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_GOOGLE_ADS', 'IMPRESSION_SHARE') }}
+  name: IMPRESSION_SHARE
+  schema: ""
+  sqlType: Source
+  table: IMPRESSION_SHARE
+  type: sourceInput
+  version: 1
+type: Node

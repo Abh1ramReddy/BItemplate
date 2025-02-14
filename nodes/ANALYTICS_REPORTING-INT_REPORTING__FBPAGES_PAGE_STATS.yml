@@ -1,0 +1,144 @@
+fileVersion: 1
+id: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+name: INT_REPORTING__FBPAGES_PAGE_STATS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 215f1442-fac7-4041-a953-1cb457417ece
+          stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 29df7b95-8344-4fd4-a7e1-6fdb581cd82e
+                stepCounter: e0c39bf4-a839-4f2d-9733-9147642f1c08
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83aa8ad3-81d0-4caf-b738-dde9a7208a48
+          stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 62e85ee9-b8be-414c-94e6-19e5092270dd
+                stepCounter: e0c39bf4-a839-4f2d-9733-9147642f1c08
+            transform: SUM(PAGE_IMPRESSIONS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c79c33cc-4ef1-4ea5-8306-b86499161e82
+          stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: LIKES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 970cfe58-6e08-4539-bac0-5e107eac76f0
+                stepCounter: e0c39bf4-a839-4f2d-9733-9147642f1c08
+            transform: SUM(PAGE_ACTIONS_POST_REACTIONS_LIKE_TOTAL)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 33574e37-9784-4adc-894e-a831db8064ac
+          stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: FOLLOWERS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b93a6202-8075-46f1-84b2-9c95a0c03e78
+                stepCounter: e0c39bf4-a839-4f2d-9733-9147642f1c08
+            transform: SUM(PAGE_FANS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71a1b5b6-1037-4039-8f99-8148d80baeb7
+          stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 75cc4fca-2ed2-4032-b3ea-648270b36c33
+                stepCounter: e0c39bf4-a839-4f2d-9733-9147642f1c08
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a4eaf51-354a-4a34-a1ac-65e2f8d58892
+          stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: HOTEL_GRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37823555-63e1-4ddb-af42-dcc32669d7e8
+                stepCounter: e0c39bf4-a839-4f2d-9733-9147642f1c08
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 70c722f2-61f6-429d-ad9b-07b57dae16dd
+          stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PLATFORM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'Facebook Pages'"
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          MRT_REPORTING__FBPAGES_PAGE_STATS: e0c39bf4-a839-4f2d-9733-9147642f1c08
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ANALYTICS_REPORTING
+            nodeName: MRT_REPORTING__FBPAGES_PAGE_STATS
+        join:
+          joinCondition: FROM {{ ref('ANALYTICS_REPORTING', 'MRT_REPORTING__FBPAGES_PAGE_STATS') }} "MRT_REPORTING__FBPAGES_PAGE_STATS" GROUP BY ALL
+        name: INT_REPORTING__FBPAGES_PAGE_STATS
+        noLinkRefs: []
+  name: INT_REPORTING__FBPAGES_PAGE_STATS
+  overrideSQL: false
+  schema: ""
+  sqlType: "2"
+  type: sql
+  version: 1
+type: Node

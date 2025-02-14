@@ -1,0 +1,151 @@
+fileVersion: 1
+id: 9e092a42-aebc-4004-a746-43e1262a767f
+name: STG_GOOGLE_ADS__IMPRESSION_SHARE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_GOOGLE_ADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11141177-562e-4e85-9e63-520149884ab0
+          stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1bce8784-27b0-4081-8bc7-8bf110975645
+                stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3c7313fc-b039-486b-839b-e95b69576b9e
+          stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c93067a-d6f1-46ad-9891-987dbc2166c0
+                stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2bf2dc65-a688-4676-a1a6-66dbf5a8c6cf
+          stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f4755952-5153-4169-85fa-faa42a59bd56
+                stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d7d0e50-8147-4aa2-a47a-b7337d8d406c
+          stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ebd79c66-0f6c-4988-a2a9-925296d663c1
+                stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 51807ea2-d3d8-48d2-8eb2-b91ccb471075
+          stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: SEARCH_IMPRESSION_SHARE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd32f126-ce21-43e7-8b7c-6091489dc1db
+                stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03883b06-ece8-4ce5-8261-5f93c06520fc
+          stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: SEARCH_BUDGET_LOST_IMPRESSION_SHARE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 91ac1fac-f37f-41e7-af14-a71e514519b9
+                stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a08ef1c3-acf8-4fff-89d1-27498c14baa8
+          stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: SEARCH_TOP_IMPRESSION_SHARE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8a00f44e-9abc-4491-9683-4e8c943518de
+                stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed1e0084-504f-431f-b30f-5f17ea76036f
+          stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e7c47a9-ee6e-40fb-90d1-7c65609409c2
+                stepCounter: c5ab6a75-4b92-4776-b1bd-a6998d76a622
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_GOOGLE_ADS
+            nodeName: IMPRESSION_SHARE
+        join:
+          joinCondition: FROM {{ ref('RAW_GOOGLE_ADS', 'IMPRESSION_SHARE') }} "IMPRESSION_SHARE"
+        name: STG_GOOGLE_ADS__IMPRESSION_SHARE
+        noLinkRefs: []
+  name: STG_GOOGLE_ADS__IMPRESSION_SHARE
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

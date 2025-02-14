@@ -1,0 +1,96 @@
+fileVersion: 1
+id: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+name: GROUPING
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_ACCOUNT_MAPPING
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6ef81a52-3511-49c7-a0c6-d5a365b0164b
+          stepCounter: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: _ROW
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 06cf06b1-4a3e-4e95-875f-2a5dcbf862a9
+          stepCounter: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3762c33f-cc76-43ac-adc0-eeb072c9f18f
+          stepCounter: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: HOTEL_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 35076d17-bd19-4356-aa71-08c21d3eba4d
+          stepCounter: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: HOTELGRUPPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_ACCOUNT_MAPPING', 'GROUPING') }}
+  name: GROUPING
+  schema: ""
+  sqlType: Source
+  table: GROUPING
+  type: sourceInput
+  version: 1
+type: Node

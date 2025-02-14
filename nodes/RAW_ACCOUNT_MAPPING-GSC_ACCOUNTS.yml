@@ -1,0 +1,96 @@
+fileVersion: 1
+id: f343c440-5681-4213-9da5-f8e858b0539c
+name: GSC_ACCOUNTS
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_ACCOUNT_MAPPING
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 49f1bed5-7955-410e-a7c2-2846af85ded7
+          stepCounter: f343c440-5681-4213-9da5-f8e858b0539c
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: _ROW
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 935c6503-df3c-4ec3-aa98-a8328f391ae2
+          stepCounter: f343c440-5681-4213-9da5-f8e858b0539c
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97b988ae-02a2-4762-869d-d8d8c718492c
+          stepCounter: f343c440-5681-4213-9da5-f8e858b0539c
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: SITE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 475ce471-202b-4db7-9125-e55b221241c0
+          stepCounter: f343c440-5681-4213-9da5-f8e858b0539c
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_ACCOUNT_MAPPING', 'GSC_ACCOUNTS') }}
+  name: GSC_ACCOUNTS
+  schema: ""
+  sqlType: Source
+  table: GSC_ACCOUNTS
+  type: sourceInput
+  version: 1
+type: Node

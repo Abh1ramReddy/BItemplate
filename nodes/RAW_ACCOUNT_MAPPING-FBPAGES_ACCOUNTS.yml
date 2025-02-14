@@ -1,0 +1,96 @@
+fileVersion: 1
+id: 51b47002-0a59-40d2-9f47-58c5264806b9
+name: FBPAGES_ACCOUNTS
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_ACCOUNT_MAPPING
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dbb7be5a-1273-409d-8452-40807dc3a57f
+          stepCounter: 51b47002-0a59-40d2-9f47-58c5264806b9
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: _ROW
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bb655a92-638b-4490-a825-92ea77323cf6
+          stepCounter: 51b47002-0a59-40d2-9f47-58c5264806b9
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1e6b177-6ac7-4336-a087-ab1a91b971b2
+          stepCounter: 51b47002-0a59-40d2-9f47-58c5264806b9
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cedc89d1-4773-4d7f-8d73-e23724cacea3
+          stepCounter: 51b47002-0a59-40d2-9f47-58c5264806b9
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_ACCOUNT_MAPPING', 'FBPAGES_ACCOUNTS') }}
+  name: FBPAGES_ACCOUNTS
+  schema: ""
+  sqlType: Source
+  table: FBPAGES_ACCOUNTS
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,62 @@
+fileVersion: 1
+id: "9"
+mappingDefinitions:
+  ANALYTICS_REPORTING:
+    database: PROD_ANALYTICS
+    schema: MARKETING_REPORTING
+  RAW_ACCOUNT_MAPPING:
+    database: RAW
+    schema: ACCOUNT_MAPPING
+  RAW_BINGADS:
+    database: RAW
+    schema: BINGADS
+  RAW_FACEBOOK_ADS:
+    database: RAW
+    schema: FACEBOOK_ADS
+  RAW_FACEBOOK_PAGES:
+    database: RAW
+    schema: FACEBOOK_PAGES
+  RAW_GOOGLE_ADS:
+    database: RAW
+    schema: GOOGLE_ADS
+  RAW_GOOGLE_ANALYTICS:
+    database: RAW
+    schema: GOOGLE_ANALYTICS_4
+  RAW_GOOGLE_BUSINESS_PROFILE:
+    database: RAW
+    schema: GOOGLE_BUSINESS_PROFILE
+  RAW_GOOGLE_SEARCH_CONSOLE:
+    database: RAW
+    schema: GOOGLE_SEARCH_CONSOLE
+  RAW_INSTAGRAM_BUSINESS:
+    database: RAW
+    schema: INSTAGRAM_BUSINESS
+  STG_ACCOUNT_MAPPING:
+    database: PROD_ANALYTICS
+    schema: ACCOUNT_MAPPING
+  STG_BINGADS:
+    database: PROD_ANALYTICS
+    schema: BINGADS
+  STG_FACEBOOK_ADS:
+    database: PROD_ANALYTICS
+    schema: FACEBOOK_ADS
+  STG_FACEBOOK_PAGES:
+    database: PROD_ANALYTICS
+    schema: FACEBOOK_PAGES
+  STG_GOOGLE_ADS:
+    database: PROD_ANALYTICS
+    schema: GOOGLE_ADS
+  STG_GOOGLE_ANALYTICS:
+    database: PROD_ANALYTICS
+    schema: GOOGLE_ANALYTICS_4
+  STG_GOOGLE_BUSINESS_PROFILE:
+    database: PROD_ANALYTICS
+    schema: GOOGLE_BUSINESS_PROFILE
+  STG_GOOGLE_SEARCH_CONSOLE:
+    database: PROD_ANALYTICS
+    schema: GOOGLE_SEARCH_CONSOLE
+  STG_INSTAGRAM_BUSINESS:
+    database: PROD_ANALYTICS
+    schema: INSTAGRAM_BUSINESS
+name: Production
+type: Environment

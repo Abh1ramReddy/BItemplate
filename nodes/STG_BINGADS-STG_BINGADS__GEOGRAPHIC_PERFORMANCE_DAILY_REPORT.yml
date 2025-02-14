@@ -1,0 +1,193 @@
+fileVersion: 1
+id: 027cd967-7032-4ea2-be9f-a12a592e3c13
+name: STG_BINGADS__GEOGRAPHIC_PERFORMANCE_DAILY_REPORT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_BINGADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 49208800-e9e1-483f-ab6a-40c3b5a0c41f
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 69643550-f8dd-4ad8-8613-5000ee9a0ba4
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b83ac28-35c3-423e-92b0-954dab31c9cb
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fbcb6b0b-3e42-4529-b818-6592ffa9b5ae
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4a2d8dda-4886-4f4a-8354-8f35c6a6083d
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9da46377-e47b-4aea-8990-f287dd04b2b6
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dbdc1bf7-64eb-414d-b004-eb5195977b9f
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee05a465-2ec1-4f79-a8ff-dc66c3d2fa99
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71ccf220-e1e9-44e0-a9c2-d9b26f9f8fde
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 606cc77a-89cd-4eb8-ada5-53a2ce7b99df
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 23c409d1-b83d-4139-b427-5cd9b01e97eb
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: INTERACTIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 606cc77a-89cd-4eb8-ada5-53a2ce7b99df
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 776e77e5-9666-4156-a929-d05675256552
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: COST_MICROS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 43360bc3-7e92-438e-8b82-94aad56b0edb
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2548ec2e-01c4-46f8-9e91-44fc79c89efd
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DEVICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 07bd6492-3529-4ae3-b417-137132b1347f
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3798fa6d-6709-4222-acda-f08c6f7d1f6f
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CONVERSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 84d2234b-ea0a-4c77-9fdb-c8c614e3da7a
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 621f6650-256b-49e2-8242-fc58480a5309
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CONVERSIONS_VALUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 55d36e62-709f-4f98-a14f-d29ac33ed7ed
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86e7271d-6736-402a-b519-ea27f6f0ab4d
+          stepCounter: 027cd967-7032-4ea2-be9f-a12a592e3c13
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4cb9e1e5-f2a3-4604-8f80-c8b7fc1aab0f
+                stepCounter: f20c8f8e-65a3-49d4-a1ed-0a74ccb3d1dd
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_BINGADS
+            nodeName: GEOGRAPHIC_PERFORMANCE_DAILY_REPORT
+        join:
+          joinCondition: FROM {{ ref('RAW_BINGADS', 'GEOGRAPHIC_PERFORMANCE_DAILY_REPORT') }} "GEOGRAPHIC_PERFORMANCE_DAILY_REPORT"
+        name: STG_BINGADS__GEOGRAPHIC_PERFORMANCE_DAILY_REPORT
+        noLinkRefs: []
+  name: STG_BINGADS__GEOGRAPHIC_PERFORMANCE_DAILY_REPORT
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

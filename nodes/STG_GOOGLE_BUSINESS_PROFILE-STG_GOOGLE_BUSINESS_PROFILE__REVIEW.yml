@@ -1,0 +1,235 @@
+fileVersion: 1
+id: 1a328010-66ea-4286-91ef-266961768eab
+name: STG_GOOGLE_BUSINESS_PROFILE__REVIEW
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_GOOGLE_BUSINESS_PROFILE
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6bac7549-ec26-4d73-afd7-9d2756a6c57a
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd05913f-465a-4ba8-a350-0bb299f85af7
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1deb6c3b-717c-4b11-a22a-519f254cff1e
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: LOCATION_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7c393cad-2c4d-42e0-b015-63c9df44a2f3
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2953664-139f-4689-8a75-82d8367fc843
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a0884033-4b63-479b-bc64-774fed2adcfc
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9518ba57-1616-4e0c-8c42-e06382dea68a
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e8ad45a6-87ce-4a43-b48d-192231396361
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 31f0cb94-7b9c-4f5f-b6cc-1609937412d9
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ddfc7b33-1966-4a44-afe1-abcc3fc50d3b
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20f4e8f1-f381-4e5d-9a94-73bb16e42cc3
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: REVIEWER_DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37c8f6f1-ce09-4e58-ae63-89ea16458a9c
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1575576-5c4a-49b1-8371-c66ad9367d3c
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: CREATE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9b0c0001-2122-4411-ad71-0eed028b48d7
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1abeb147-20f6-4f1d-82ec-e89c3d6af4fb
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: REVIEW_REPLY_UPDATE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 95196375-ca8a-4564-9c11-93a5a9bbf29b
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aeaa403c-c3f0-4029-9256-58ceb35b9ed4
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: UPDATE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b4a0b380-fc5d-43c1-b82b-673176353271
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b734dfac-5dc3-40d2-9797-631940814be3
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: STAR_RATING
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6ddefbd3-ff6a-4337-a599-ec2542d8229b
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9ca333b-e21a-448b-b581-8cb8bf5daf2a
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: VARCHAR(4096)
+        description: ""
+        name: REVIEW_REPLY_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 79776df0-3eb4-4b75-9ffe-ff17e7cab3cc
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0db5f786-1542-427b-bf9f-07177f70c80c
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 272b51b6-19b0-4734-a823-41a553771582
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ff8bc47e-d549-4814-8592-9d2de183527d
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: VARCHAR(8192)
+        description: ""
+        name: COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 98a27a18-9926-41c8-893d-bc2e0a94afc6
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d06132aa-5a86-4500-9aca-1a0bcd101181
+          stepCounter: 1a328010-66ea-4286-91ef-266961768eab
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: REVIEWER_PROFILE_PHOTO_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3fcb60f5-4198-4fbe-ae17-55788612563c
+                stepCounter: c4176cd3-9aba-4e5d-b76a-9f6194727a75
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_GOOGLE_BUSINESS_PROFILE
+            nodeName: REVIEW
+        join:
+          joinCondition: FROM {{ ref('RAW_GOOGLE_BUSINESS_PROFILE', 'REVIEW') }} "REVIEW"
+        name: STG_GOOGLE_BUSINESS_PROFILE__REVIEW
+        noLinkRefs: []
+  name: STG_GOOGLE_BUSINESS_PROFILE__REVIEW
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

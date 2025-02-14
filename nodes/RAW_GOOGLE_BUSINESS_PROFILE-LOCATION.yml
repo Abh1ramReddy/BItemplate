@@ -1,0 +1,761 @@
+fileVersion: 1
+id: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+name: LOCATION
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_GOOGLE_BUSINESS_PROFILE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67221a00-528b-4869-a93d-6bf58133558d
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b64d1ba-53da-4d97-911f-5880c86b5940
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: STOREFRONT_ADDRESS_LINES
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 103fe6b4-2787-4313-9277-7e6917ffe104
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: STOREFRONT_ADDRESS_RECIPIENTS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 856ca968-a2c4-4eff-90ed-638620063661
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 61b0e74e-1376-4441-bf40-70b6f9166acb
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ACCOUNT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 61e62009-577b-4e44-ab67-2b696aaf6461
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60e80032-7e05-4bb5-991a-bee8267ef318
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: METADATA_CAN_DELETE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad879a3f-025a-44a5-bf96-233efee6afef
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: LATITUDE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 705c1ba8-370e-4632-b7e2-d3d551f4f490
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: STOREFRONT_ADDRESS_POSTAL_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bc97b034-a635-430d-84ce-0349b9e97110
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(1024)
+        defaultValue: ""
+        description: ""
+        name: PROFILE_DESCRIPTION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e0f2cb2-0d14-4289-bf91-1b606aef5def
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: TITLE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a08bb07a-8d16-4ba1-bb72-d14ff8bf2224
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: STOREFRONT_ADDRESS_LANGUAGE_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 676c97ac-4436-43c3-8079-b20003d97cdf
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: LANGUAGE_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96731525-76d1-4801-ad36-c95f2c6beb13
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: OPEN_INFO_CAN_REOPEN
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3adc4924-0429-4ed4-8e33-c786db231fed
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: SERVICE_AREA_REGION_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77b284c2-f172-434f-9201-cb8bd145a24b
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: PRIMARY_PHONE_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 049b6937-912d-4e0e-8933-9cda09a6483e
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: METADATA_PLACE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e248297a-f406-430d-ad70-045fe9d6afdd
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: OPEN_INFO_STATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 19a1798f-1136-4f26-8536-99b3df38e614
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: OPENING_DATE_YEAR
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3acb2f66-dad9-4d20-9203-0ae888c311ce
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: STOREFRONT_ADDRESS_ADMINISTRATIVE_AREA
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c957dbd5-869a-4842-8fa7-0761ae416fb6
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: LONGITUDE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ac353bc-38df-43bd-8f65-75221c4082e6
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: STORE_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f074b1ac-f172-41c4-861e-a5ee1ccffb27
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: AD_WORD_LOCATION_EXTENSION_PHONE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 558a6937-2fd0-400a-8eb3-784041695946
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: METADATA_HAS_VOICE_OF_MERCHANT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d649572b-9f67-49f0-8305-733a49432267
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: METADATA_NEW_REVIEW_URI
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b71b7eb-13cd-4d08-8d99-87e93913624a
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: METADATA_CAN_HAVE_FOOD_MENUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c0546ccd-cd92-46ff-9f49-5423ba541a9e
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: OPENING_DATE_DAY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6892ad77-6232-4d0f-be3f-2858327efbbe
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: PRIMARY_CATEGORY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b79f69c-e2ad-4653-a6ac-51744fba5711
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: PRIMARY_CATEGORY_DISPLAY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0212ed2d-8143-4ec2-8327-a9cb4a3ee23f
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: STOREFRONT_ADDRESS_REGION_CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60c2f638-60db-4565-af23-e1da4bffe772
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: WEBSITE_URI
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b96d7105-e271-44ea-a03f-f821b9439fba
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: SERVICE_AREA_BUSINESS_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c139439a-1c27-45d6-98ca-2b2edaa9437e
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: OPENING_DATE_MONTH
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3813897c-34c6-4466-8673-3bef255774ed
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: METADATA_MAPS_URI
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a1c718b-bf8b-4896-ab5f-ce9bc924f830
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: METADATA_CAN_OPERATE_LODGING_DATA
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 923bccdb-cafa-4659-80ff-2c73839af60e
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: STOREFRONT_ADDRESS_LOCALITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fc4f129f-0718-49f8-92a8-05314420de2c
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: METADATA_HAS_GOOGLE_UPDATED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72e9adcb-b63f-4f7d-9792-132e54226886
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: METADATA_CAN_MODIFY_SERVICE_LIST
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a86ec76-fac8-4e53-8a48-4cb7dcfa4a70
+          stepCounter: 536b84a8-8fa0-45da-9a7b-cf59e36993c7
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: METADATA_DUPLICATE_LOCATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_GOOGLE_BUSINESS_PROFILE', 'LOCATION') }}
+  name: LOCATION
+  schema: ""
+  sqlType: Source
+  table: LOCATION
+  type: sourceInput
+  version: 1
+type: Node

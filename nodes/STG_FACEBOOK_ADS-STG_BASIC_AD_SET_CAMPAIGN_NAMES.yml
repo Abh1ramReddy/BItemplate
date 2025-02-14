@@ -1,0 +1,70 @@
+fileVersion: 1
+id: c859fca3-b639-4f52-a900-7e82a012d3a4
+name: STG_BASIC_AD_SET_CAMPAIGN_NAMES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_FACEBOOK_ADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a05094ef-df64-4bfc-b448-a43dbf162e17
+          stepCounter: c859fca3-b639-4f52-a900-7e82a012d3a4
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ADSET_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 97fd4873-f812-4bcc-a42b-330fcac9c8a9
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf2155c9-fbde-4aca-b9b6-74d86f6ac366
+          stepCounter: c859fca3-b639-4f52-a900-7e82a012d3a4
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CAMPAIGN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d0b42fce-59d7-409a-9c3f-9e74103c30db
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_BASIC_AD_SET: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_FACEBOOK_ADS
+            nodeName: STG_BASIC_AD_SET
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_FACEBOOK_ADS', 'STG_BASIC_AD_SET') }} "STG_BASIC_AD_SET" 
+            qualify row_number() over (partition by  "ADSET_ID" order by "_FIVETRAN_SYNCED" desc) = 1
+        name: STG_BASIC_AD_SET_CAMPAIGN_NAMES
+        noLinkRefs: []
+  name: STG_BASIC_AD_SET_CAMPAIGN_NAMES
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

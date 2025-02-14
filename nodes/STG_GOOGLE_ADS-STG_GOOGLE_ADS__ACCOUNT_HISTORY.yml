@@ -1,0 +1,70 @@
+fileVersion: 1
+id: 571f0cbd-12dc-4f40-a90f-3a123bf86ae4
+name: STG_GOOGLE_ADS__ACCOUNT_HISTORY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_GOOGLE_ADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9da43c55-e4f2-444c-a83d-23439fbf6324
+          stepCounter: 571f0cbd-12dc-4f40-a90f-3a123bf86ae4
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e39081fa-b829-417d-80d6-e8b033a4bf0f
+                stepCounter: 430db70e-b50f-46a2-a027-bf0a0b4791db
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 138080c1-c48c-4236-9727-46d878b411fd
+          stepCounter: 571f0cbd-12dc-4f40-a90f-3a123bf86ae4
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c38d5ae-6c29-413a-9c54-74501d5c6911
+                stepCounter: 430db70e-b50f-46a2-a027-bf0a0b4791db
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ACCOUNT_HISTORY: 430db70e-b50f-46a2-a027-bf0a0b4791db
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_GOOGLE_ADS
+            nodeName: ACCOUNT_HISTORY
+        join:
+          joinCondition: |-
+            FROM {{ ref('RAW_GOOGLE_ADS', 'ACCOUNT_HISTORY') }} "ACCOUNT_HISTORY"
+            qualify row_number() over (partition by ID order by updated_at desc) = 1
+        name: STG_GOOGLE_ADS__ACCOUNT_HISTORY
+        noLinkRefs: []
+  name: STG_GOOGLE_ADS__ACCOUNT_HISTORY
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

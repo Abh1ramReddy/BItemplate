@@ -1,0 +1,316 @@
+fileVersion: 1
+id: 1e0a030a-7698-483c-9aa5-e83931d5d875
+name: INT_INSTAGRAM_BUSINESS__MEDIA_HISTORY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: c6e962ec-cb90-4e8a-be36-79b6a312bceb
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 04270ebe-72e0-4a76-97a4-971e54a68765
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 8e6639c5-3d8d-4b67-94e1-090338c60264
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: USER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b9eab19d-6da1-479e-b7c5-5e1db421e18b
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 62a06b27-afcc-473a-9e6e-da6ca6df2f74
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: IS_STORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f1648d88-1e67-4ae0-a1af-fa14ac265ebe
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 1d04c7ed-4e03-4496-81e3-3b61806a8402
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CAROUSEL_ALBUM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b9d298ac-e06a-4165-81b5-e5636a605228
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: true
+          isDistinct: true
+        columnReference:
+          columnCounter: 13559af1-2886-4033-878a-7f4bbc40521e
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bf1e02a2-adf3-481b-9e21-f0de6aacf51e
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: fad1ad8b-79d1-4297-9876-86855076b991
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IG_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 173860eb-ac3f-4aa0-a9e6-3c01e2bd0423
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 4350af2f-caa9-43ef-80f6-92a44bd8efed
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: USERNAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0624a74b-7635-468c-841c-5f03cb056dbc
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 716fd58e-cc18-435e-ab99-7035eeb7885a
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: VARCHAR(1024)
+        description: ""
+        name: MEDIA_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 556d7cc7-e01a-412a-9b01-a35a2c9dfef5
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 6f9d25af-5561-4a51-a46b-502a12cafe90
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: PERMALINK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ba9a7352-44cf-43ec-ba35-ae30df6a41f3
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 0efb62aa-2f6e-4454-9575-67366d888bfb
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SHORTCODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b8a81909-7ec0-4697-a0d8-d7b413b32844
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 80f1f3ef-838a-4787-a89e-c5c2b3c36684
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: VARCHAR(512)
+        description: ""
+        name: THUMBNAIL_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0374af3c-afa1-46de-8fb0-b8705501de5d
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 3066998c-d011-4d7d-88a2-d5b50f8da8d9
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: VARCHAR(4096)
+        description: ""
+        name: CAPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 78eaa7a4-14ea-4660-b383-131dfed047fd
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 3291bae8-51f2-43b9-9372-a71411fa66da
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: IS_COMMENT_ENABLED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d577f159-245e-4b87-8291-bf710c49fa44
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 1f24633f-023e-47cc-9c77-a55cc7160784
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MEDIA_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6f898de4-e7d0-419a-a1a1-365af3d443a2
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: f776357d-9682-4ce3-a284-6a81d2ed96f8
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MEDIA_PRODUCT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4611484f-bc0e-4cd0-9796-3694de1fa7e0
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 48fe7970-ca56-47f0-87bc-7266de8773b2
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: CREATED_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 68bafc17-64b4-492c-bffc-0be8dd722a73
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 46be4523-435c-4f69-aa07-9341d500df04
+          stepCounter: 1e0a030a-7698-483c-9aa5-e83931d5d875
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5f66730f-05d0-4940-9328-f0fe03c6eba2
+                stepCounter: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs:
+      - isDistinct
+      - hasNull
+    sourceMapping:
+      - aliases:
+          STG_INSTAGRAM_BUSINESS__MEDIA_HISTORY: 5189acfb-df32-4fd3-a0f0-0baa4206e57a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_INSTAGRAM_BUSINESS
+            nodeName: STG_INSTAGRAM_BUSINESS__MEDIA_HISTORY
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_INSTAGRAM_BUSINESS', 'STG_INSTAGRAM_BUSINESS__MEDIA_HISTORY') }} "STG_INSTAGRAM_BUSINESS__MEDIA_HISTORY"
+            qualify ROW_NUMBER() over (partition by "STG_INSTAGRAM_BUSINESS__MEDIA_HISTORY"."ID" order by "STG_INSTAGRAM_BUSINESS__MEDIA_HISTORY"."CREATED_TIME" desc) = 1
+        name: INT_INSTAGRAM_BUSINESS__MEDIA_HISTORY
+        noLinkRefs: []
+  name: INT_INSTAGRAM_BUSINESS__MEDIA_HISTORY
+  overrideSQL: false
+  schema: ""
+  sqlType: "2"
+  type: sql
+  version: 1
+type: Node

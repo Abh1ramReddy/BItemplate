@@ -1,0 +1,67 @@
+fileVersion: 1
+id: f9cc494b-2606-43e5-a505-13082b8f904c
+name: STG_INSTAGRAM_BUSINESS__INSTAGRAM_USERS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_INSTAGRAM_BUSINESS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4e8b640-efad-49b9-aa28-5cd7a6c62a5d
+          stepCounter: f9cc494b-2606-43e5-a505-13082b8f904c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b61dd385-9f91-46e8-ac57-36f30795fbd7
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7287c38c-c1d3-4f8f-bc80-320a15525c58
+          stepCounter: f9cc494b-2606-43e5-a505-13082b8f904c
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8324903d-c799-4285-b9d2-542b90c2a562
+                stepCounter: c234fe8b-ba33-4101-89ef-cb73a116b3a9
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_INSTAGRAM_BUSINESS
+            nodeName: USER_HISTORY
+        join:
+          joinCondition: FROM {{ ref('RAW_INSTAGRAM_BUSINESS', 'USER_HISTORY') }} "USER_HISTORY"
+        name: STG_INSTAGRAM_BUSINESS__INSTAGRAM_USERS
+        noLinkRefs: []
+  name: STG_INSTAGRAM_BUSINESS__INSTAGRAM_USERS
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

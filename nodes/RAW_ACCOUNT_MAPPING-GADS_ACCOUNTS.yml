@@ -1,0 +1,96 @@
+fileVersion: 1
+id: f1288560-2bf4-4eaf-9a1f-733072ec295d
+name: GADS_ACCOUNTS
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_ACCOUNT_MAPPING
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a87c8ee-1259-4e80-b5dc-7221e4e67f6d
+          stepCounter: f1288560-2bf4-4eaf-9a1f-733072ec295d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: _ROW
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b648984-a099-4371-b26d-55ebe8efbe96
+          stepCounter: f1288560-2bf4-4eaf-9a1f-733072ec295d
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b711a7b-9367-4e2c-91d7-35c51d7e1de4
+          stepCounter: f1288560-2bf4-4eaf-9a1f-733072ec295d
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: DESCRIPTIVE_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d717f9d1-c0fa-452e-8bda-e7f797bf4708
+          stepCounter: f1288560-2bf4-4eaf-9a1f-733072ec295d
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_ACCOUNT_MAPPING', 'GADS_ACCOUNTS') }}
+  name: GADS_ACCOUNTS
+  schema: ""
+  sqlType: Source
+  table: GADS_ACCOUNTS
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,210 @@
+fileVersion: 1
+id: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+name: BASIC_AD_SET_ACTIONS
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_FACEBOOK_ADS
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2a4e627-5ec1-48d7-90eb-202d5c305b02
+          stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ADSET_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4620d7e9-5872-494f-81bd-ef9e568c7f91
+          stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: DATE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d241dac-b1a7-41f7-ba07-1fe514484e95
+          stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d54b597e-50d0-4d60-9529-f41a84fb1a63
+          stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: INDEX
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4363396-f571-4c23-bde1-4ff1bc0b6f73
+          stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: ACTION_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8ac1df27-0c72-44b4-82b5-58ba6ee03683
+          stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: VALUE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 521a9414-13b5-410c-b0a6-2bd4d90a1396
+          stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a7c42492-4fe1-4678-afb8-34b024e0f08b
+          stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: INLINE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa77bf90-07b2-4a9c-a55f-54449e2a2b19
+          stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: _1_D_VIEW
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f17b4b2b-d815-4841-911b-1cee86357a75
+          stepCounter: 0da27c9c-7f73-4525-80a7-c05aa203f76a
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: _7_D_CLICK
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_FACEBOOK_ADS', 'BASIC_AD_SET_ACTIONS') }}
+  name: BASIC_AD_SET_ACTIONS
+  schema: ""
+  sqlType: Source
+  table: BASIC_AD_SET_ACTIONS
+  type: sourceInput
+  version: 1
+type: Node

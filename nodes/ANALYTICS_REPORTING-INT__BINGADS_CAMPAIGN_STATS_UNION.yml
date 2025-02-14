@@ -1,0 +1,160 @@
+fileVersion: 1
+id: 54a6cb23-1f9e-4c77-9b2f-3199543f3176
+name: INT__BINGADS_CAMPAIGN_STATS_UNION
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7cefa336-756e-4fe6-b7d5-3e4668b37104
+          stepCounter: 54a6cb23-1f9e-4c77-9b2f-3199543f3176
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f9076245-e98e-421c-9059-a2ff68a5b7d0
+                stepCounter: c3d4f0b6-e9df-4742-8d0e-48a548b3e94f
+            transform: SUM(IMPRESSIONS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cc0ce7fd-ba59-4171-8f80-62e0840feb6f
+          stepCounter: 54a6cb23-1f9e-4c77-9b2f-3199543f3176
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0785321f-dcbf-4253-9904-5ed7f21224e4
+                stepCounter: c3d4f0b6-e9df-4742-8d0e-48a548b3e94f
+            transform: SUM(CLICKS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60b05465-c378-463e-99b3-67aba91510c5
+          stepCounter: 54a6cb23-1f9e-4c77-9b2f-3199543f3176
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: COST
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e0156b16-f68a-4d0e-8613-8804d14c7e7c
+                stepCounter: c3d4f0b6-e9df-4742-8d0e-48a548b3e94f
+            transform: SUM(COST)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d66591b-4047-4e03-ba42-f4282e771272
+          stepCounter: 54a6cb23-1f9e-4c77-9b2f-3199543f3176
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CONVERSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6753b98f-2dab-4e43-b51e-5a4266d38577
+                stepCounter: c3d4f0b6-e9df-4742-8d0e-48a548b3e94f
+            transform: SUM(CONVERSIONS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 347d95c1-a5d8-4c64-a9c2-dfac3c3ff40f
+          stepCounter: 54a6cb23-1f9e-4c77-9b2f-3199543f3176
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 51f5f9ed-5530-457f-85da-b0c28c351b39
+                stepCounter: c3d4f0b6-e9df-4742-8d0e-48a548b3e94f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74afe276-8e89-49e6-af82-4e89f76378b0
+          stepCounter: 54a6cb23-1f9e-4c77-9b2f-3199543f3176
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f58437df-dc54-4ace-8680-b2cde2041fbd
+                stepCounter: c3d4f0b6-e9df-4742-8d0e-48a548b3e94f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 696dd569-e693-4ab8-8fb6-e68d5c0a009d
+          stepCounter: 54a6cb23-1f9e-4c77-9b2f-3199543f3176
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4553c78b-f5c4-4c97-b5a2-e8a1e42510a6
+                stepCounter: c3d4f0b6-e9df-4742-8d0e-48a548b3e94f
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad99df0b-a2f2-467f-a17f-74258200a7cc
+          stepCounter: 54a6cb23-1f9e-4c77-9b2f-3199543f3176
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PLATFORM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'Bing Ads'"
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          MRT_REPORTING__BINGADS_CAMPAIGN_STATS: c3d4f0b6-e9df-4742-8d0e-48a548b3e94f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ANALYTICS_REPORTING
+            nodeName: MRT_REPORTING__BINGADS_CAMPAIGN_STATS
+        join:
+          joinCondition: |-
+            FROM {{ ref('ANALYTICS_REPORTING', 'MRT_REPORTING__BINGADS_CAMPAIGN_STATS') }} "MRT_REPORTING__BINGADS_CAMPAIGN_STATS"
+            GROUP BY ALL
+        name: INT__BINGADS_CAMPAIGN_STATS_UNION
+        noLinkRefs: []
+  name: INT__BINGADS_CAMPAIGN_STATS_UNION
+  overrideSQL: false
+  schema: ""
+  sqlType: "2"
+  type: sql
+  version: 1
+type: Node

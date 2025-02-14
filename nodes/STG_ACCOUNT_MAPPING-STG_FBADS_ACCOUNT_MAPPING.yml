@@ -1,0 +1,88 @@
+fileVersion: 1
+id: abeb00e0-8c73-4841-86f2-6ca1928da0ac
+name: STG_FBADS_ACCOUNT_MAPPING
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_ACCOUNT_MAPPING
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a16325f7-c678-4509-a7ad-20f1dad5e9d9
+          stepCounter: abeb00e0-8c73-4841-86f2-6ca1928da0ac
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: acbf9859-c624-4565-b38a-145728e8dcd9
+                stepCounter: d0985652-0a0c-4592-99f5-f1ddfdd4c99c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 555c7b70-9eb3-4e04-a9e8-8a06c6de4df0
+          stepCounter: abeb00e0-8c73-4841-86f2-6ca1928da0ac
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 08824eec-3bcb-4c1e-a17e-24daa26db55f
+                stepCounter: d0985652-0a0c-4592-99f5-f1ddfdd4c99c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2fbac4e5-14dd-4220-83a5-5934970037a6
+          stepCounter: abeb00e0-8c73-4841-86f2-6ca1928da0ac
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 35076d17-bd19-4356-aa71-08c21d3eba4d
+                stepCounter: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FBADS_ACCOUNTS: d0985652-0a0c-4592-99f5-f1ddfdd4c99c
+          GROUPING: 9c3e4246-5e7b-4afc-ba99-0403c599ddaa
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_ACCOUNT_MAPPING
+            nodeName: FBADS_ACCOUNTS
+          - locationName: RAW_ACCOUNT_MAPPING
+            nodeName: GROUPING
+        join:
+          joinCondition: |-
+            FROM {{ ref('RAW_ACCOUNT_MAPPING', 'FBADS_ACCOUNTS') }} "FBADS_ACCOUNTS"
+            INNER JOIN {{ ref('RAW_ACCOUNT_MAPPING', 'GROUPING') }} "GROUPING"
+            ON "FBADS_ACCOUNTS"."DISPLAY_NAME" = "GROUPING"."HOTEL_NAME"
+        name: STG_FBADS_ACCOUNT_MAPPING
+        noLinkRefs: []
+  name: STG_FBADS_ACCOUNT_MAPPING
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

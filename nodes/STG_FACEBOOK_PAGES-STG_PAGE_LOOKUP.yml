@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 7555afad-9a02-47b9-936f-3e434d9a084e
+name: STG_PAGE_LOOKUP
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_FACEBOOK_PAGES
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d72a1c83-b874-4924-869f-41cf21f974ab
+          stepCounter: 7555afad-9a02-47b9-936f-3e434d9a084e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5cf9e063-9d05-4e51-8382-89bdebd9131a
+                stepCounter: c6008654-a903-4977-bf63-d5931d088c01
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 615e4a8d-8dce-418d-9135-d4ce8b94bb43
+          stepCounter: 7555afad-9a02-47b9-936f-3e434d9a084e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e42a44dd-ce0a-4ebb-b7b3-93c175868710
+                stepCounter: c6008654-a903-4977-bf63-d5931d088c01
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_FACEBOOK_PAGES
+            nodeName: STG_PAGE
+        join:
+          joinCondition: FROM {{ ref('STG_FACEBOOK_PAGES', 'STG_PAGE') }} "STG_PAGE"
+        name: STG_PAGE_LOOKUP
+        noLinkRefs: []
+  name: STG_PAGE_LOOKUP
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

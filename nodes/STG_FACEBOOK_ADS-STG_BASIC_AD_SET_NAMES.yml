@@ -1,0 +1,78 @@
+fileVersion: 1
+id: f67ac051-05d5-4263-8251-81af2859054e
+name: STG_BASIC_AD_SET_NAMES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_FACEBOOK_ADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d7fcc3f-3dcf-4ff9-9a7e-5b88d4d5cdfc
+          stepCounter: f67ac051-05d5-4263-8251-81af2859054e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ADSET_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 97fd4873-f812-4bcc-a42b-330fcac9c8a9
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 733336ae-b98e-4a46-9608-ba7c7bb6253d
+          stepCounter: f67ac051-05d5-4263-8251-81af2859054e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ADSET_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: de555187-01bd-43ed-a02a-f289d9c5376f
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_BASIC_AD_SET: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('STG_FACEBOOK_ADS', 'STG_BASIC_AD_SET_NAMES')}} AS (
+            		SELECT 
+             "ADSET_ID" AS "ADSET_ID",
+             "ADSET_NAME" AS "ADSET_NAME"
+             FROM {{ ref('STG_FACEBOOK_ADS', 'STG_BASIC_AD_SET') }}
+             qualify row_number() over (partition by "ADSET_ID" order by "_FIVETRAN_SYNCED" desc) = 1
+            	)
+        dependencies:
+          - locationName: STG_FACEBOOK_ADS
+            nodeName: STG_BASIC_AD_SET
+        join:
+          joinCondition: |
+            FROM {{ ref('STG_FACEBOOK_ADS', 'STG_BASIC_AD_SET') }} "STG_BASIC_AD_SET"
+             qualify row_number() over (partition by "ADSET_ID" order by "_FIVETRAN_SYNCED" desc) = 1
+        name: STG_BASIC_AD_SET_NAMES
+        noLinkRefs: []
+  name: STG_BASIC_AD_SET_NAMES
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

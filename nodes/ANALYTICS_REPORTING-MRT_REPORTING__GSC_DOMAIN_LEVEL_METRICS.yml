@@ -1,0 +1,196 @@
+fileVersion: 1
+id: 8dff9e1c-dc02-4138-9416-5d6320584f50
+name: MRT_REPORTING__GSC_DOMAIN_LEVEL_METRICS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96f8a74b-6368-42e2-88be-8c41aa6d8f00
+          stepCounter: 8dff9e1c-dc02-4138-9416-5d6320584f50
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 17f37ae7-ed59-4925-b843-9a4f0cca2b45
+                stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9842648e-0c48-4d1c-b493-1c4b3f456b11
+          stepCounter: 8dff9e1c-dc02-4138-9416-5d6320584f50
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SEARCH_TYPE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 83133a69-d8a4-46a9-8f95-1ee99201557f
+                stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d627a0d6-51a2-4051-87ff-996ff3e1d6a1
+          stepCounter: 8dff9e1c-dc02-4138-9416-5d6320584f50
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 71041a5c-15c8-43da-a896-7cd2c8aee619
+                stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 51e847be-c39e-41ff-85b8-2a0af6aca78b
+          stepCounter: 8dff9e1c-dc02-4138-9416-5d6320584f50
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: faf5929a-5dbb-4539-ad2d-a53c2dc53174
+                stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 35b4fbcf-d37e-4027-bf91-8d39cfb39f5b
+          stepCounter: 8dff9e1c-dc02-4138-9416-5d6320584f50
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CTR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2dd03ccb-4543-4a99-8e66-158114f9862b
+                stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4efce3e-b234-471c-bf0b-5fe1f88ad364
+          stepCounter: 8dff9e1c-dc02-4138-9416-5d6320584f50
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: POSITION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dd59bd05-5f0d-46ee-a0be-5ccf43a6914e
+                stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03619e2c-8189-4e61-b0ca-7df5f1bb9977
+          stepCounter: 8dff9e1c-dc02-4138-9416-5d6320584f50
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5ad81af8-c795-44f2-966b-55214b3b9563
+                stepCounter: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ae926bf-5462-4dd6-9b36-a1eb02c60d66
+          stepCounter: 8dff9e1c-dc02-4138-9416-5d6320584f50
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a42ca8c7-74a2-4316-90b7-ba8987f44501
+                stepCounter: 818cbf14-b72c-4463-88eb-4255cc5c30f5
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bb6862e0-1098-4110-bff8-aa8ba145a6ed
+          stepCounter: 8dff9e1c-dc02-4138-9416-5d6320584f50
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 13237824-8d1c-4dc9-a23d-80f82e3ed6f5
+                stepCounter: 818cbf14-b72c-4463-88eb-4255cc5c30f5
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_DOMAIN_LEVEL_METRICS: 0d2fa906-717c-4f27-8fe5-a82d00ea4fa5
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+            	CREATE OR REPLACE VIEW {{ ref('ANALYTICS_REPORTING', 'MRT_GSC_DOMAIN_LEVEL_METRICS')}} AS (
+            		SELECT 
+             "DATE" AS "DATE",
+             "SEARCH_TYPE" AS "SEARCH_TYPE",
+             "SITE" AS "SITE",
+             "CLICKS" AS "CLICKS",
+             "IMPRESSIONS" AS "IMPRESSION",
+             "CTR" AS "CTR",
+             "POSITION" AS "POSITION",
+             "_FIVETRAN_SYNCED" AS "_FIVETRAN_SYNCED"
+             FROM {{ ref('STG_GOOGLE_SEARCH_CONSOLE', 'STG_DOMAIN_LEVEL_METRICS') }}
+            	)
+        dependencies:
+          - locationName: STG_ACCOUNT_MAPPING
+            nodeName: STG_GSC_ACCOUNT_MAPPING
+          - locationName: STG_GOOGLE_SEARCH_CONSOLE
+            nodeName: STG_DOMAIN_LEVEL_METRICS
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_GOOGLE_SEARCH_CONSOLE', 'STG_DOMAIN_LEVEL_METRICS') }} "STG_DOMAIN_LEVEL_METRICS"
+            LEFT JOIN (SELECT "SITE","DISPLAY_NAME", "HOTELGRUPPE" FROM {{ ref('STG_ACCOUNT_MAPPING', 'STG_GSC_ACCOUNT_MAPPING') }}) "STG_GSC_ACCOUNT_MAPPING"
+            ON "STG_DOMAIN_LEVEL_METRICS"."SITE"="STG_GSC_ACCOUNT_MAPPING"."SITE"
+        name: MRT_REPORTING__GSC_DOMAIN_LEVEL_METRICS
+        noLinkRefs: []
+  name: MRT_REPORTING__GSC_DOMAIN_LEVEL_METRICS
+  overrideSQL: false
+  schema: ""
+  sqlType: "5"
+  type: sql
+  version: 1
+type: Node

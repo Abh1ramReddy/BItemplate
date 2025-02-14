@@ -1,0 +1,96 @@
+fileVersion: 1
+id: ceb9f121-b472-4841-9aad-9fb75c102f57
+name: GA_4_ACCOUNTS
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_ACCOUNT_MAPPING
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a91ecc1e-de3f-420e-b8e2-d3af4a00dfb6
+          stepCounter: ceb9f121-b472-4841-9aad-9fb75c102f57
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: _ROW
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b0a1608-4ae1-4d3f-88f2-633a3d981dea
+          stepCounter: ceb9f121-b472-4841-9aad-9fb75c102f57
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b94fce2-5961-4196-9982-4268f7f06c15
+          stepCounter: ceb9f121-b472-4841-9aad-9fb75c102f57
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65a4a7d4-fa85-44d9-8158-8cae9f456e8e
+          stepCounter: ceb9f121-b472-4841-9aad-9fb75c102f57
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_ACCOUNT_MAPPING', 'GA_4_ACCOUNTS') }}
+  name: GA_4_ACCOUNTS
+  schema: ""
+  sqlType: Source
+  table: GA_4_ACCOUNTS
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,818 @@
+fileVersion: 1
+id: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+name: DAILY_PAGE_METRICS_TOTAL
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_FACEBOOK_PAGES
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2578c724-1907-4286-9018-663a38fc393a
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: DATE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 52c6f5c6-1650-4ead-904d-c35a41da068c
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: PAGE_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b45b2b14-3321-4da4-9740-7e7ee78e6500
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_IMPRESSIONS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 466074e8-0367-4316-a1e4-69bf41e49a2c
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_IMPRESSIONS_PAID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32bd8d1b-1fa6-4875-9fd3-ae1f20af5ed7
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_IMPRESSIONS_VIRAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3eba2d40-a79e-4c08-bba6-d8591bd394bf
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_IMPRESSIONS_NONVIRAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 36a596d0-46c4-4060-b7c6-4a1828d7704c
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_POST_ENGAGEMENTS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0089b6b6-5758-48b0-a48b-a949348529ee
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_ACTIONS_POST_REACTIONS_LIKE_TOTAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d8e66fc-ed29-45df-8922-de703da0e2b4
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_ACTIONS_POST_REACTIONS_LOVE_TOTAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c325f2df-4374-403f-8490-780d7092a733
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_ACTIONS_POST_REACTIONS_WOW_TOTAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71b7117a-0a6e-4d1b-abab-72f4251994b8
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_ACTIONS_POST_REACTIONS_HAHA_TOTAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 39cf3191-caae-44ff-bb83-472192f9b18d
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_ACTIONS_POST_REACTIONS_SORRY_TOTAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10e4b53c-c9c8-4b99-92ab-50e1ee88703a
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_ACTIONS_POST_REACTIONS_ANGER_TOTAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a19f0106-de44-47b0-9aa7-d07f61ae51d2
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_TOTAL_ACTIONS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac26f5e9-2355-4338-967d-37d6b8ce7928
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_FANS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 559d9ca7-13b3-4bb0-87d6-c2f48720a5a8
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_FAN_ADDS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 39a1fa64-4ec4-48fb-be09-d49e3c7c83a9
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_FAN_REMOVES
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: af391507-bf15-4733-83f2-33db25d42ec7
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIEWS_TOTAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bcf343b5-5698-41d9-beb2-fe66d8ac36b9
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1bdb46c4-22ee-457e-86a4-9c9f6c25bf00
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS_PAID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ed50592-95b4-4273-a4c7-028c3495369e
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS_ORGANIC
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91819e0f-1c37-480c-93a4-e225b9b51f2e
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS_AUTOPLAYED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73854510-37c6-4128-b7a6-a14492f188f3
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS_CLICK_TO_PLAY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a0925f9c-ab6c-4978-8829-352f7e19808b
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_REPEAT_VIEWS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f841b3cb-9290-42af-8294-c52cf40f5432
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_COMPLETE_VIEWS_30_S
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c4db85f5-5b1f-486f-b39a-b69c7085895b
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_COMPLETE_VIEWS_30_S_PAID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 12057181-5a69-412f-914a-07a28e982250
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_COMPLETE_VIEWS_30_S_ORGANIC
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e9c101d1-c11d-40f3-a510-410224897323
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_COMPLETE_VIEWS_30_S_AUTOPLAYED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a05a6967-0c76-476b-9b08-97985a7e9da2
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_COMPLETE_VIEWS_30_S_CLICK_TO_PLAY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 52e8d8f0-d305-4654-bfb5-2f67ed78e279
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_COMPLETE_VIEWS_30_S_REPEAT_VIEWS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a019ae7d-c0c3-412b-93b4-69e8bb099ddb
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS_10_S
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1dde807d-c334-4347-a8a7-2b035c28e991
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS_10_S_PAID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 38498aa0-741d-4c50-bbe4-953cb796cb9f
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS_10_S_ORGANIC
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4a1bfcdf-3041-42a2-ba0d-9b3b770b960c
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS_10_S_AUTOPLAYED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5b91e12-8a2c-4fda-97f9-c6e8139470f5
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS_10_S_CLICK_TO_PLAY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 46f8d694-4f6b-40e2-85ac-770c1e74b959
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEWS_10_S_REPEAT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b646203-5b99-4d55-a0ed-6c98c5a5652b
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_VIDEO_VIEW_TIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6fcd4011-1958-4ce3-a870-1685d66b32c9
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_POSTS_IMPRESSIONS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b87c998-a733-4bef-b645-7ef0dd53fa83
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_POSTS_IMPRESSIONS_PAID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5254ac6a-13b6-4bf6-9643-29505bbb578d
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_POSTS_IMPRESSIONS_VIRAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 300037b2-9c99-4fbc-85ee-bd0ec544bc20
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: PAGE_POSTS_IMPRESSIONS_NONVIRAL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 861c4d2e-f557-41ba-a5bb-753c86f62596
+          stepCounter: 5fe39ef2-8713-4c1e-84c3-243e064f7214
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_FACEBOOK_PAGES', 'DAILY_PAGE_METRICS_TOTAL') }}
+  name: DAILY_PAGE_METRICS_TOTAL
+  schema: ""
+  sqlType: Source
+  table: DAILY_PAGE_METRICS_TOTAL
+  type: sourceInput
+  version: 1
+type: Node

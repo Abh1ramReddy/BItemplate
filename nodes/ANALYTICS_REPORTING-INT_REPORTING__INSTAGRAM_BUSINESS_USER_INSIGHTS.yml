@@ -1,0 +1,156 @@
+fileVersion: 1
+id: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+name: INT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e356ae2-f785-416c-ae45-6e481281be69
+          stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5edc9dff-bf8f-4b55-826f-48751deca7c8
+                stepCounter: 8c4496e1-6305-40af-99ab-9f9af382dcb3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91db142a-9151-4717-b261-5d1e06490cb5
+          stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: FOLLOWERS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f6844122-7816-4a8a-82dd-90a20c69dbce
+                stepCounter: 8c4496e1-6305-40af-99ab-9f9af382dcb3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9d52042-210f-4ac2-9726-93c3e23f6ab9
+          stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ca83dd67-e108-407c-a74d-b0ddf27bc61d
+                stepCounter: 8c4496e1-6305-40af-99ab-9f9af382dcb3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3127330d-a4f2-4623-b118-61aa41f18dbc
+          stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 76458547-830a-454b-83d9-a4fff924d386
+                stepCounter: 8c4496e1-6305-40af-99ab-9f9af382dcb3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 85fd1cc5-e886-4610-8923-bcf075737b16
+          stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9782ba94-b7fa-4ddc-acd8-ddb22869c493
+                stepCounter: 8c4496e1-6305-40af-99ab-9f9af382dcb3
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d5cbcbdd-bd7b-4b02-93cb-af475d995e24
+          stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: LIKES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 034c530c-8c41-4b7b-8aaa-bf77c95d0000
+                stepCounter: 666d279b-8075-4c82-9891-d619130e098e
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63ad4971-969a-467a-9154-643e81e0fc9b
+          stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PLATFORM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'Instagram Business'"
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          MRT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS: 8c4496e1-6305-40af-99ab-9f9af382dcb3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ANALYTICS_REPORTING
+            nodeName: MRT_REPORTING__INSTAGRAM_BUSINESS_MEDIA_INSIGHTS
+          - locationName: ANALYTICS_REPORTING
+            nodeName: MRT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS
+        join:
+          joinCondition: |-
+            FROM {{ ref('ANALYTICS_REPORTING', 'MRT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS') }} "MRT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS"
+            LEFT JOIN (SELECT ID,LIKE_COUNT FROM {{ ref('ANALYTICS_REPORTING', 'MRT_REPORTING__INSTAGRAM_BUSINESS_MEDIA_INSIGHTS') }} )"MRT_REPORTING__INSTAGRAM_BUSINESS_MEDIA_INSIGHTS" 
+            ON "MRT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS"."ID"="MRT_REPORTING__INSTAGRAM_BUSINESS_MEDIA_INSIGHTS"."ID"
+            GROUP BY ALL 
+        name: INT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS
+        noLinkRefs: []
+  name: INT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS
+  overrideSQL: false
+  schema: ""
+  sqlType: "2"
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,263 @@
+fileVersion: 1
+id: 64231ea3-f488-4f1d-8342-a20f91e4358b
+name: STG_DEMOGRAPHICS_AGE_AND_GENDER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_FACEBOOK_ADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d4494e4-9bee-4622-930b-f8de5af620fa
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aa4b8b34-0f8f-4d80-b00e-df2ce3119347
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d0213fd-f65e-4860-9ce6-9aae6ad46019
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bcd1422e-5bf6-489f-99db-fbcf6ede5223
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 89980e91-b141-4ef7-89f0-4e8cb1e4c32e
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 060976e7-a13d-44d1-9b4a-4452b68b3721
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95af3bcd-3462-403c-bc95-4c13085972b1
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: AGE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cb4f7f8a-b0df-4f99-bd69-c2c8383173f0
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 54719a87-949e-4cc3-9111-30c0ba1693f4
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: GENDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 610ee4e7-a529-4ed0-a6ba-0544ee19d2c3
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf77898c-434c-47fb-a0cc-fe8156a7342b
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8d911cda-5164-4f34-a1cd-f5bc7d23d969
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91816ebd-a69e-4e54-9aa3-2920a6c9d465
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: INLINE_LINK_CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4cf440d8-0e06-4cd6-b915-ddc3776425fa
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d68dbbf3-0f5b-40b2-a44f-04d984383994
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: REACH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 463986c2-f9a3-4fc7-aaef-6859aee9a691
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6ed11793-7896-4c6b-8cee-5826acf14a71
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: COST_PER_INLINE_LINK_CLICK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ffe98366-2c79-4d76-b194-009d574978a3
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8ff8efa2-6480-420b-9f86-d8a7e73c62be
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CPC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bd74d4f3-7401-47c7-91cc-69c5d4f81d47
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 02fb80e0-59e6-49cd-a6ca-b6eef4cd3ae4
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CPM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c8805e53-fe61-4117-b4e7-1da6667d9541
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e946d497-b96e-4893-9765-29afb0d85a88
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CTR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 29d01f2a-4ddd-49a4-b962-d384c3f09693
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3dfbe73c-630f-4a72-afe6-e90bcbaef51c
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: FREQUENCY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b62e7ade-15f5-45cd-8147-90d0ac401d76
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 87ea7aa8-4f72-46a0-8259-7b21797819c6
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: SPEND
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee84bf6d-27ab-443d-a711-6582e4650a06
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 034694a7-0955-4759-9f59-6078fdd30cb9
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: INLINE_LINK_CLICK_CTR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 53573ef8-64bc-4115-86fd-9f773796c43f
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a5f1cb2-8bea-44e6-8e16-d2f3576c0f2a
+          stepCounter: 64231ea3-f488-4f1d-8342-a20f91e4358b
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 04663b2a-b48c-4339-9095-9adb7176e594
+                stepCounter: af2a1a8b-b815-4e18-b0e9-5e5383845343
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_FACEBOOK_ADS
+            nodeName: DEMOGRAPHICS_AGE_AND_GENDER
+        join:
+          joinCondition: FROM {{ ref('RAW_FACEBOOK_ADS', 'DEMOGRAPHICS_AGE_AND_GENDER') }} "DEMOGRAPHICS_AGE_AND_GENDER"
+        name: STG_DEMOGRAPHICS_AGE_AND_GENDER
+        noLinkRefs: []
+  name: STG_DEMOGRAPHICS_AGE_AND_GENDER
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

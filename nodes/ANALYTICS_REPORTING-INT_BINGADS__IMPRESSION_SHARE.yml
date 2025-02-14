@@ -1,0 +1,165 @@
+fileVersion: 1
+id: b3a49ee2-1096-40b6-ac15-f5688c3e7624
+name: INT_BINGADS__IMPRESSION_SHARE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3df881ce-1916-44b2-844e-4ed93c02f829
+          stepCounter: b3a49ee2-1096-40b6-ac15-f5688c3e7624
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CAMPAIGN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ce5f843e-51e6-4330-8552-e97a777c4d13
+                stepCounter: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: edfec515-4f66-4f4d-999a-e52df96f7915
+          stepCounter: b3a49ee2-1096-40b6-ac15-f5688c3e7624
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ACCOUNT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 67cd4fae-6844-40d7-8a74-d34fef61d703
+                stepCounter: 9b3281a0-3e5b-4913-a40a-7aad595d401b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 04d9d335-9281-463a-abfd-043b873550a2
+          stepCounter: b3a49ee2-1096-40b6-ac15-f5688c3e7624
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7fff96ca-192f-4118-8ba7-0974afc050de
+                stepCounter: 9b3281a0-3e5b-4913-a40a-7aad595d401b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca9bd116-ac91-4088-92dc-c177c8116db8
+          stepCounter: b3a49ee2-1096-40b6-ac15-f5688c3e7624
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 68d06fce-cec7-4d37-a5b0-d4dbaa1e8d03
+                stepCounter: 9b3281a0-3e5b-4913-a40a-7aad595d401b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7461cc8f-4158-4763-8f1b-ba016a44cca6
+          stepCounter: b3a49ee2-1096-40b6-ac15-f5688c3e7624
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 081331d8-2890-4b9b-9256-3e14e870c8a6
+                stepCounter: 9b3281a0-3e5b-4913-a40a-7aad595d401b
+            transform: SUM(IMPRESSIONS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 04b129cc-1af3-4fb5-9145-1e059efd5e76
+          stepCounter: b3a49ee2-1096-40b6-ac15-f5688c3e7624
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IMPRESSION_SHARE_PERCENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 35c002d6-a14e-466c-9f52-e32532cfd991
+                stepCounter: 9b3281a0-3e5b-4913-a40a-7aad595d401b
+            transform: DIV0NULL(SUM(IMPRESSION_SHARE_PERCENT * IMPRESSIONS) , (SUM (IMPRESSIONS) * 100))
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86bfd7af-7190-4851-87cf-a21a080798cf
+          stepCounter: b3a49ee2-1096-40b6-ac15-f5688c3e7624
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: TOP_IMPRESSION_SHARE_PERCENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fdc32571-7ed5-4bce-b038-5cc29f56f8f4
+                stepCounter: 9b3281a0-3e5b-4913-a40a-7aad595d401b
+            transform: DIV0NULL(SUM(TOP_IMPRESSION_SHARE_PERCENT * IMPRESSIONS) , (SUM (IMPRESSIONS) * 100))
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7ae19fc-f4c6-4863-9ed0-fa1398fe4e45
+          stepCounter: b3a49ee2-1096-40b6-ac15-f5688c3e7624
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: IMPRESSION_LOST_TO_BUDGET_PERCENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: da228c35-aaf9-465b-9d86-ea8d514ea3e9
+                stepCounter: 9b3281a0-3e5b-4913-a40a-7aad595d401b
+            transform: DIV0NULL(SUM(IMPRESSION_LOST_TO_BUDGET_PERCENT * IMPRESSIONS),(SUM (IMPRESSIONS) * 100))
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_BINGADS__CAMPAIGN_HISTORY: 47de923e-016f-46d4-ba1d-8cbe3bd8e9f6
+          STG_BINGADS__CAMPAIGN_IMPRESSION_PERFORMANCE_DAILY_REPORT: 9b3281a0-3e5b-4913-a40a-7aad595d401b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_BINGADS
+            nodeName: STG_BINGADS__CAMPAIGN_HISTORY
+          - locationName: STG_BINGADS
+            nodeName: STG_BINGADS__CAMPAIGN_IMPRESSION_PERFORMANCE_DAILY_REPORT
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_BINGADS', 'STG_BINGADS__CAMPAIGN_IMPRESSION_PERFORMANCE_DAILY_REPORT') }} "STG_BINGADS__CAMPAIGN_IMPRESSION_PERFORMANCE_DAILY_REPORT"
+            LEFT JOIN {{ ref('STG_BINGADS', 'STG_BINGADS__CAMPAIGN_HISTORY') }} "STG_BINGADS__CAMPAIGN_HISTORY"
+            ON "STG_BINGADS__CAMPAIGN_IMPRESSION_PERFORMANCE_DAILY_REPORT".CAMPAIGN_ID = "STG_BINGADS__CAMPAIGN_HISTORY".ID
+            GROUP BY 1,2,3,4
+        name: INT_BINGADS__IMPRESSION_SHARE
+        noLinkRefs: []
+  name: INT_BINGADS__IMPRESSION_SHARE
+  overrideSQL: false
+  schema: ""
+  sqlType: "2"
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,235 @@
+fileVersion: 1
+id: bc21e5e7-f36c-4144-9348-3a093748669e
+name: STG_GOOGLE_ADS__KEYWORD_LEVEL
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_GOOGLE_ADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: afef594d-a01b-49df-9927-56ace8c5d7d1
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f97c831-b977-4bcd-887f-71eab99f4e51
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 063f7808-9596-4649-bf41-c09c7ad2ab36
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c32ef757-cc5c-455b-8b28-14633bb61271
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21234bfb-56cf-4f3d-b0c8-419d4ebeb31a
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4a015394-49ec-4763-81d8-41160f4d9cda
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8231bddc-12f3-4a07-a3b0-1f0d58c02e05
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CAMPAIGN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 76297441-1191-4173-b570-4e28cb2d9089
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe2a51bf-f4d5-4114-ae1c-c49932670328
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CONVERSIONS_VALUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ab7b8e48-2080-4f77-bb65-e5abd9aaab20
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1ebb1da-e95a-4e05-b36a-44ba7c9eac28
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: AD_GROUP_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bc2933a0-e088-47ab-96fb-de18dbaf2120
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c2d615a-f44b-46f9-9e4f-636f442ced20
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CONVERSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 79773d2d-34eb-4676-a098-6c3d0c8e3e52
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7fc712f5-1633-4e62-85e3-b7bf0cbd2560
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: INTERACTIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8a11f3ff-0965-43f2-9dd8-29d1a36377e2
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2ab7e624-6e98-4da6-96a5-a9435dc22cb2
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: KEYWORD_TEXT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c7e6dd23-f9a7-4c59-be9d-4e6ae32fba1b
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 15872ca6-a063-496c-b228-5116130338bf
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: INTERACTION_RATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4dfd4f63-108a-4cdb-824e-32589998a172
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 359eab58-defc-4049-9351-f5ea6e1d2363
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: df16baa0-9113-48d7-9d36-f37b69665543
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71c670ce-3b19-405f-aaec-8d50a0881247
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: AVERAGE_CPC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bcd2dce4-7c44-4849-ae2d-94e168527857
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 02644039-c0c4-4e51-9e77-4218310f8780
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: COST_MICROS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2242dfa9-5a76-40f0-852b-22891f03fe46
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 52f73de7-9fa7-4529-a0aa-d5f2276b6fc6
+          stepCounter: bc21e5e7-f36c-4144-9348-3a093748669e
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1706e79-bd75-450d-8566-e0d5a0298d48
+                stepCounter: c5ca992f-033a-43fb-81c8-f3481aeac0ff
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_GOOGLE_ADS
+            nodeName: KEYWORD_LEVEL
+        join:
+          joinCondition: FROM {{ ref('RAW_GOOGLE_ADS', 'KEYWORD_LEVEL') }} "KEYWORD_LEVEL"
+        name: STG_GOOGLE_ADS__KEYWORD_LEVEL
+        noLinkRefs: []
+  name: STG_GOOGLE_ADS__KEYWORD_LEVEL
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

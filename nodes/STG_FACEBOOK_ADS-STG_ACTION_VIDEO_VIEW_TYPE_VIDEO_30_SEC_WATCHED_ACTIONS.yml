@@ -1,0 +1,165 @@
+fileVersion: 1
+id: 5e1fe131-ae44-40ee-82f3-0143798125b0
+name: STG_ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_FACEBOOK_ADS
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 45d9bd1c-cad4-4f80-9a6b-7a492b9c91e0
+          stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7bc6d7b5-8013-47aa-b1be-d2696036208b
+                stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ff510667-82fb-4088-b86b-c7ad99385526
+          stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 063c861e-3128-421f-bf0f-40ff0dff5b97
+                stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d550a6f-b72f-44ad-aeca-6ae85645b91c
+          stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 56c6b0ed-d8b4-4cd8-a713-5ed6dbe7c766
+                stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fb8f86bc-77dc-49ea-bd27-bf9927654b2b
+          stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: INDEX
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 158a10fb-2b78-40cb-87f0-4556014f07fe
+                stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d23c8717-551b-4aef-9bb7-60ed164a9ea9
+          stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACTION_VIDEO_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bc19f923-08e1-4a53-9944-6b7bc2ff3db0
+                stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bfa02e85-a7b8-4b7e-90b0-2639d527983c
+          stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: VALUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 309386f2-b643-4c5d-bc1c-cc2d1c276fb8
+                stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7c9ee6a2-bec0-476b-ae68-5e53e2aab0e4
+          stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d9a5a0cd-5635-4324-8a0f-548b8e30ea47
+                stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e9def34-ff22-45dd-84ae-fb9df20838f0
+          stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACTION_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c16fc9f4-32bd-4d9e-a433-90aee871cb57
+                stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 69fd30dd-8bef-44c3-b654-b937b6e615b9
+          stepCounter: 5e1fe131-ae44-40ee-82f3-0143798125b0
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: INLINE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d8b9ec9e-4617-4594-b75a-68234140ac17
+                stepCounter: fabe2223-8385-4bc6-8f74-e10b42063067
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_FACEBOOK_ADS
+            nodeName: ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS
+        join:
+          joinCondition: FROM {{ ref('RAW_FACEBOOK_ADS', 'ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS') }} "ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS"
+        name: STG_ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS
+        noLinkRefs: []
+  name: STG_ACTION_VIDEO_VIEW_TYPE_VIDEO_30_SEC_WATCHED_ACTIONS
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,190 @@
+fileVersion: 1
+id: f3b7c434-dc64-4972-afaf-f350f963e9e1
+name: MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_IMPRESSION_SHARE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21a14119-0fbc-4e77-90b4-e895795c1feb
+          stepCounter: f3b7c434-dc64-4972-afaf-f350f963e9e1
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 138080c1-c48c-4236-9727-46d878b411fd
+                stepCounter: 571f0cbd-12dc-4f40-a90f-3a123bf86ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5ac1097e-c45f-4470-8f96-f4e726e63944
+          stepCounter: f3b7c434-dc64-4972-afaf-f350f963e9e1
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1be4539b-42e2-4f1d-b2f3-8d20baa879e6
+                stepCounter: 1a016e89-e870-4758-823b-8c57f0e20389
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 44ca357a-981f-4404-985e-3b39f41df05f
+          stepCounter: f3b7c434-dc64-4972-afaf-f350f963e9e1
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1f53e781-0246-4642-affd-bf4792080d97
+                stepCounter: 1a016e89-e870-4758-823b-8c57f0e20389
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5488aa19-0e5b-4b9c-9fd8-9c0f5800a775
+          stepCounter: f3b7c434-dc64-4972-afaf-f350f963e9e1
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a5a4d0d4-b8c3-4bc5-816f-b05a71edb78e
+                stepCounter: 1a016e89-e870-4758-823b-8c57f0e20389
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 867abbb6-d3af-4974-a30b-5e9b1847eb89
+          stepCounter: f3b7c434-dc64-4972-afaf-f350f963e9e1
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 11141177-562e-4e85-9e63-520149884ab0
+                stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e1e2334-af2c-40e7-a6f3-ac9aa0f8ac69
+          stepCounter: f3b7c434-dc64-4972-afaf-f350f963e9e1
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c7313fc-b039-486b-839b-e95b69576b9e
+                stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b09c3e9-e4c1-47fa-b6a5-6bad49953768
+          stepCounter: f3b7c434-dc64-4972-afaf-f350f963e9e1
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CAMPAIGN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9d7d0e50-8147-4aa2-a47a-b7337d8d406c
+                stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+            transform: REPLACE(REPLACE("STG_GOOGLE_ADS__IMPRESSION_SHARE"."NAME",'-Kampagne'),' Kampagne')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed906d4f-9c87-47c2-8c40-45c7da64717a
+          stepCounter: f3b7c434-dc64-4972-afaf-f350f963e9e1
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: SEARCH_IMPRESSION_SHARE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 51807ea2-d3d8-48d2-8eb2-b91ccb471075
+                stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 75be0026-972c-4792-b399-de6edd4d41e4
+          stepCounter: f3b7c434-dc64-4972-afaf-f350f963e9e1
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: SEARCH_BUDGET_LOST_IMPRESSION_SHARE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 03883b06-ece8-4ce5-8261-5f93c06520fc
+                stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a774d2c-0cb7-4643-87d8-6f5714e1d307
+          stepCounter: f3b7c434-dc64-4972-afaf-f350f963e9e1
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: SEARCH_TOP_IMPRESSION_SHARE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a08ef1c3-acf8-4fff-89d1-27498c14baa8
+                stepCounter: 9e092a42-aebc-4004-a746-43e1262a767f
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_GOOGLE_ADS__ACCOUNT_HISTORY: 571f0cbd-12dc-4f40-a90f-3a123bf86ae4
+          STG_GOOGLE_ADS__IMPRESSION_SHARE: 9e092a42-aebc-4004-a746-43e1262a767f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_ACCOUNT_MAPPING
+            nodeName: STG_GADS_ACCOUNT_MAPPING
+          - locationName: STG_GOOGLE_ADS
+            nodeName: STG_GOOGLE_ADS__ACCOUNT_HISTORY
+          - locationName: STG_GOOGLE_ADS
+            nodeName: STG_GOOGLE_ADS__IMPRESSION_SHARE
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_GOOGLE_ADS', 'STG_GOOGLE_ADS__IMPRESSION_SHARE') }} "STG_GOOGLE_ADS__IMPRESSION_SHARE"
+            LEFT JOIN {{ ref('STG_GOOGLE_ADS', 'STG_GOOGLE_ADS__ACCOUNT_HISTORY') }} "STG_GOOGLE_ADS__ACCOUNT_HISTORY"
+            ON "STG_GOOGLE_ADS__IMPRESSION_SHARE"."CUSTOMER_ID" = "STG_GOOGLE_ADS__ACCOUNT_HISTORY"."ID"
+            LEFT JOIN (SELECT "NAME" ,"DISPLAY_NAME", "HOTELGRUPPE" FROM {{ ref('STG_ACCOUNT_MAPPING', 'STG_GADS_ACCOUNT_MAPPING') }}) "STG_GADS_ACCOUNT_MAPPING"
+            ON "STG_GOOGLE_ADS__ACCOUNT_HISTORY"."NAME" = "STG_GADS_ACCOUNT_MAPPING"."NAME"
+        name: MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_IMPRESSION_SHARE
+        noLinkRefs: []
+  name: MRT_REPORTING__GOOGLE_ADS_CAMPAIGN_IMPRESSION_SHARE
+  overrideSQL: false
+  schema: ""
+  sqlType: "5"
+  type: sql
+  version: 1
+type: Node

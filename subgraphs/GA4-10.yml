@@ -1,0 +1,19 @@
+fileVersion: 1
+id: "10"
+name: GA4
+steps:
+  - 09bd8270-bfc5-4f61-b4fb-001b7a0e1440
+  - 2f4b7cec-1f54-4d6b-b8cd-5a00ee343ddd
+  - 3a2d9cf7-32cc-43c9-a706-ff2f27370297
+  - 3bd39095-3448-42a5-9efe-29bf037756ac
+  - 6a56f5b3-87bc-4ab9-b0ad-b61807bc0a8e
+  - 6c15580a-18ab-4e7b-a562-3802434047e2
+  - 9002a22a-e1d8-4263-bfc6-ad999e0aaa4f
+  - 91c58fe8-b619-4ef3-af68-48ae15f1d35a
+  - abd035be-8bf8-4548-bd77-2ec721af73c4
+  - c92aedaa-fc4a-4199-afc2-1f1e6420e40c
+  - cc017984-1359-41b6-ac1a-8191e34f202c
+  - cd8a73eb-4ace-4f7b-a7a8-2e2d99524fca
+  - f5322cc6-e865-469d-aaaa-dea914316c5e
+  - fb270c75-55c8-4327-a806-dee311ddbf24
+type: Subgraph

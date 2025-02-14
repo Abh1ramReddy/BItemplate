@@ -1,0 +1,160 @@
+fileVersion: 1
+id: 9b11d974-f5e5-4df5-9fb2-13adbb9c0d49
+name: INT__FBADS_ADSET_STATS_UNION
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1451037-17ca-4669-86e1-4441eff0e16e
+          stepCounter: 9b11d974-f5e5-4df5-9fb2-13adbb9c0d49
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c848e4fd-a0a9-4020-a90c-0b2b4cc18c56
+                stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 676387ce-19bd-44eb-a922-9d004db108ac
+          stepCounter: 9b11d974-f5e5-4df5-9fb2-13adbb9c0d49
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f37394de-20ec-4b9e-b257-4ed117aa76ed
+                stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+            transform: SUM(IMPRESSIONS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf9c2961-b43e-479c-b648-9bbadd1c54c9
+          stepCounter: 9b11d974-f5e5-4df5-9fb2-13adbb9c0d49
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CONVERSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c77d37fe-36e9-423b-81e5-abb4b9f63f5d
+                stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+            transform: SUM(INLINE_LINK_CLICKS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c8833709-438e-4fa3-86e7-c33f808e1910
+          stepCounter: 9b11d974-f5e5-4df5-9fb2-13adbb9c0d49
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: COST
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fbdeb0bb-476a-46e2-961a-8f5a1c4054fb
+                stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+            transform: SUM(SPEND)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8559d791-6c8e-4dea-aa4d-43a108330f76
+          stepCounter: 9b11d974-f5e5-4df5-9fb2-13adbb9c0d49
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6746860e-454e-4272-acf6-f866b63ac1c7
+                stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+            transform: SUM(CLICKS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 742aa32b-594e-4742-b554-5b122741c7cd
+          stepCounter: 9b11d974-f5e5-4df5-9fb2-13adbb9c0d49
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: da1a57ed-ca3e-4ef8-bb3c-854a4785630f
+                stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 30fd9c4c-f721-45c4-889a-272c694ee9b3
+          stepCounter: 9b11d974-f5e5-4df5-9fb2-13adbb9c0d49
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9c5bfc34-e2dd-4851-ac94-236fe2b11f31
+                stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95b8959b-bc1c-4765-9b9d-c7d77e220fc6
+          stepCounter: 9b11d974-f5e5-4df5-9fb2-13adbb9c0d49
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: PLATFORM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'Facebook Ads'"
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          MRT_REPORTING__FBADS_ADSET_STATS: ab327a0d-4942-41b6-9c87-165b55f369ae
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ANALYTICS_REPORTING
+            nodeName: MRT_REPORTING__FBADS_ADSET_STATS
+        join:
+          joinCondition: |-
+            FROM {{ ref('ANALYTICS_REPORTING', 'MRT_REPORTING__FBADS_ADSET_STATS') }} "MRT_REPORTING__FBADS_ADSET_STATS"
+            GROUP BY ALL
+        name: INT__FBADS_ADSET_STATS_UNION
+        noLinkRefs: []
+  name: INT__FBADS_ADSET_STATS_UNION
+  overrideSQL: false
+  schema: ""
+  sqlType: "2"
+  type: sql
+  version: 1
+type: Node

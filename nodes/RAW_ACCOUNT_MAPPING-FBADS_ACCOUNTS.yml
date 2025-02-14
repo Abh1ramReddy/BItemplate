@@ -1,0 +1,96 @@
+fileVersion: 1
+id: d0985652-0a0c-4592-99f5-f1ddfdd4c99c
+name: FBADS_ACCOUNTS
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_ACCOUNT_MAPPING
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1ab00c7-e3a9-4b08-9035-eba799bff5e0
+          stepCounter: d0985652-0a0c-4592-99f5-f1ddfdd4c99c
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: _ROW
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fda25f74-a96d-4c2c-a79f-226fdfbb7119
+          stepCounter: d0985652-0a0c-4592-99f5-f1ddfdd4c99c
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: acbf9859-c624-4565-b38a-145728e8dcd9
+          stepCounter: d0985652-0a0c-4592-99f5-f1ddfdd4c99c
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 08824eec-3bcb-4c1e-a17e-24daa26db55f
+          stepCounter: d0985652-0a0c-4592-99f5-f1ddfdd4c99c
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_ACCOUNT_MAPPING', 'FBADS_ACCOUNTS') }}
+  name: FBADS_ACCOUNTS
+  schema: ""
+  sqlType: Source
+  table: FBADS_ACCOUNTS
+  type: sourceInput
+  version: 1
+type: Node

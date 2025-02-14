@@ -1,0 +1,394 @@
+fileVersion: 1
+id: ab327a0d-4942-41b6-9c87-165b55f369ae
+name: MRT_REPORTING__FBADS_ADSET_STATS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f6b7c11-30d1-4434-a88d-935893ab8009
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ADSET_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 97fd4873-f812-4bcc-a42b-330fcac9c8a9
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c848e4fd-a0a9-4020-a90c-0b2b4cc18c56
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5fd9fc21-7ae8-4ab4-af0e-a4ac357b925d
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e899d330-2ca6-4717-883f-817fa6d7156e
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: _FIVETRAN_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a13dd6e9-ad66-4ad1-b80f-4a710a80db21
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6348bc7c-d08a-4959-99af-462a509d8bb8
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ACCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 86545d6c-c6d8-401a-8e60-0ee519785280
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f37394de-20ec-4b9e-b257-4ed117aa76ed
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b077c619-d776-4288-af5c-9abcfa6e6345
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c77d37fe-36e9-423b-81e5-abb4b9f63f5d
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: INLINE_LINK_CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bb50f6d9-58b8-4cae-a9c6-fe9b4239e1de
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 771a225f-4407-4b3d-a0ed-d73813bfd38e
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: REACH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a772c09-9384-421f-be26-eda638c33d24
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b74208a5-6ec2-4a45-bc00-0c1ad7059366
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: COST_PER_INLINE_LINK_CLICK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5b86624b-5d62-4768-a268-2321d99aa328
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 14740aa2-45f2-4fe4-b2b3-59bc7f4e39ee
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CPC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 92216441-85c1-4948-9792-311206dcc17d
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9965746a-5cbe-475f-9571-6f02c4ac79b2
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CPM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3ecc0f9f-00be-43e3-98c1-961f80e09a3f
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b41d1634-15f3-4739-b4b8-4cf77d605e8b
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CTR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 458d1431-b4ed-4cf6-81ee-3cda340c1318
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92561e06-03f7-4f86-8f19-ac9d03bf9bfa
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: FREQUENCY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0e282455-241f-41a0-bac4-686175881cbb
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fbdeb0bb-476a-46e2-961a-8f5a1c4054fb
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: SPEND
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5bf91b59-8fe1-4420-a6ed-d7c1639bf010
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 219a243c-3247-4112-b1d6-ddbe11749d89
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: INLINE_LINK_CLICK_CTR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f4088767-6f4a-435d-861f-668c4d173d34
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eee45656-e40e-41a2-9d13-2f7559f10c35
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c6a6cb16-d757-4649-9cac-7810e9a1f2ed
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6746860e-454e-4272-acf6-f866b63ac1c7
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0baa13fe-4364-4eee-823f-8f32e160e59c
+                stepCounter: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 66b8eef0-a7eb-45bd-9b74-d69f548f3fd7
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CAMPAIGN_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bf2155c9-fbde-4aca-b9b6-74d86f6ac366
+                stepCounter: c859fca3-b639-4f52-a900-7e82a012d3a4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f637797c-5cc7-42e0-bd24-9073e26e15ef
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ADSET_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 733336ae-b98e-4a46-9608-ba7c7bb6253d
+                stepCounter: f67ac051-05d5-4263-8251-81af2859054e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: af3f5d5a-8401-4bb9-8eca-4c4d44f41911
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4a073dba-8acb-4266-b287-1aa61acd7976
+                stepCounter: 66c05d14-0ef0-425b-9673-38b1bd401739
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4486c308-c716-4650-aef0-0337f17f6c5e
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 817ceb9d-310a-473f-80de-41097a3e4fe5
+                stepCounter: 66c05d14-0ef0-425b-9673-38b1bd401739
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d7d5736-aff3-4022-975d-1b18e44d6140
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 64035715-d00e-46cc-8fc6-b044755ee63d
+                stepCounter: 66c05d14-0ef0-425b-9673-38b1bd401739
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da1a57ed-ca3e-4ef8-bb3c-854a4785630f
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a16325f7-c678-4509-a7ad-20f1dad5e9d9
+                stepCounter: abeb00e0-8c73-4841-86f2-6ca1928da0ac
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c5bfc34-e2dd-4851-ac94-236fe2b11f31
+          stepCounter: ab327a0d-4942-41b6-9c87-165b55f369ae
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: HOTELGRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2fbac4e5-14dd-4220-83a5-5934970037a6
+                stepCounter: abeb00e0-8c73-4841-86f2-6ca1928da0ac
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ACCOUNT_HISTORY: 66c05d14-0ef0-425b-9673-38b1bd401739
+          STG_BASIC_AD_SET: 00fada6f-e9ab-4adc-a4f3-031535ddf9d1
+          STG_BASIC_AD_SET_CAMPAIGN_NAMES: c859fca3-b639-4f52-a900-7e82a012d3a4
+          STG_BASIC_AD_SET_NAMES: f67ac051-05d5-4263-8251-81af2859054e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_ACCOUNT_MAPPING
+            nodeName: STG_FBADS_ACCOUNT_MAPPING
+          - locationName: STG_FACEBOOK_ADS
+            nodeName: STG_ACCOUNT_HISTORY
+          - locationName: STG_FACEBOOK_ADS
+            nodeName: STG_BASIC_AD_SET
+          - locationName: STG_FACEBOOK_ADS
+            nodeName: STG_BASIC_AD_SET_CAMPAIGN_NAMES
+          - locationName: STG_FACEBOOK_ADS
+            nodeName: STG_BASIC_AD_SET_NAMES
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_FACEBOOK_ADS', 'STG_BASIC_AD_SET') }} "STG_BASIC_AD_SET"
+            LEFT JOIN {{ ref('STG_FACEBOOK_ADS', 'STG_BASIC_AD_SET_CAMPAIGN_NAMES') }} "STG_BASIC_AD_SET_CAMPAIGN_NAMES"
+            ON "STG_BASIC_AD_SET"."ADSET_ID" = "STG_BASIC_AD_SET_CAMPAIGN_NAMES"."ADSET_ID"
+            LEFT JOIN {{ ref('STG_FACEBOOK_ADS', 'STG_BASIC_AD_SET_NAMES') }} "STG_BASIC_AD_SET_NAMES"
+            ON "STG_BASIC_AD_SET"."ADSET_ID" = "STG_BASIC_AD_SET_NAMES"."ADSET_ID"
+            LEFT JOIN {{ ref('STG_FACEBOOK_ADS', 'STG_ACCOUNT_HISTORY') }} "STG_ACCOUNT_HISTORY"
+            ON "STG_BASIC_AD_SET"."ACCOUNT_ID"= "STG_ACCOUNT_HISTORY"."ID"
+            LEFT JOIN (SELECT "NAME","DISPLAY_NAME", "HOTELGRUPPE" FROM {{ ref('STG_ACCOUNT_MAPPING', 'STG_FBADS_ACCOUNT_MAPPING') }}) "STG_FBADS_ACCOUNT_MAPPING"
+            ON "STG_ACCOUNT_HISTORY"."NAME"="STG_FBADS_ACCOUNT_MAPPING"."NAME"
+        name: MRT_REPORTING__FBADS_ADSET_STATS
+        noLinkRefs: []
+  name: MRT_REPORTING__FBADS_ADSET_STATS
+  overrideSQL: false
+  schema: ""
+  sqlType: "5"
+  type: sql
+  version: 1
+type: Node

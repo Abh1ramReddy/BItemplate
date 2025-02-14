@@ -1,0 +1,197 @@
+fileVersion: 1
+id: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+name: STG_KEYWORD_STATS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_GOOGLE_SEARCH_CONSOLE
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8ecaf4d9-2517-4d6c-9e2b-2fde84540128
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: DATE
+        description: ""
+        name: month_start
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 07bf4052-7266-4684-a4a3-50279ae70de2
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b869eed2-dfb1-425e-ae9a-e0c07a5c15d8
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SEARCH_TYPE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bb4fd313-cc5e-484f-8be1-35ec7c821fda
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1b957d7-16b3-4e79-9b11-67735620c7b1
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SITE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: befc79a9-779b-4e93-8885-f5bee3f4b169
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0b0522d-97d3-4647-8792-67f7c0decea3
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: COUNTRY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0f7e6fe6-d945-4954-9f23-c0e4ddf9816c
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d7d6be2-dd2b-4d31-9d03-da7f820ee57e
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DEVICE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 595c2d5f-9d82-4e10-8c0c-f5e82e50da69
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 23a12a4d-56ab-4d34-b74b-23a86666bab6
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: VARCHAR(1024)
+        description: ""
+        name: PAGE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c23101e0-1ea3-4e82-a54d-38cfed7398e4
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c19e72e7-357c-4d2c-9aef-3ca19d869f3b
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: QUERY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e558337-0a52-4d9f-a64b-993da151a31d
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bedabe10-3f67-47e1-af26-5705f94a3a71
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: TOTAL_CLICKS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cdd71e1b-85a3-45b5-a666-dec0214362d6
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: SUM(CLICKS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e314f94-cac6-4fc4-a203-6d92274feed9
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: TOTAL_IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dfc16aa9-72a9-4c48-b436-0ea0834c7eb2
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: SUM(IMPRESSIONS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25c59463-c8b6-4659-bc5f-dbf4a18163fa
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: AVERAGE_CTR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 285fb056-321e-443d-8a9e-ad039fc97c97
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: SUM(CLICKS)/SUM(IMPRESSIONS)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 241d3e99-c46c-4f2f-a652-3612103a2500
+          stepCounter: f36a0e8b-246d-4498-a14e-f4cf90fdf893
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: AVERAGE_POSITION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 93a0c405-f04e-4ce1-962a-07320ff8aa7a
+                stepCounter: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+            transform: AVG(POSITION)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_KEYWORD_PAGE_REPORT: 4c7b8b71-e842-430b-ba2f-f43f8928efc1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STG_GOOGLE_SEARCH_CONSOLE
+            nodeName: STG_KEYWORD_PAGE_REPORT
+        join:
+          joinCondition: |-
+            FROM {{ ref('STG_GOOGLE_SEARCH_CONSOLE', 'STG_KEYWORD_PAGE_REPORT') }} "STG_KEYWORD_PAGE_REPORT"  GROUP BY 
+
+            "month_start", "PAGE", "QUERY", "SEARCH_TYPE", "SITE", "COUNTRY", "DEVICE"
+        name: STG_KEYWORD_STATS
+        noLinkRefs: []
+  name: STG_KEYWORD_STATS
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

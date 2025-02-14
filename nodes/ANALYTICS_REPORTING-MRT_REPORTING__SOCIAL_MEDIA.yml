@@ -1,0 +1,179 @@
+fileVersion: 1
+id: 9069033d-0ec6-4ec8-9a4e-a2e181e8cb23
+name: MRT_REPORTING__SOCIAL_MEDIA
+operation:
+  config:
+    insertStrategy: UNION
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: ANALYTICS_REPORTING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0d2b851-8a80-4e31-8078-f89eb1d7216c
+          stepCounter: 9069033d-0ec6-4ec8-9a4e-a2e181e8cb23
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: DATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 215f1442-fac7-4041-a953-1cb457417ece
+                stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+            transform: ""
+          - columnReferences:
+              - columnCounter: 0e356ae2-f785-416c-ae45-6e481281be69
+                stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8e48e8a-3e67-44c8-bd9c-a78ca5ca95a5
+          stepCounter: 9069033d-0ec6-4ec8-9a4e-a2e181e8cb23
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: IMPRESSIONS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 83aa8ad3-81d0-4caf-b738-dde9a7208a48
+                stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+            transform: ""
+          - columnReferences:
+              - columnCounter: a9d52042-210f-4ac2-9726-93c3e23f6ab9
+                stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5e973b07-bad7-4995-af7a-7a8d39858b58
+          stepCounter: 9069033d-0ec6-4ec8-9a4e-a2e181e8cb23
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: LIKES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c79c33cc-4ef1-4ea5-8306-b86499161e82
+                stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+            transform: ""
+          - columnReferences:
+              - columnCounter: d5cbcbdd-bd7b-4b02-93cb-af475d995e24
+                stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b466f03-3d7b-4546-88a1-308d1a454754
+          stepCounter: 9069033d-0ec6-4ec8-9a4e-a2e181e8cb23
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: FOLLOWERS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 33574e37-9784-4adc-894e-a831db8064ac
+                stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+            transform: ""
+          - columnReferences:
+              - columnCounter: 91db142a-9151-4717-b261-5d1e06490cb5
+                stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f006afc-7e8b-42df-8742-c59ef43b4dff
+          stepCounter: 9069033d-0ec6-4ec8-9a4e-a2e181e8cb23
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: DISPLAY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 71a1b5b6-1037-4039-8f99-8148d80baeb7
+                stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+            transform: ""
+          - columnReferences:
+              - columnCounter: 3127330d-a4f2-4623-b118-61aa41f18dbc
+                stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1024fcbb-ae46-4e98-96d4-e02f2995ddf7
+          stepCounter: 9069033d-0ec6-4ec8-9a4e-a2e181e8cb23
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: HOTEL_GRUPPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6a4eaf51-354a-4a34-a1ac-65e2f8d58892
+                stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+            transform: ""
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20c44804-7430-4184-beb8-7ee8b103adf4
+          stepCounter: 9069033d-0ec6-4ec8-9a4e-a2e181e8cb23
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PLATFORM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 70c722f2-61f6-429d-ad9b-07b57dae16dd
+                stepCounter: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+            transform: ""
+          - columnReferences:
+              - columnCounter: 63ad4971-969a-467a-9154-643e81e0fc9b
+                stepCounter: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          INT_REPORTING__FBPAGES_PAGE_STATS: 9761ebac-a2fd-4a51-af97-e53f8c7891a8
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ANALYTICS_REPORTING
+            nodeName: INT_REPORTING__FBPAGES_PAGE_STATS
+        join:
+          joinCondition: |-
+
+            FROM {{ ref('ANALYTICS_REPORTING', 'INT_REPORTING__FBPAGES_PAGE_STATS') }} "INT_REPORTING__FBPAGES_PAGE_STATS"
+        name: MRT__REPORTING_SOCIAL_MEDIA
+        noLinkRefs: []
+      - aliases:
+          INT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS: 4acd00a6-a1fc-47c4-888d-a59a69b888ec
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: ANALYTICS_REPORTING
+            nodeName: INT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS
+        join:
+          joinCondition: |-
+
+            FROM {{ ref('ANALYTICS_REPORTING', 'INT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS') }} "INT_REPORTING__INSTAGRAM_BUSINESS_USER_INSIGHTS"
+        name: NEW_SOURCE
+        noLinkRefs: []
+  name: MRT_REPORTING__SOCIAL_MEDIA
+  overrideSQL: false
+  schema: ""
+  sqlType: "5"
+  type: sql
+  version: 1
+type: Node

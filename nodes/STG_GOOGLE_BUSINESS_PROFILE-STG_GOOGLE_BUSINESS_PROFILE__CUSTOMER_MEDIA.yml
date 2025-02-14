@@ -1,0 +1,263 @@
+fileVersion: 1
+id: e39037c0-c512-41bc-92e8-9ce9969ade3a
+name: STG_GOOGLE_BUSINESS_PROFILE__CUSTOMER_MEDIA
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STG_GOOGLE_BUSINESS_PROFILE
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dc5ee397-da99-4dd8-9910-90daa220bb7e
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ACCOUNT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c947bc00-2c8d-43bb-9297-48710d93a15a
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d983de3b-e466-4819-80b3-d5c4c41bf758
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: LOCATION_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0c4efd62-b83b-42ec-bec7-61ee62a69037
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 53467255-94d7-4b72-bb84-f6946814acdc
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f3bbaf67-5a80-46a0-bb41-eae5fc6d3537
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b09e1b1a-fa28-4c8e-b0ca-0e76bbd38007
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c9fa7718-474e-46ec-9565-f5e7f122d3ed
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2949d3c-ded9-4fa0-9766-d3e706f6663c
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0a1c528a-4561-40fd-b59f-9e1b60961f12
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e17ababf-beaa-428d-b055-3e8bac58248b
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ATTRIBUTION_PROFILE_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2935699d-d45a-41e2-8eb7-e4e98dd7e2cd
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43caf528-cc82-4d7d-b3d6-0c6a9e912114
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: CREATE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4e542afc-4112-4f13-8b1b-96a1e827ca0f
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 23266509-c7f0-4d08-8e41-7473828aa7f5
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ATTRIBUTION_TAKE_DOWN_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d0372109-bbfb-4006-b0e7-4087511c5591
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2475d02f-ccef-43ae-b0de-df44a2036abf
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: DIMENSION_WIDTH_PIXEL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d8a2944c-b2d3-4235-8bef-dae434355264
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 66e9abf7-a5de-46a0-87c4-614db9f18219
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: DIMENSION_HEIGHT_PIXEL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 32a8841b-93a8-42a5-83c5-d3fd085b6f04
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8bf2165e-4f00-4e4b-b9be-8790303b7d34
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 30ccb23e-db3e-48ec-ae60-376b76f513bf
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09416bbc-5931-495e-89fe-1095d45aeb97
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: THUMBNAIL_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ccc6c1a1-3c69-40a1-a5fc-8de55baa7634
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d605068-b0fb-48e9-96cf-05f9c8aedc0c
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: GOOGLE_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f3ffe69c-283e-4812-9812-c1bde7fc52ef
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 032f7639-7f6a-406c-8881-93885b6fe08f
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MEDIA_FORMAT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7a170769-7bd1-4145-be11-e62802fb3605
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e8acdf9-91e9-4652-b35a-0aa3639a455b
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ATTRIBUTION_PROFILE_PHOTO_URL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 67d24a56-d1e6-4af2-a260-bc44a1b3efa8
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 309d3da0-b68d-448d-a806-d823aabea075
+          stepCounter: e39037c0-c512-41bc-92e8-9ce9969ade3a
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ATTRIBUTION_PROFILE_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a060fd47-c40d-4f47-93f8-570b0b14e0bc
+                stepCounter: bae10678-5373-4053-9bfa-f60156d881d3
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: RAW_GOOGLE_BUSINESS_PROFILE
+            nodeName: CUSTOMER_MEDIA
+        join:
+          joinCondition: FROM {{ ref('RAW_GOOGLE_BUSINESS_PROFILE', 'CUSTOMER_MEDIA') }} "CUSTOMER_MEDIA"
+        name: STG_GOOGLE_BUSINESS_PROFILE__CUSTOMER_MEDIA
+        noLinkRefs: []
+  name: STG_GOOGLE_BUSINESS_PROFILE__CUSTOMER_MEDIA
+  overrideSQL: false
+  schema: ""
+  sqlType: "8"
+  type: sql
+  version: 1
+type: Node

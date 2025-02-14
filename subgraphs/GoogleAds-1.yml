@@ -1,0 +1,27 @@
+fileVersion: 1
+id: "1"
+name: Google Ads
+steps:
+  - 2d8bfb49-81ed-4361-84a8-e2250385c33f
+  - 430db70e-b50f-46a2-a027-bf0a0b4791db
+  - 571f0cbd-12dc-4f40-a90f-3a123bf86ae4
+  - 5bb5cba1-ceef-45f0-be74-3b73bcff13df
+  - 5ea66a92-913d-48d2-a1f3-23e7e5b68e1f
+  - 625b24e2-bd0f-4580-b86b-aa5a2ccb3ad6
+  - 94f03885-c0d1-4ad4-bbb5-28021f0a95f0
+  - 95e82853-adab-491a-8908-0682c6fa4714
+  - 9646d84d-223d-4f80-a8f1-84f927b761da
+  - 9cd78f06-92ed-4afe-9e07-b42809217148
+  - 9e092a42-aebc-4004-a746-43e1262a767f
+  - aa8a3fea-ede7-422e-b6f9-a62a569dffad
+  - aaedcde8-8055-414c-8e27-9968c5ebaea3
+  - ba088c8f-8e3e-423c-abd6-5a613a12cbec
+  - bbcbde94-0d32-4030-ab58-dc27879f0614
+  - bc21e5e7-f36c-4144-9348-3a093748669e
+  - c5ab6a75-4b92-4776-b1bd-a6998d76a622
+  - c5ca992f-033a-43fb-81c8-f3481aeac0ff
+  - d1926aa9-cd00-45ba-b41f-32d2689fb0f6
+  - f31c00a9-2ba0-4ce9-a1a8-5398eca67a39
+  - f3b7c434-dc64-4972-afaf-f350f963e9e1
+  - fa7b242b-4f40-46fb-9980-5a076035ff3c
+type: Subgraph

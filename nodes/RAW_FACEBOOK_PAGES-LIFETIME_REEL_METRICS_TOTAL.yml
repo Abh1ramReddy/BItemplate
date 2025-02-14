@@ -1,0 +1,134 @@
+fileVersion: 1
+id: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+name: LIFETIME_REEL_METRICS_TOTAL
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: RAW_FACEBOOK_PAGES
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d56c3b8d-2cb8-4c1d-ad68-750308d4cd9b
+          stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: DATE
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 429684b2-4277-497c-9175-689b2e5f1ac9
+          stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: REEL_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 911ec504-bdd7-4a02-b035-618b52126828
+          stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: BLUE_REELS_PLAY_COUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b058cedd-3e82-448a-a4ca-fee85eef5ed0
+          stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_VIDEO_AVG_TIME_WATCHED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13a22373-ed93-4b60-b627-243940750825
+          stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: POST_VIDEO_VIEW_TIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dabcd7ec-5494-450f-89db-75171d326a8d
+          stepCounter: 60e7efed-fbbb-4b23-8785-67c5250cf6fd
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('RAW_FACEBOOK_PAGES', 'LIFETIME_REEL_METRICS_TOTAL') }}
+  name: LIFETIME_REEL_METRICS_TOTAL
+  schema: ""
+  sqlType: Source
+  table: LIFETIME_REEL_METRICS_TOTAL
+  type: sourceInput
+  version: 1
+type: Node
