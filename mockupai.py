@@ -7,12 +7,16 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 from openai import OpenAI
-import streamlit as st
 
 # -----------------------------
-# OpenAI client
+# OpenAI client (Streamlit secrets + optional env var fallback)
 # -----------------------------
-OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY")
+OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
+
+if OPENAI_API_KEY:
+    client = OpenAI(api_key=OPENAI_API_KEY)
+else:
+    client = None
 
 # -----------------------------
 # Page config & basic styling
@@ -162,7 +166,7 @@ def generate_config_from_prompt(prompt: str) -> dict:
         - scatter/line/area primarily for 'time_series'
 
     Client description:
-    \"\"\"{prompt}\"\"\"
+    \"\"\"{prompt}\"\"\""
     """
 
     try:
@@ -660,4 +664,3 @@ else:
         "2) Click **Interpret prompt (AI)**.\n"
         "3) Then click **Generate mockup with current config**."
     )
-
