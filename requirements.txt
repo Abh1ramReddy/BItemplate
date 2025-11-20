@@ -1,0 +1,16 @@
+# talk2earth / requirements.txt  — main Streamlit app (LLM + UI)
+streamlit==1.49.0
+openai==1.106.1
+openai-agents==0.2.11
+earthengine-api==1.6.4
+geemap==0.36.2
+folium>=0.16.0
+pillow>=10.3.0
+requests>=2.32.0
+matplotlib>=3.8.0
+pandas>=2.2.0
+numpy>=1.26.0
+pyyaml>=6.0.1
+pydantic>=2.7.0
+streamlit-folium==0.25.1
+streamlit-js-eval==0.1.7
