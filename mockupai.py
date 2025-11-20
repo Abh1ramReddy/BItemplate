@@ -7,12 +7,12 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 from openai import OpenAI
+import streamlit as st
 
 # -----------------------------
 # OpenAI client
 # -----------------------------
-OPENAI_API_KEY = "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"
-client = OpenAI(api_key=OPENAI_API_KEY) if OPENAI_API_KEY else None
+OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY")
 
 # -----------------------------
 # Page config & basic styling
@@ -660,3 +660,4 @@ else:
         "2) Click **Interpret prompt (AI)**.\n"
         "3) Then click **Generate mockup with current config**."
     )
+
