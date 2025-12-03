@@ -9,7 +9,41 @@ import plotly.express as px
 from openai import OpenAI
 
 # -----------------------------
-# OpenAI client (Streamlit secrets + optional env var fallback)
+# VERY SIMPLE LOGIN (hard-coded users)
+# -----------------------------
+VALID_USERS = {
+    "ABHIRAMPALICHERLA": "r9K3!bp2",
+    "MARTIJNBURGMAN": "Q4mz7#Lc",
+    "KWEMHOENER": "f82T@ldP",
+}
+
+
+def login_screen():
+    st.title("🔐 Login Required")
+
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+        if username in VALID_USERS and password == VALID_USERS[username]:
+            st.session_state["logged_in"] = True
+            st.session_state["username"] = username
+            st.experimental_rerun()
+        else:
+            st.error("Invalid username or password.")
+
+
+# Create login state if missing
+if "logged_in" not in st.session_state:
+    st.session_state["logged_in"] = False
+
+# If not logged in → show login page and stop
+if not st.session_state["logged_in"]:
+    login_screen()
+    st.stop()
+
+# -----------------------------
+# OpenAI client (local only: env var or st.secrets)
 # -----------------------------
 OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
 
@@ -22,7 +56,7 @@ else:
 # Page config & basic styling
 # -----------------------------
 st.set_page_config(
-    page_title="Kemb Reporting Mockup Generator",
+    page_title="Reporting Mockup Generator",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -118,7 +152,7 @@ def generate_config_from_prompt(prompt: str) -> dict:
         return DEFAULT_CONFIG
 
     if client is None:
-        st.warning("OPENAI_API_KEY is not set. Using default configuration.")
+        st.warning("OPENAI_API_KEY is not set or unavailable. Using default configuration.")
         return DEFAULT_CONFIG
 
     system_message = (
@@ -147,7 +181,7 @@ def generate_config_from_prompt(prompt: str) -> dict:
             "line", "area", "bar", "bar_horizontal",
             "stacked_area", "stacked_bar",
             "pie", "donut",
-            "scatter", "heatmap"
+            "scatter", "heatmap", "radar"
         - level: one of:
             - "time_series" -> use time-series data with Date on x-axis
             - "segment_latest" -> use the latest period, aggregated by the dimension
@@ -163,11 +197,10 @@ def generate_config_from_prompt(prompt: str) -> dict:
     - Prefer:
         - pie/donut only for 'segment_latest'
         - stacked_area/stacked_bar only for 'segment_over_time'
-        - scatter/line/area primarily for 'time_series'
+        - scatter/line/area/radar primarily for 'time_series'
 
     Client description:
-    \"\"\"{prompt}\"\"\""
-    """
+    \"\"\"{prompt}\"\"\""""
 
     try:
         response = client.chat.completions.create(
@@ -214,7 +247,12 @@ def generate_time_index(periods: int, frequency: str):
     freq_map = {"Daily": "D", "Weekly": "W", "Monthly": "MS"}
     freq = freq_map.get(frequency, "W")
     end = date.today()
-    start = end - timedelta(days=periods * 7) if frequency == "Weekly" else end - timedelta(days=periods * 30)
+    if frequency == "Weekly":
+        start = end - timedelta(days=periods * 7)
+    elif frequency == "Daily":
+        start = end - timedelta(days=periods)
+    else:  # Monthly approx
+        start = end - timedelta(days=periods * 30)
     return pd.date_range(start=start, periods=periods, freq=freq)
 
 
@@ -284,8 +322,8 @@ def render_dynamic_views(cfg: dict, df_time: pd.DataFrame, df_segments: pd.DataF
       - bar_horizontal
       - stacked_area, stacked_bar
       - pie, donut
-      - scatter
-      - heatmap
+      - scatter, heatmap
+      - radar
     """
     primary = cfg["primary_metric"]
     dim = cfg["dimension"]
@@ -365,6 +403,23 @@ def render_dynamic_views(cfg: dict, df_time: pd.DataFrame, df_segments: pd.DataF
                         )
                         st.plotly_chart(fig, use_container_width=True)
 
+                    elif ctype == "radar":
+                        # Radar of latest point across the selected metrics
+                        last_row = plot_df.iloc[-1]
+                        radar_df = pd.DataFrame(
+                            {
+                                "Metric": cols,
+                                "Value": [last_row[m] for m in cols],
+                            }
+                        )
+                        fig = px.line_polar(
+                            radar_df,
+                            theta="Metric",
+                            r="Value",
+                            line_close=True,
+                        )
+                        st.plotly_chart(fig, use_container_width=True)
+
                     else:
                         # Fallback to line
                         st.line_chart(plot_df)
@@ -384,7 +439,6 @@ def render_dynamic_views(cfg: dict, df_time: pd.DataFrame, df_segments: pd.DataF
                     plot_df = seg_latest[available_cols]
 
                     if ctype == "bar":
-                        # Vertical bar via Plotly for more control
                         fig = px.bar(
                             plot_df.reset_index(),
                             x=dim,
@@ -402,7 +456,6 @@ def render_dynamic_views(cfg: dict, df_time: pd.DataFrame, df_segments: pd.DataF
                         st.plotly_chart(fig, use_container_width=True)
 
                     elif ctype in ["pie", "donut"]:
-                        # Use first metric for share
                         metric = available_cols[0]
                         fig = px.pie(
                             plot_df.reset_index(),
@@ -410,6 +463,40 @@ def render_dynamic_views(cfg: dict, df_time: pd.DataFrame, df_segments: pd.DataF
                             values=metric,
                             hole=0.5 if ctype == "donut" else 0.0,
                         )
+                        st.plotly_chart(fig, use_container_width=True)
+
+                    elif ctype == "radar":
+                        # Radar chart comparing segments for one or multiple metrics
+                        if len(available_cols) == 1:
+                            metric = available_cols[0]
+                            radar_df = (
+                                plot_df.reset_index()
+                                .rename(columns={dim: "Segment", metric: "Value"})
+                            )
+                            fig = px.line_polar(
+                                radar_df,
+                                theta="Segment",
+                                r="Value",
+                                line_close=True,
+                            )
+                        else:
+                            radar_df = (
+                                plot_df.reset_index()
+                                .melt(
+                                    id_vars=dim,
+                                    value_vars=available_cols,
+                                    var_name="Metric",
+                                    value_name="Value",
+                                )
+                            )
+                            fig = px.line_polar(
+                                radar_df,
+                                theta=dim,
+                                r="Value",
+                                color="Metric",
+                                line_close=True,
+                            )
+
                         st.plotly_chart(fig, use_container_width=True)
 
                     elif ctype == "heatmap":
@@ -434,7 +521,6 @@ def render_dynamic_views(cfg: dict, df_time: pd.DataFrame, df_segments: pd.DataF
                 if seg_over_time.empty:
                     st.warning("No segment-over-time data available.")
                 else:
-                    # seg_over_time: index=Date, columns=segments, values=primary metric
                     df_plot = seg_over_time.copy()
                     df_melt = df_plot.reset_index().melt(
                         id_vars="Date", var_name=dim, value_name=primary
@@ -467,13 +553,29 @@ def render_dynamic_views(cfg: dict, df_time: pd.DataFrame, df_segments: pd.DataF
                         )
                         st.plotly_chart(fig, use_container_width=True)
 
+                    elif ctype == "radar":
+                        # Total contribution per segment over the whole time range
+                        total_by_segment = df_plot.sum(axis=0)
+                        radar_df = total_by_segment.reset_index()
+                        radar_df.columns = [dim, primary]
+
+                        fig = px.line_polar(
+                            radar_df,
+                            theta=dim,
+                            r=primary,
+                            line_close=True,
+                        )
+                        st.plotly_chart(fig, use_container_width=True)
+
                     elif ctype in ["pie", "donut"]:
                         # Aggregate over full time for total contribution
                         total_by_segment = df_plot.sum(axis=0)
+                        df_tot = total_by_segment.reset_index()
+                        df_tot.columns = [dim, primary]
                         fig = px.pie(
-                            total_by_segment.reset_index(),
-                            names=total_by_segment.index.name or dim,
-                            values=0,
+                            df_tot,
+                            names=dim,
+                            values=primary,
                             hole=0.5 if ctype == "donut" else 0.0,
                         )
                         st.plotly_chart(fig, use_container_width=True)
@@ -500,7 +602,13 @@ def render_dynamic_views(cfg: dict, df_time: pd.DataFrame, df_segments: pd.DataF
 # -----------------------------
 # Sidebar – configuration
 # -----------------------------
-st.sidebar.title("Kemb Mockup Settings")
+st.sidebar.title("Mockup Settings")
+
+st.sidebar.write(f"👤 Logged in as **{st.session_state.get('username', '')}**")
+if st.sidebar.button("Log out"):
+    st.session_state["logged_in"] = False
+    st.session_state["username"] = ""
+    st.experimental_rerun()
 
 prompt = st.sidebar.text_area(
     "Reporting configuration prompt",
@@ -515,7 +623,8 @@ prompt = st.sidebar.text_area(
         "- Donut chart of Revenue by Channel for latest period (segment_latest).\n"
         "- Stacked area chart of Revenue mix by Channel over time (segment_over_time).\n"
         "- Scatter of Revenue vs Conversion Rate % over time (time_series).\n"
-        "- Heatmap of metrics over time (time_series)."
+        "- Heatmap of metrics over time (time_series).\n"
+        "- Radar chart of average metrics by Channel (segment_latest, type 'radar')."
     ),
     height=260,
 )
@@ -543,80 +652,160 @@ st.sidebar.markdown("---")
 interpret_btn = st.sidebar.button("Interpret prompt (AI)")
 generate_btn = st.sidebar.button("Generate mockup with current config")
 
-# Keep config in session so you can iterate without re-calling the model every time
+# -----------------------------
+# Session state for dashboard config
+# -----------------------------
 if "dashboard_config" not in st.session_state:
     st.session_state["dashboard_config"] = DEFAULT_CONFIG
 
+if "show_dashboard" not in st.session_state:
+    st.session_state["show_dashboard"] = False
+
+# Handle AI config interpretation
 if interpret_btn:
     cfg = generate_config_from_prompt(prompt)
     st.session_state["dashboard_config"] = cfg
 
 cfg = st.session_state["dashboard_config"]
 
+# Clicking "Generate mockup" switches to dashboard view
+if generate_btn:
+    st.session_state["show_dashboard"] = True
+
 # -----------------------------
 # Main layout
 # -----------------------------
-st.markdown("# Kemb Reporting Mockup Generator")
+if not st.session_state["show_dashboard"]:
+    # === SETUP VIEW (before generating) ===
+    st.markdown("# Reporting Mockup Generator")
 
-col_info, col_meta = st.columns([2.5, 1.5])
+    col_info, col_meta = st.columns([2.5, 1.5])
 
-with col_info:
-    st.markdown('<div class="section-header">Client / use case description</div>', unsafe_allow_html=True)
-    with st.container():
-        st.markdown('<div class="kemb-card">', unsafe_allow_html=True)
-        if prompt.strip():
-            st.write(prompt)
-        else:
-            st.write(
-                "Use the sidebar prompt to describe the client, use case, metrics, segments, "
-                "and the charts you want to see. Then click **Interpret prompt (AI)**."
-            )
-        st.markdown("</div>", unsafe_allow_html=True)
+    with col_info:
+        st.markdown('<div class="section-header">Client / use case description</div>', unsafe_allow_html=True)
+        with st.container():
+            st.markdown('<div class="kemb-card">', unsafe_allow_html=True)
+            if prompt.strip():
+                st.write(prompt)
+            else:
+                st.write(
+                    "Use the sidebar prompt to describe the client, use case, metrics, segments, "
+                    "and the charts you want to see. Then click **Interpret prompt (AI)**."
+                )
+            st.markdown("</div>", unsafe_allow_html=True)
 
-with col_meta:
-    st.markdown('<div class="section-header">Current configuration</div>', unsafe_allow_html=True)
-    with st.container():
-        st.markdown('<div class="kemb-card">', unsafe_allow_html=True)
-        st.write(f"**Use case:** {cfg['use_case_name']}")
-        st.write(f"**Primary KPI:** `{cfg['primary_metric']}`")
+    with col_meta:
+        st.markdown('<div class="section-header">Current configuration</div>', unsafe_allow_html=True)
+        with st.container():
+            st.markdown('<div class="kemb-card">', unsafe_allow_html=True)
+            st.write(f"**Use case:** {cfg['use_case_name']}")
+            st.write(f"**Primary KPI:** `{cfg['primary_metric']}`")
 
-        st.write("Secondary KPIs:")
-        if cfg["secondary_metrics"]:
-            pills = " ".join([f'<span class="pill">{m}</span>' for m in cfg["secondary_metrics"]])
-            st.markdown(pills, unsafe_allow_html=True)
-        else:
-            st.write("_None defined_")
+            st.write("Secondary KPIs:")
+            if cfg["secondary_metrics"]:
+                pills = " ".join([f'<span class="pill">{m}</span>' for m in cfg["secondary_metrics"]])
+                st.markdown(pills, unsafe_allow_html=True)
+            else:
+                st.write("_None defined_")
 
-        st.write(f"**Dimension:** `{cfg['dimension']}`")
-        st.write("Segments:")
-        seg_pills = " ".join([f'<span class="pill">{s}</span>' for s in cfg["segments"]])
-        st.markdown(seg_pills, unsafe_allow_html=True)
+            st.write(f"**Dimension:** `{cfg['dimension']}`")
+            st.write("Segments:")
+            seg_pills = " ".join([f'<span class="pill">{s}</span>' for s in cfg["segments"]])
+            st.markdown(seg_pills, unsafe_allow_html=True)
 
-        st.write(f"**Base magnitude:** ~{cfg['base']}")
-        st.caption("Base defines the rough scale of the primary metric per period for dummy data.")
+            st.write(f"**Base magnitude:** ~{cfg['base']}")
+            st.caption("Base defines the rough scale of the primary metric per period for dummy data.")
 
-        st.write("Charts:")
-        for c in cfg.get("charts", []):
-            st.markdown(
-                f"- **{c.get('title', 'Chart')}** "
-                f"(_type_: `{c.get('type', 'line')}`, _level_: `{c.get('level', 'time_series')}`)"
-            )
+            st.write("Charts:")
+            for c in cfg.get("charts", []):
+                st.markdown(
+                    f"- **{c.get('title', 'Chart')}** "
+                    f"(_type_: `{c.get('type', 'line')}`, _level_: `{c.get('level', 'time_series')}`)"
+                )
 
-        st.markdown("</div>", unsafe_allow_html=True)
+            st.markdown("</div>", unsafe_allow_html=True)
 
-st.markdown("---")
+    st.markdown("---")
 
-if generate_btn:
-    # Data generation
+    st.info(
+        "1) Describe the reporting setup (metrics, segments, chart types) in the sidebar prompt.\n"
+        "2) Click **Interpret prompt (AI)**.\n"
+        "3) Then click **Generate mockup with current config**."
+    )
+
+else:
+    # === DASHBOARD VIEW (after generating) ===
+
+    # Always regenerate dummy data based on current settings
     df_time, df_segments = generate_dummy_data(cfg, periods, frequency, noise_level)
     primary_metric = cfg["primary_metric"]
 
-    # KPI tiles
+    # -----------------------------
+    # Filters
+    # -----------------------------
+    st.markdown('<div class="section-header">Filters</div>', unsafe_allow_html=True)
+    with st.container():
+        st.markdown('<div class="kemb-card">', unsafe_allow_html=True)
+
+        col1, col2 = st.columns([2, 2])
+
+        with col1:
+            min_date = df_time["Date"].min().date()
+            max_date = df_time["Date"].max().date()
+            date_filter = st.date_input(
+                "Date range",
+                value=(min_date, max_date),
+                min_value=min_date,
+                max_value=max_date,
+            )
+
+            # date_input can return a single date or a tuple
+            if isinstance(date_filter, tuple):
+                start_date, end_date = date_filter
+            else:
+                start_date = min_date
+                end_date = date_filter
+
+        with col2:
+            all_segments = cfg.get("segments", [])
+            dim_name = cfg.get("dimension", "Segment")
+            selected_segments = st.multiselect(
+                f"{dim_name} filter",
+                options=all_segments,
+                default=all_segments,
+            )
+
+        # Apply filters to time-series data
+        df_time_filtered = df_time[
+            (df_time["Date"].dt.date >= start_date)
+            & (df_time["Date"].dt.date <= end_date)
+        ].copy()
+
+        # Apply filters to segment data
+        if not df_segments.empty:
+            df_segments_filtered = df_segments[
+                (df_segments["Date"].dt.date >= start_date)
+                & (df_segments["Date"].dt.date <= end_date)
+                & (df_segments[dim_name].isin(selected_segments))
+            ].copy()
+        else:
+            df_segments_filtered = df_segments
+
+        if df_time_filtered.empty:
+            st.warning("No data for the selected filter combination.")
+            st.markdown("</div>", unsafe_allow_html=True)
+            st.stop()
+
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    # -----------------------------
+    # KPI tiles (use filtered data)
+    # -----------------------------
     st.markdown('<div class="section-header">Key metrics</div>', unsafe_allow_html=True)
     sec_metrics = cfg["secondary_metrics"]
     kpi_cols = st.columns(1 + len(sec_metrics))
 
-    current_primary, primary_change = compute_kpi_change(df_time[primary_metric])
+    current_primary, primary_change = compute_kpi_change(df_time_filtered[primary_metric])
     with kpi_cols[0]:
         st.metric(
             label=primary_metric,
@@ -625,7 +814,7 @@ if generate_btn:
         )
 
     for col, metric in zip(kpi_cols[1:], sec_metrics):
-        current, change = compute_kpi_change(df_time[metric])
+        current, change = compute_kpi_change(df_time_filtered[metric])
         fmt = "{:,.0f}" if "%" not in metric else "{:,.2f}"
         with col:
             st.metric(
@@ -636,20 +825,24 @@ if generate_btn:
 
     st.markdown("---")
 
+    # -----------------------------
     # Dynamic views based on config + chart spec
-    render_dynamic_views(cfg, df_time, df_segments)
+    # -----------------------------
+    render_dynamic_views(cfg, df_time_filtered, df_segments_filtered)
 
+    # -----------------------------
     # Data preview
+    # -----------------------------
     st.markdown('<div class="section-header">Data preview</div>', unsafe_allow_html=True)
     with st.container():
         st.markdown('<div class="kemb-card">', unsafe_allow_html=True)
         tab1, tab2 = st.tabs(["Time-series KPIs", "Segment breakdown"])
         with tab1:
-            st.dataframe(df_time.tail(10), use_container_width=True)
+            st.dataframe(df_time_filtered.tail(10), use_container_width=True)
         with tab2:
-            st.dataframe(df_segments.tail(20), use_container_width=True)
+            st.dataframe(df_segments_filtered.tail(20), use_container_width=True)
 
-        csv = df_time.to_csv(index=False).encode("utf-8")
+        csv = df_time_filtered.to_csv(index=False).encode("utf-8")
         st.download_button(
             label="Download time-series data as CSV",
             data=csv,
@@ -657,10 +850,3 @@ if generate_btn:
             mime="text/csv",
         )
         st.markdown("</div>", unsafe_allow_html=True)
-
-else:
-    st.info(
-        "1) Describe the reporting setup (metrics, segments, chart types) in the sidebar prompt.\n"
-        "2) Click **Interpret prompt (AI)**.\n"
-        "3) Then click **Generate mockup with current config**."
-    )
